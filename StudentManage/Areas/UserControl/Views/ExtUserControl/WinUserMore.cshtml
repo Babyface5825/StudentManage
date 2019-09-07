@@ -1,0 +1,282 @@
+﻿@{
+    var X = Html.X();
+}
+@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@section WindowItemField
+{@(
+    X.TabPanel()
+        .ID(ViewData["WindowID"] + "_TabPanel")
+        .X(5).Y(2)
+        .Height(330).Width(610)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.FormPanel()
+                .Title("用户信息")
+                .ID(ViewData["WindowID"] + "_Form")
+                .Layout(LayoutType.Absolute)
+                .BodyPadding(5)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .Items(
+                    X.Hidden().ID((string)ViewData["WindowID"] + "_SelUserID").Name("ID").Text("0"),
+                    X.Hidden()
+                        .ID((string)ViewData["WindowID"] + "_SelDutyID")
+                        .Name("UserIDutyIID")
+                        .Text("0"),
+                    X.Hidden()
+                        .ID((string)ViewData["WindowID"] + "_SelDepartmentID")
+                        .Name("UserIDepartmentIID")
+                        .Text("0")
+                        .DirectEvents(de =>
+                        {
+                            de.Change.Url = Url.Action("SetThreeListComboValue", "ThreeListComboBox", new { Area = "UserControl" });
+                            de.Change.ExtraParams.Add(new Parameter()
+                            {
+                                Name = "PanelID",
+                                Value = (string)ViewData["WindowID"] + "_cmbDepartmentInfo",
+                                Mode = ParameterMode.Value
+                            });
+                            de.Change.ExtraParams.Add(new Parameter()
+                            {
+                                Name = "sSelID",
+                                Value = "this.getValue()",
+                                Mode = ParameterMode.Raw
+                            });
+                        }),                            
+                    X.Hidden().ID((string)ViewData["WindowID"] + "_SetAuthorID").Text((string)ViewData["WinUserMore_SetAuthorID"]), /*用于强制设定权限*/                            
+                    X.Hidden().ID((string)ViewData["WindowID"] + "_OriginAuthorIDs").Text("0"),
+                    X.Label().Text("登录账号:").X(5).Y(10),
+                    X.TextField().ID((string)ViewData["WindowID"] + "_txtUserCode").Name("UserICode").X(58).Y(10).Width(240).AllowBlank(false),
+                    X.Label().Text("登录密码:").X(305).Y(10),
+                    X.TextField().Name("UserIPsd").X(358).Y(10).Width(240).InputType(Ext.Net.InputType.Password).AllowBlank(false),
+                    X.Label().Text("用户姓名:").X(5).Y(35),
+                    X.TextField().Name("Name").X(58).Y(35).Width(240).AllowBlank(false),
+                    X.Label().Text("用户性别:").X(305).Y(35),
+                    X.ComboBox().Name("UserISex").X(358).Y(35).Width(240).Editable(false)
+                    .Items(
+                        X.ListItem().Text("男").Value("男"),
+                        X.ListItem().Text("女").Value("女")
+                    ),
+                    X.Label().Text("身份证号:").X(5).Y(60),
+                    X.TextField().Name("UserIIDCard").X(58).Y(60).Width(240),
+                    X.Label().Text("手机号码:").X(305).Y(60),
+                    X.TextField().Name("UserIMobilePhone").X(358).Y(60).Width(240),
+                    X.Label().Text("出生日期:").X(5).Y(85),
+                    X.DateField().Name("UserIBirth").X(58).Y(85).Width(240),
+                    X.Label().Text("用户编号:").X(305).Y(85),
+                    X.TextField().Name("UserINumber").X(358).Y(85).Width(240).AllowBlank(false),
+                    X.Label().Text("通讯地址:").X(5).Y(110),
+                    X.TextField().Name("UserIAddress").X(58).Y(110).Width(240),
+                    X.Label().Text("所在部门:").X(305).Y(110),
+                    X.Panel()
+                        .ID((string)ViewData["WindowID"] + "_DepartmentContainer")
+                        .Header(false)
+                        .X(358)
+                        .Y(110)
+                        .Width(215)
+                        .Height(75)
+                        .Layout(LayoutType.Fit)
+                        .Border(false)
+                        .BodyStyle("background-color:transparent;")
+                        .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\ThreeListComboBox.cshtml",
+                            ViewData["ThreeListComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbDepartmentInfo"),
+                    X.Button()
+                        .Icon(Icon.Database)
+                        .ID((string)ViewData["WindowID"] + "_btnClearDepartment")
+                        .ToolTip("清除")
+                        .X(575)
+                        .Y(110)
+                        .Width(25)
+                        .Height(20)
+                        .DirectEvents(de =>
+                        {
+                            de.Click.Url = Url.Action("WinUserMore_ClearDepartmentClick", "WinUserMore", new { Area = "UserControl" });
+                            de.Click.ExtraParams.Add(new Parameter()
+                            {
+                                Name = "PanelID",
+                                Value = "this.up('window').id",
+                                Mode = ParameterMode.Raw
+                            });
+                        }),
+                    X.Label().Text("邮政编码:").X(5).Y(135),
+                    X.TextField().Name("UserIPostalCode").X(58).Y(135).Width(240),
+                    X.Label().Text("电子邮件:").X(5).Y(160),
+                    X.TextField().Name("UserIeMail").X(58).Y(160).Width(240),
+                    X.Label().Text("注册日期:").X(5).Y(185),
+                    X.DateField().Name("UserIRegisterDate").X(58).Y(185).Width(240),
+                    X.Label().Text("当前职务:").X(305).Y(185),
+                    X.Panel()
+                        .ID((string)ViewData["WindowID"] + "_DutyContainer")
+                        .Header(false)
+                        .X(358)
+                        .Y(185)
+                        .Width(215)
+                        .Layout(LayoutType.Fit)
+                        .Border(false)
+                        .BodyStyle("background-color:transparent;")
+                        .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                            ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbDutyInfo"),
+                    X.Button()
+                        .Icon(Icon.Database)
+                        .ID((string)ViewData["WindowID"] + "_btnClearDuty")
+                        .ToolTip("清除")
+                        .X(575)
+                        .Y(185)
+                        .Width(25)
+                        .Height(20)
+                        .DirectEvents(de =>
+                        {
+                            de.Click.Url = Url.Action("WinUserMore_ClearDutyClick", "WinUserMore", new { Area = "UserControl" });
+                            de.Click.ExtraParams.Add(new Parameter()
+                            {
+                                Name = "PanelID",
+                                Value = "this.up('window').id",
+                                Mode = ParameterMode.Raw
+                            });
+                        }),
+                    X.Label().Text("其他说明:").X(5).Y(210),
+                    X.TextArea().Name("Remark").X(58).Y(210).Width(540).Height(80)
+                ),
+            X.Panel()
+                .Title("角色信息")
+                .ID((string)(ViewData["WindowID"] + "_AuthorPanel"))
+                .Hidden((bool)ViewData["WinUserMore_AuthorPanelHidden"])
+                .Layout(LayoutType.Absolute)
+                .BodyPadding(5)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .Items(
+                    X.GridPanel()
+                        .ID((string)ViewData["WindowID"] + "_AllRolePanel")
+                        .X(32).Y(10)
+                        .Height(280).Width(240)
+                        .Border(false)
+                        .Header(false)
+                        .AutoScroll(true)
+                        .AutoDataBind(true)
+                        .View(
+                            X.GridView()
+                                .StripeRows(true)
+                        )
+                        .Store(
+                            X.Store()
+                                .ID((string)ViewData["WindowID"] + "_AllRoleStore")
+                                .AutoLoad(false)
+                                .Model(
+                                        X.Model()
+                                        .IDProperty("ID")
+                                        .Fields(new ModelField("ID", ModelFieldType.Int), new ModelField("Name"))
+                                    )
+                                .Proxy(
+                                        X.AjaxProxy()
+                                            .Url(Url.Action("WinUserMore_UserAuthorAllRead", "WinUserMore", new { Area = "UserControl" }))
+                                            .Reader(X.ArrayReader().RootProperty("data").TotalProperty("total"))
+                                            .ExtraParams(pa => pa.Add(new Parameter("ParentVariable", "this.id", ParameterMode.Raw)))
+                                    )
+                                .Parameters(ps => {
+                                    ps.Add(new StoreParameter("sNowUserID", "App." + (ViewData["WindowID"] + "_SelUserID") + ".getValue()", ParameterMode.Raw));
+                                })
+                        )
+                .ColumnModel(
+                        X.Column().Text("可选项").DataIndex("Name").Flex(1)
+                )
+                .SelectionModel(X.RowSelectionModel().Mode(SelectionMode.Multi)),
+                X.GridPanel()
+                        .ID((string)ViewData["WindowID"] + "_NowRolePanel")
+                    .X(340).Y(10)
+                    .Height(280).Width(240)
+                    .Border(false)
+                    .Header(false)
+                    .AutoScroll(true)
+                    .AutoDataBind(true)
+                    .View(
+                        X.GridView()
+                            .StripeRows(true)
+                    )
+                    .Store(
+                        X.Store()
+                            .ID((string)ViewData["WindowID"] + "_NowRoleStore")
+                            .AutoLoad(false)
+                            .Model(
+                                    X.Model()
+                                    .IDProperty("ID")
+                                    .Fields(new ModelField("ID", ModelFieldType.Int), new ModelField("Name"))
+                                )
+                            .Proxy(
+                                    X.AjaxProxy()
+                                        .Url(Url.Action("WinUserMore_UserAuthorNowRead", "WinUserMore", new { Area = "UserControl" }))
+                                        .Reader(X.ArrayReader().RootProperty("data").TotalProperty("total"))
+                                        .ExtraParams(pa => pa.Add(new Parameter("ParentVariable", "this.id", ParameterMode.Raw)))
+                                )
+                            .Parameters(ps =>
+                            {
+                                ps.Add(new StoreParameter("sNowUserID", "App." + (ViewData["WindowID"] + "_SelUserID") + ".getValue()", ParameterMode.Raw));                                        
+                            })
+                    )
+                    .ColumnModel(
+                            X.Column().Text("已选项").DataIndex("Name").Flex(1)
+                    )
+                    .SelectionModel(X.RowSelectionModel().Mode(SelectionMode.Multi))
+                    ,
+                X.Button()
+                    .Icon(Icon.ResultsetNext)
+                    .ToolTip("加入")
+                    .X(295).Y(80)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("WinUserMore_AddRoleClick", "WinUserMore", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = "this.up('window').id",
+                            Mode = ParameterMode.Raw
+                        });
+                    }),
+                X.Button()
+                    .Icon(Icon.ResultsetLast)
+                    .ToolTip("全部加入")
+                    .X(295).Y(120)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("WinUserMore_AddAllRoleClick", "WinUserMore", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = "this.up('window').id",
+                            Mode = ParameterMode.Raw
+                        });
+                    }),
+                X.Button()
+                    .Icon(Icon.ResultsetPrevious)
+                    .ToolTip("移出")
+                    .X(295).Y(160)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("WinUserMore_RemoveRoleClick", "WinUserMore", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = "this.up('window').id",
+                            Mode = ParameterMode.Raw
+                        });
+                    }),
+                X.Button()
+                    .Icon(Icon.ResultsetFirst)
+                    .ToolTip("全部移出")
+                    .X(295).Y(200)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("WinUserMore_RemoveAllRoleClick", "WinUserMore", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = "this.up('window').id",
+                            Mode = ParameterMode.Raw
+                        });
+                    })
+                )
+            )
+)}

@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = "~/Views/ExtLayout/_ExtLayout.cshtml";
+}
+
+
+
+@section center
+{   
+    @(Html.X().Viewport().Layout(LayoutType.Border)
+            .ItemsFromPage(this, "_North.cshtml")
+            .ItemsFromPage(this, "_West.cshtml")
+            .ItemsFromPage(this, "_Center.cshtml")
+            .ItemsFromPage(this, "_South.cshtml")
+    )
+    
+}

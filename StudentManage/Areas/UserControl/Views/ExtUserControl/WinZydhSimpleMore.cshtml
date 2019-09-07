@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Absolute)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().Name("ID").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelZylbdm").Name("Zylbdm").Text("0"),            
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelKldm").Name("Kldm").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelXzdm").Name("Xzdm").Text("0"),
+            X.Label().X(5).Y(2).Text("所属院校:"),
+            X.TextField().X(60).Y(2).Width(200).Editable(false).Name("GxName"),
+            X.Label().X(5).Y(27).Text("专业类别:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(60).Y(27).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbZylbdm"),
+            X.Label().X(5).Y(52).Text("科类名称:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(60).Y(52).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbKldm"),
+            X.Label().X(5).Y(77).Text("学制安排:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(60).Y(77).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbXzdm"),
+            X.Label().X(30).Y(102).Text("代码:"),
+            X.TextField().Name("Code").AllowBlank(false).X(60).Y(102).Width(200),
+            X.Label().X(30).Y(127).Text("名称:"),
+            X.TextField().Name("Name").AllowBlank(false).X(60).Y(127).Width(200),
+            X.Label().X(30).Y(152).Text("排序:"),
+            X.NumberField().Name("TheOrder").AllowBlank(false).X(60).Y(152).Width(200),
+            X.Label().X(30).Y(177).Text("备注:"),
+            X.TextArea().Name("Remark").X(60).Y(177).Width(200)
+        )
+   )
+}

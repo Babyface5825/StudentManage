@@ -1,0 +1,662 @@
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\csc.exe
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\System.Collections.Immutable.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\vbc.exe
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\VBCSCompiler.exe
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\roslyn\VBCSCompiler.exe.config
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\MvcTywzV2.dll.config
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\MvcTywzV2.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\MvcTywzV2.pdb
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Antlr3.Runtime.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\EntityFramework.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\EntityFramework.SqlServer.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.Office.Interop.Excel.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.Office.Interop.Word.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.Web.Infrastructure.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Owin.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Swashbuckle.Core.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Net.Http.Formatting.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Helpers.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Http.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Http.WebHost.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Mvc.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Optimization.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Razor.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.WebPages.Deployment.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.WebPages.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.WebPages.Razor.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\WebActivatorEx.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\WebGrease.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\stdole.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Net.Http.Formatting.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Helpers.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Http.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Http.WebHost.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Mvc.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Optimization.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.Razor.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.WebPages.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.WebPages.Deployment.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\System.Web.WebPages.Razor.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Antlr3.Runtime.pdb
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\EntityFramework.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\EntityFramework.SqlServer.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project_Code\MvcTywzV4\MvcTywzV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+D:\Project_Code\MvcTywzV4\MvcTywzV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+D:\Project_Code\MvcTywzV4\MvcTywzV2\obj\Debug\MvcTywzV2.dll
+D:\Project_Code\MvcTywzV4\MvcTywzV2\obj\Debug\MvcTywzV2.pdb
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\csc.exe
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\System.Collections.Immutable.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\vbc.exe
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\VBCSCompiler.exe
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\roslyn\VBCSCompiler.exe.config
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\MvcTywzV2.dll.config
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\MvcTywzV2.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\MvcTywzV2.pdb
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Antlr3.Runtime.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\EntityFramework.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\EntityFramework.SqlServer.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.Office.Interop.Excel.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.Office.Interop.Word.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.Web.Infrastructure.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Owin.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Swashbuckle.Core.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Net.Http.Formatting.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Helpers.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Http.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Http.WebHost.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Mvc.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Optimization.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Razor.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.WebPages.Deployment.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.WebPages.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.WebPages.Razor.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\WebActivatorEx.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\WebGrease.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\stdole.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Net.Http.Formatting.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Helpers.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Http.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Http.WebHost.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Mvc.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Optimization.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.Razor.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.WebPages.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.WebPages.Deployment.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\System.Web.WebPages.Razor.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Antlr3.Runtime.pdb
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\EntityFramework.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\EntityFramework.SqlServer.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\obj\Debug\MvcTywzV2.dll
+D:\Project_Code\TeachingResearchV2\MvcTywzV2\obj\Debug\MvcTywzV2.pdb
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\csc.exe
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Collections.Immutable.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\vbc.exe
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe.config
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Excel.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Word.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Web.Infrastructure.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Owin.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Swashbuckle.Core.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\WebActivatorEx.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\WebGrease.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\stdole.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.pdb
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll.config
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.pdb
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.dll
+D:\Project_Code\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.pdb
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\csc.exe
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Collections.Immutable.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Reflection.Metadata.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\vbc.exe
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe.config
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll.config
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.pdb
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Excel.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Word.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Web.Infrastructure.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Owin.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Swashbuckle.Core.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\WebActivatorEx.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\WebGrease.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\office.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Vbe.Interop.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\stdole.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.pdb
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\bin\office.xml
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.dll
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.pdb
+D:\sl\教研会报名评审系统\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\csc.exe
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\vbc.exe
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll.config
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.pdb
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Owin.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Swashbuckle.Core.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\WebActivatorEx.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\WebGrease.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\office.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Vbe.Interop.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\stdole.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\office.xml
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.dll
+C:\Users\19837\Desktop\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\csc.exe
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Collections.Immutable.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Reflection.Metadata.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\vbc.exe
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe.config
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll.config
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Excel.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Word.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Web.Infrastructure.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Owin.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Swashbuckle.Core.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\WebActivatorEx.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\WebGrease.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\office.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Vbe.Interop.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\stdole.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.pdb
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\bin\office.xml
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\例子\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\csc.exe
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Collections.Immutable.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Reflection.Metadata.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\vbc.exe
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe.config
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll.config
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Excel.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Word.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Web.Infrastructure.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Owin.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Swashbuckle.Core.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\WebActivatorEx.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\WebGrease.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\office.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Vbe.Interop.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\stdole.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\bin\office.xml
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\csc.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Collections.Immutable.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Reflection.Metadata.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\vbc.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe.config
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll.config
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Excel.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Word.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Web.Infrastructure.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Owin.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Swashbuckle.Core.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\WebActivatorEx.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\WebGrease.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\office.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Vbe.Interop.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\stdole.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\office.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\csc.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Collections.Immutable.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Reflection.Metadata.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\vbc.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe.config
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll.config
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Excel.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Word.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Web.Infrastructure.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Owin.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Swashbuckle.Core.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\WebActivatorEx.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\WebGrease.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\office.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Vbe.Interop.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\stdole.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\bin\office.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-0910\TeachingResearchV2-0910\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\csc.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Collections.Immutable.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\System.Reflection.Metadata.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\vbc.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\roslyn\VBCSCompiler.exe.config
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll.config
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\TeachingResearchV2.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Excel.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Office.Interop.Word.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Web.Infrastructure.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Owin.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Swashbuckle.Core.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\WebActivatorEx.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\WebGrease.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\office.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.Vbe.Interop.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\stdole.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.IdentityModel.Tokens.Jwt.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Net.Http.Formatting.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Helpers.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Http.WebHost.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Mvc.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Optimization.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.Razor.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Deployment.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\System.Web.WebPages.Razor.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Antlr3.Runtime.pdb
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\EntityFramework.SqlServer.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Core.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\bin\office.xml
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csprojResolveAssemblyReference.cache
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.csproj.ResolveComReference.cache
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.dll
+E:\on going\高校招生数据管理\TeachingResearchV2-删减版\TeachingResearchV2\TeachingResearchV2\obj\Debug\TeachingResearchV2.pdb

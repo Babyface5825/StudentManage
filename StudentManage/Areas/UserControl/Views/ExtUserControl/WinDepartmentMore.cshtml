@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Absolute)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().ID((string)ViewData["WindowID"] + "_ID").Name("ID").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_ZYIDs").Name("ZYIDs").Text(""),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelGxdm").Name("GxID").Text("0"),
+            X.Label().X(5).Y(2).Text("所属高校:"),
+            X.Panel().ID((string)ViewData["WindowID"] + "_comboPanel").Header(false).Layout(LayoutType.Fit).Border(false).X(60).Y(2).Width(260)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbGxdm"),
+            X.Label().X(5).Y(27).Text("单位地址:"),
+            X.TextField().Name("DepartmentIADD").X(60).Y(27).Width(260),
+            X.Label().X(5).Y(52).Text("邮政编码:"),
+            X.TextField().Name("DepartmentIPostalCode").X(60).Y(52).Width(260),
+            X.Label().X(5).Y(77).Text("单位电话:"),
+            X.TextField().Name("DepartmentIPhone").X(60).Y(77).Width(260),
+            X.Label().X(5).Y(102).Text("单位传真:"),
+            X.TextField().Name("DepartmentIFax").X(60).Y(102).Width(260),
+            X.Label().X(5).Y(127).Text("电子邮箱:"),
+            X.TextField().Name("DepartmentIeMail").X(60).Y(127).Width(260),
+            X.Label().X(5).Y(152).Text("包含专业:"),
+            X.TextField().ID((string)ViewData["WindowID"] + "_ZYNames").Name("ZYNames").X(60).Y(152).Width(230).ReadOnly(true),
+            X.Button().X(295).Y(152).Width(25).Icon(Icon.Add)
+            .ID(ViewData["WinDepartmentMore_Panel"] + "_btnAdd")
+            .DirectEvents(de =>
+            {
+                de.Click.Url = Url.Action("WinDepartmentMore_OpenAddZYWindow", "WinDepartmentMore", new { Area = "UserControl" });
+                de.Click.ExtraParams.Add(new Parameter()
+                {
+                    Name = "PanelID",
+                    Value = (string)ViewData["WindowID"],
+                    Mode = ParameterMode.Value
+                });
+                de.Click.ExtraParams.Add(new Parameter()
+                {
+                    Name = "ID",
+                    Value = "App." + (string)ViewData["WindowID"] + "_ID" + ".getValue()",
+                    Mode = ParameterMode.Raw
+                });
+                de.Click.ExtraParams.Add(new Parameter()
+                {
+                    Name = "ZYIDs",
+                    Value = "App." + (string)ViewData["WindowID"] + "_ZYIDs" + ".getValue()",
+                    Mode = ParameterMode.Raw
+                });
+                de.Click.ExtraParams.Add(new Parameter()
+                {
+                    Name = "GxID",
+                    Value = "App." + (string)ViewData["WindowID"] + "_SelGxdm" + ".getValue()",
+                    Mode = ParameterMode.Raw
+                });
+                de.Click.EventMask.ShowMask = true;
+                de.Click.EventMask.Msg = "正在读取,请稍后...";
+            })
+        )
+   )
+}

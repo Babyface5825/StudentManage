@@ -1,0 +1,51 @@
+﻿@{
+    var X = Html.X();
+}
+
+@(
+ X.Window()
+        .ID((string)(ViewData["WinNeedConfirm_WindowID"]))
+        .Height(100)
+        .Width(250)
+        .Title("注意")
+        .BodyPadding(5)
+        .Modal(true)
+        .Resizable(false)
+        .Hidden(true)
+        .Items(
+            X.Panel()
+                .Layout(LayoutType.HBox)
+                .Border(false)
+                .Height(55)
+                .BodyStyle("background-color:transparent;")
+                .LayoutConfig(new HBoxLayoutConfig { Align = HBoxAlign.Top, Pack = BoxPack.Center })
+                .Items(
+                    X.Label().ID((string)(ViewData["WinNeedConfirm_WindowID"]) + "_labHint"),
+                    X.Hidden().ID((string)(ViewData["WinNeedConfirm_WindowID"]) + "_HiddenVariable").Text("")
+                )
+                .Buttons(
+                    X.Button()
+                        .Text("确定")
+                        .Icon(Icon.Tick)
+                        .DirectEvents(de =>
+                        {
+                            de.Click.Url = Url.Action("WinNeedConfirm_Sure", "WinNeedConfirm", new { Area = "UserControl" });
+                            de.Click.ExtraParams.Add(new Parameter("PanelID", "this.up('window').id", ParameterMode.Raw));
+                            de.Click.ExtraParams.Add(new Parameter("HideVariable", "this.up('window').query('hidden')[0].getValue()", ParameterMode.Raw));
+                        })
+                        .Handler("function(){this.up('window').hide();}"),
+                    X.Button()
+                        .Text("取消")
+                        .Icon(Icon.Cross)
+                        .DirectEvents(de =>
+                        {
+                            de.Click.Url = Url.Action("WinNeedConfirm_Cancel", "WinNeedConfirm", new { Area = "UserControl" });
+                            de.Click.ExtraParams.Add(new Parameter("PanelID", "this.up('window').id", ParameterMode.Raw));
+                            de.Click.ExtraParams.Add(new Parameter("HideVariable", "this.up('window').query('hidden')[0].getValue()", ParameterMode.Raw));
+                        }
+                        )
+                        .Handler("function(){this.up('window').hide();}")
+                )
+                .ButtonAlign(Alignment.Center)
+            )
+)

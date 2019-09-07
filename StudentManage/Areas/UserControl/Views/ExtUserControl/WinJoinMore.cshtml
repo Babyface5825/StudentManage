@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Absolute)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().ID((string)ViewData["WindowID"] + "_NowSelID").Name("ID").Text("0"),
+            X.Hidden().Name("AllJoinIDs"),
+            X.Label().X(2).Y(2).Text("合并后项目名称:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(92).Y(2).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbJoin"),
+            X.Label().X(15).Y(30).Text("所有合并项目:"),
+            X.TextArea().X(92).Y(30).Name("AllJoinNames").Width(200).ReadOnly(true)
+        )
+   )
+}

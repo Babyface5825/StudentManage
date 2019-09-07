@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ViewPortLayout3.cshtml";
+    var X = Html.X();
+}
+
+
+@section TreePanelField{
+    @(
+        X.Panel()
+            .Header(false)
+            .ID("RoleAuthorizationDataListContainer")
+            .Layout(LayoutType.Fit)
+            .BodyStyle("background-color:transparent;")
+            .Loader(Html.X().ComponentLoader()
+                .Url(Url.Action("AutoLoadDataListContainer"))
+                .Mode(LoadMode.Script)
+                .Params(new { containerId = "RoleAuthorizationDataListContainer" })
+                .LoadMask(lm => lm.ShowMask = true)
+            )
+    )
+}
+
+@section MainPanelField1{
+    @(
+            X.Panel()
+                .Header(false)
+                .Layout(LayoutType.Fit)
+                .Items(
+                    X.Panel()                        
+                        .Header(true)
+                        .Title("菜单权限设定")
+                        .Layout(LayoutType.Fit)
+                        .Width(450)
+                        .AnchorHorizontal("100%")
+                        .Split(true)
+                        .ID("RoleAuthorizationDataTreeGridContainer")
+                        .BodyStyle("background-color:transparent;")
+                        .Loader(Html.X().ComponentLoader()
+                            .Url(Url.Action("AutoLoadDataTreeGridContainer"))
+                            .Mode(LoadMode.Script)
+                            .Params(new { containerId = "RoleAuthorizationDataTreeGridContainer" })
+                            .LoadMask(lm => lm.ShowMask = true)
+                            )
+                )
+    )
+}
+
+
+@section MainPanelField2{
+    @(
+            X.Panel()
+                .Layout(LayoutType.Fit)
+                .Header(true)
+                .Title("栏目权限设定")
+                .ID("RoleAuthorizationDataTreeContainer")
+                .AutoScroll(true)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+    //.Loader(Html.X().ComponentLoader()
+    //    .Url(Url.Action("AutoLoadDataTreeContainer"))
+    //    .Mode(LoadMode.Script)
+    //    .Params(new { containerId = "RoleAuthorizationDataTreeContainer" })
+    //    .LoadMask(lm => lm.ShowMask = true)
+    //    )
+    )
+
+}
+
+
+@section Hidden{
+
+}

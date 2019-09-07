@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeachingResearchV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“TeachingResearchV2.dbo.ViewContestInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ViewContestInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Remark" />
+      <PropertyRef Name="CreatorID" />
+      <PropertyRef Name="TypeID" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatorID" Type="bigint" Nullable="false" />
+    <Property Name="TypeID" Type="bigint" Nullable="false" />
+    <Property Name="CreateDate" Type="date" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserICode" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="TeachingResearchV2ModelStoreContainer">
+    <EntitySet Name="ViewContestInfo" EntityType="Self.ViewContestInfo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewContestInfo].[ID] AS [ID], 
+    [ViewContestInfo].[Name] AS [Name], 
+    [ViewContestInfo].[Remark] AS [Remark], 
+    [ViewContestInfo].[CreatorID] AS [CreatorID], 
+    [ViewContestInfo].[TypeID] AS [TypeID], 
+    [ViewContestInfo].[CreateDate] AS [CreateDate], 
+    [ViewContestInfo].[DelFlag] AS [DelFlag], 
+    [ViewContestInfo].[TypeName] AS [TypeName], 
+    [ViewContestInfo].[UserICode] AS [UserICode], 
+    [ViewContestInfo].[UserName] AS [UserName]
+    FROM [dbo].[ViewContestInfo] AS [ViewContestInfo]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

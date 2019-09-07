@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Form)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().ID((string)ViewData["WindowID"] + "_ID").Name("ID").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_ParentIndex").Name("ParentIndex").Text("0"),
+            X.TextField().ID((string)ViewData["WindowID"] + "_ParentName").Name("ParentName").FieldLabel("上级").ReadOnly(true),
+            X.TextField().Name("Code").FieldLabel("代码").AllowBlank(false)
+                .DirectEvents(de =>
+                {
+                    de.Blur.Url = Url.Action("DqdmCodeChange", "WinDqdmSimpleMore", new { Area = "UserControl" });
+                    de.Blur.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "sChangeValue",
+                        Value = "this.getValue()",
+                        Mode = ParameterMode.Raw
+                    });
+                    de.Blur.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "sNowID",
+                        Value = "App." + (string)ViewData["WindowID"] + "_ID" + ".getValue()",
+                        Mode = ParameterMode.Raw
+                    });
+                    de.Blur.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "PanelID",
+                        Value = (string)ViewData["WindowID"],
+                        Mode = ParameterMode.Value
+                    });
+                }),
+            X.TextField().Name("Name").FieldLabel("名称").AllowBlank(false),
+            X.TextField().Name("JoinNames").FieldLabel("相似").ReadOnly(true).AllowBlank(false),
+            X.NumberField().ID((string)ViewData["WindowID"] + "_TheOrder").Name("TheOrder").FieldLabel("排序").AllowBlank(false),
+            X.TextArea().Name("Remark").FieldLabel("备注")
+        )
+   )
+}

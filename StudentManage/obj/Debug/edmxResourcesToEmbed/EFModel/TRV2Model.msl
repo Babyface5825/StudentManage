@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TeachingResearchV2ModelStoreContainer" CdmEntityContainer="TeachingResearchV2Entities1">
+    <EntitySetMapping Name="tblAfterMarkInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblAfterMarkInfo">
+        <MappingFragment StoreEntitySet="tblAfterMarkInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AfterMarkIGetNum" ColumnName="AfterMarkIGetNum" />
+          <ScalarProperty Name="AfterMarkIDate" ColumnName="AfterMarkIDate" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="ChapterID" ColumnName="ChapterID" />
+          <ScalarProperty Name="PeriodID" ColumnName="PeriodID" />
+          <ScalarProperty Name="SelStudentID" ColumnName="SelStudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAllocate">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblAllocate">
+        <MappingFragment StoreEntitySet="tblAllocate">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AllocaterID" ColumnName="AllocaterID" />
+          <ScalarProperty Name="ExpertID" ColumnName="ExpertID" />
+          <ScalarProperty Name="GroupWorkID" ColumnName="GroupWorkID" />
+          <ScalarProperty Name="AllocateStart" ColumnName="AllocateStart" />
+          <ScalarProperty Name="AllocateEnd" ColumnName="AllocateEnd" />
+          <ScalarProperty Name="SubmitFlag" ColumnName="SubmitFlag" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAuthorizationInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblAuthorizationInfo">
+        <MappingFragment StoreEntitySet="tblAuthorizationInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChannelAuthorRelation">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblChannelAuthorRelation">
+        <MappingFragment StoreEntitySet="tblChannelAuthorRelation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="ChannelID" ColumnName="ChannelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChannelContent">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblChannelContent">
+        <MappingFragment StoreEntitySet="tblChannelContent">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ChannelCName" ColumnName="ChannelCName" />
+          <ScalarProperty Name="ChannelCText" ColumnName="ChannelCText" />
+          <ScalarProperty Name="ChannelCTime" ColumnName="ChannelCTime" />
+          <ScalarProperty Name="ChannelCComeFrom" ColumnName="ChannelCComeFrom" />
+          <ScalarProperty Name="ChannelCAudio" ColumnName="ChannelCAudio" />
+          <ScalarProperty Name="ChannelCVedio" ColumnName="ChannelCVedio" />
+          <ScalarProperty Name="ChannelCTemplete" ColumnName="ChannelCTemplete" />
+          <ScalarProperty Name="ChannelCPop" ColumnName="ChannelCPop" />
+          <ScalarProperty Name="ChannelCTop" ColumnName="ChannelCTop" />
+          <ScalarProperty Name="ChannelCVerify" ColumnName="ChannelCVerify" />
+          <ScalarProperty Name="ChannelCDefaultFont" ColumnName="ChannelCDefaultFont" />
+          <ScalarProperty Name="ChannelTypeID" ColumnName="ChannelTypeID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="HitTime" ColumnName="HitTime" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChannelContentDoc">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblChannelContentDoc">
+        <MappingFragment StoreEntitySet="tblChannelContentDoc">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RelationID" ColumnName="RelationID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChannelContentPic">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblChannelContentPic">
+        <MappingFragment StoreEntitySet="tblChannelContentPic">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RelationID" ColumnName="RelationID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblChannelType">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblChannelType">
+        <MappingFragment StoreEntitySet="tblChannelType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentIndex" ColumnName="ParentIndex" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+          <ScalarProperty Name="TheLevel" ColumnName="TheLevel" />
+          <ScalarProperty Name="ChildNum" ColumnName="ChildNum" />
+          <ScalarProperty Name="IsLeaf" ColumnName="IsLeaf" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCommunicateInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblCommunicateInfo">
+        <MappingFragment StoreEntitySet="tblCommunicateInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CommunicateIPageNum" ColumnName="CommunicateIPageNum" />
+          <ScalarProperty Name="FoundDate" ColumnName="FoundDate" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="ChapterID" ColumnName="ChapterID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="SelStudentID" ColumnName="SelStudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContestFlowDetail">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblContestFlowDetail">
+        <MappingFragment StoreEntitySet="tblContestFlowDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FlowTypeID" ColumnName="FlowTypeID" />
+          <ScalarProperty Name="ContestInfoID" ColumnName="ContestInfoID" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Weights" ColumnName="Weights" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContestFlowType">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblContestFlowType">
+        <MappingFragment StoreEntitySet="tblContestFlowType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContestInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblContestInfo">
+        <MappingFragment StoreEntitySet="tblContestInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContestType">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblContestType">
+        <MappingFragment StoreEntitySet="tblContestType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="RelationID" ColumnName="RelationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCourseFileInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblCourseFileInfo">
+        <MappingFragment StoreEntitySet="tblCourseFileInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OpenFlag" ColumnName="OpenFlag" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="RelationID" ColumnName="RelationID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCourseInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblCourseInfo">
+        <MappingFragment StoreEntitySet="tblCourseInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentIndex" ColumnName="ParentIndex" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+          <ScalarProperty Name="TheLevel" ColumnName="TheLevel" />
+          <ScalarProperty Name="ChildNum" ColumnName="ChildNum" />
+          <ScalarProperty Name="IsLeaf" ColumnName="IsLeaf" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCoursePeriodRelation">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblCoursePeriodRelation">
+        <MappingFragment StoreEntitySet="tblCoursePeriodRelation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PeriodID" ColumnName="PeriodID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDepartmentInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblDepartmentInfo">
+        <MappingFragment StoreEntitySet="tblDepartmentInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepartmentIADD" ColumnName="DepartmentIADD" />
+          <ScalarProperty Name="DepartmentIPostalCode" ColumnName="DepartmentIPostalCode" />
+          <ScalarProperty Name="DepartmentIPhone" ColumnName="DepartmentIPhone" />
+          <ScalarProperty Name="DepartmentIFax" ColumnName="DepartmentIFax" />
+          <ScalarProperty Name="DepartmentIeMail" ColumnName="DepartmentIeMail" />
+          <ScalarProperty Name="ParentIndex" ColumnName="ParentIndex" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+          <ScalarProperty Name="TheLevel" ColumnName="TheLevel" />
+          <ScalarProperty Name="ChildNum" ColumnName="ChildNum" />
+          <ScalarProperty Name="IsLeaf" ColumnName="IsLeaf" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDutyInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblDutyInfo">
+        <MappingFragment StoreEntitySet="tblDutyInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGroupWorkInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblGroupWorkInfo">
+        <MappingFragment StoreEntitySet="tblGroupWorkInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RegisterGroupID" ColumnName="RegisterGroupID" />
+          <ScalarProperty Name="ContestFlowDetailId" ColumnName="ContestFlowDetailId" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="SubScore" ColumnName="SubScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblGuestBook">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblGuestBook">
+        <MappingFragment StoreEntitySet="tblGuestBook">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GuestBName" ColumnName="GuestBName" />
+          <ScalarProperty Name="GuestBHead" ColumnName="GuestBHead" />
+          <ScalarProperty Name="GuestBText" ColumnName="GuestBText" />
+          <ScalarProperty Name="GuestBAnswerFlag" ColumnName="GuestBAnswerFlag" />
+          <ScalarProperty Name="GuestBAnswer" ColumnName="GuestBAnswer" />
+          <ScalarProperty Name="GuestBTime" ColumnName="GuestBTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMainInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblMainInfo">
+        <MappingFragment StoreEntitySet="tblMainInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MainIName" ColumnName="MainIName" />
+          <ScalarProperty Name="MainIURL" ColumnName="MainIURL" />
+          <ScalarProperty Name="MainIEmail" ColumnName="MainIEmail" />
+          <ScalarProperty Name="MainIEmailPass" ColumnName="MainIEmailPass" />
+          <ScalarProperty Name="MainIEmailEmailSmtp" ColumnName="MainIEmailEmailSmtp" />
+          <ScalarProperty Name="MainIKeyWords" ColumnName="MainIKeyWords" />
+          <ScalarProperty Name="MainIFootMark" ColumnName="MainIFootMark" />
+          <ScalarProperty Name="MainIVisitedNum" ColumnName="MainIVisitedNum" />
+          <ScalarProperty Name="MainIVisitedVisiable" ColumnName="MainIVisitedVisiable" />
+          <ScalarProperty Name="MainIInformation" ColumnName="MainIInformation" />
+          <ScalarProperty Name="MainIAboutUS" ColumnName="MainIAboutUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMarkInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblMarkInfo">
+        <MappingFragment StoreEntitySet="tblMarkInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MarkIGetNum" ColumnName="MarkIGetNum" />
+          <ScalarProperty Name="MarkIDate" ColumnName="MarkIDate" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="TestQuestionID" ColumnName="TestQuestionID" />
+          <ScalarProperty Name="PeriodID" ColumnName="PeriodID" />
+          <ScalarProperty Name="SelStudentID" ColumnName="SelStudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOperationAuthorRelation">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblOperationAuthorRelation">
+        <MappingFragment StoreEntitySet="tblOperationAuthorRelation">
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="OperationID" ColumnName="OperationID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SearchFlag" ColumnName="SearchFlag" />
+          <ScalarProperty Name="AddFlag" ColumnName="AddFlag" />
+          <ScalarProperty Name="EditFlag" ColumnName="EditFlag" />
+          <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOperationInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblOperationInfo">
+        <MappingFragment StoreEntitySet="tblOperationInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ParentIndex" ColumnName="ParentIndex" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+          <ScalarProperty Name="TheLevel" ColumnName="TheLevel" />
+          <ScalarProperty Name="ChildNum" ColumnName="ChildNum" />
+          <ScalarProperty Name="IsLeaf" ColumnName="IsLeaf" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPaticalScore">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblPaticalScore">
+        <MappingFragment StoreEntitySet="tblPaticalScore">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AllocateID" ColumnName="AllocateID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPeriodInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblPeriodInfo">
+        <MappingFragment StoreEntitySet="tblPeriodInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRegisterGroup">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblRegisterGroup">
+        <MappingFragment StoreEntitySet="tblRegisterGroup">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ContestInfoID" ColumnName="ContestInfoID" />
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="WorkName" ColumnName="WorkName" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="GroupResult" ColumnName="GroupResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRegisterUser">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblRegisterUser">
+        <MappingFragment StoreEntitySet="tblRegisterUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RegisterGroupID" ColumnName="RegisterGroupID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblScoreTypeInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblScoreTypeInfo">
+        <MappingFragment StoreEntitySet="tblScoreTypeInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ContestFlowDetailId" ColumnName="ContestFlowDetailId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ScorePercent" ColumnName="ScorePercent" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="TheOrder" ColumnName="TheOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStudentCourseTestFile">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblStudentCourseTestFile">
+        <MappingFragment StoreEntitySet="tblStudentCourseTestFile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StudentSelCourseID" ColumnName="StudentSelCourseID" />
+          <ScalarProperty Name="ChapterID" ColumnName="ChapterID" />
+          <ScalarProperty Name="StudentCTFDate" ColumnName="StudentCTFDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LastScore" ColumnName="LastScore" />
+          <ScalarProperty Name="ReadResult" ColumnName="ReadResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStudentDutyInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblStudentDutyInfo">
+        <MappingFragment StoreEntitySet="tblStudentDutyInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StudentDutyIDate" ColumnName="StudentDutyIDate" />
+          <ScalarProperty Name="StudentDutyStatus" ColumnName="StudentDutyStatus" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="CoursePeriodID" ColumnName="CoursePeriodID" />
+          <ScalarProperty Name="SelStudentID" ColumnName="SelStudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStudentSelCourseRelation">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblStudentSelCourseRelation">
+        <MappingFragment StoreEntitySet="tblStudentSelCourseRelation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="CoursePeriodID" ColumnName="CoursePeriodID" />
+          <ScalarProperty Name="LastScore" ColumnName="LastScore" />
+          <ScalarProperty Name="DutyScore" ColumnName="DutyScore" />
+          <ScalarProperty Name="MarkScore" ColumnName="MarkScore" />
+          <ScalarProperty Name="AfterMarkScore" ColumnName="AfterMarkScore" />
+          <ScalarProperty Name="CommunicationScore" ColumnName="CommunicationScore" />
+          <ScalarProperty Name="TestReportScore" ColumnName="TestReportScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTeacherCourseRelation">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblTeacherCourseRelation">
+        <MappingFragment StoreEntitySet="tblTeacherCourseRelation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TeacherID" ColumnName="TeacherID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTestQuestion">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblTestQuestion">
+        <MappingFragment StoreEntitySet="tblTestQuestion">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Question" ColumnName="Question" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Degree" ColumnName="Degree" />
+          <ScalarProperty Name="ChapterID" ColumnName="ChapterID" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserAuthorRelation">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblUserAuthorRelation">
+        <MappingFragment StoreEntitySet="tblUserAuthorRelation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.tblUserInfo">
+        <MappingFragment StoreEntitySet="tblUserInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserICode" ColumnName="UserICode" />
+          <ScalarProperty Name="UserIPsd" ColumnName="UserIPsd" />
+          <ScalarProperty Name="UserIRegisterDate" ColumnName="UserIRegisterDate" />
+          <ScalarProperty Name="UserISex" ColumnName="UserISex" />
+          <ScalarProperty Name="UserIIDCard" ColumnName="UserIIDCard" />
+          <ScalarProperty Name="UserIBirth" ColumnName="UserIBirth" />
+          <ScalarProperty Name="UserIAddress" ColumnName="UserIAddress" />
+          <ScalarProperty Name="UserIPostalCode" ColumnName="UserIPostalCode" />
+          <ScalarProperty Name="UserIStudentNumber" ColumnName="UserIStudentNumber" />
+          <ScalarProperty Name="UserIMobilePhone" ColumnName="UserIMobilePhone" />
+          <ScalarProperty Name="UserIeMail" ColumnName="UserIeMail" />
+          <ScalarProperty Name="UserIDutyIID" ColumnName="UserIDutyIID" />
+          <ScalarProperty Name="UserIDepartmentIID" ColumnName="UserIDepartmentIID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ViewContestInfo">
+      <EntityTypeMapping TypeName="TeachingResearchV2Model.ViewContestInfo">
+        <MappingFragment StoreEntitySet="ViewContestInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreatorID" ColumnName="CreatorID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="UserICode" ColumnName="UserICode" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

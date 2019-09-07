@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ViewPortLayout4.cshtml";
+    var X = Html.X();
+}
+
+@section MainPanelField
+{
+@(X.Panel()
+        .Layout(LayoutType.Border)
+        .Items(
+             X.FormPanel()                
+                .ID("SimpleDlg_SearchForm")
+                .Height(35)
+                .Region(Region.North)
+                .Layout(LayoutType.Absolute)
+                .Header(false)
+                .Collapsible(true)
+                .Margin(1)
+                .Items(
+                    X.Label().X(5).Y(5).Text("代码:"),
+                    X.TextField().X(35).Y(5).Name("Code").Width(100),
+                    X.Label().X(140).Y(5).Text("名称:"),
+                    X.TextField().X(170).Y(5).Name("Name").Width(100)
+                ),
+            X.Panel()
+                .Region(Region.Center)
+                .Layout(LayoutType.Fit)
+                .Margin(1)
+                .ItemsFromPage(this, "~\\Areas\\UserControl\\Views\\ExtUserControl\\DataList.cshtml",
+                    ViewData["DataList_PanelID"],
+                    ViewData["DataList_ParentVariable"])
+            )
+    )
+}
+
+@section Hidden{
+
+}

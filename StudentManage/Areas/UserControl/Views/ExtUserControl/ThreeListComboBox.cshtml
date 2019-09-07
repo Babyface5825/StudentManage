@@ -1,0 +1,301 @@
+﻿@{
+    var X = Html.X();
+}
+@(X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable").Text(""))
+@(X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_NowNames").Text(""))
+@(X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_NowValues").Text(""))
+@(X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_NowSigns").Text(""))
+
+@(
+    X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_GetSelID").Value("")
+    .DirectEvents(de =>
+    {
+        de.Change.Url = Url.Action("ChangeGetSelID", "ThreeListComboBox", new { Area = "UserControl" });
+        de.Change.ExtraParams.Add(new Parameter()
+        {
+            Name = "PanelID",
+            Value = ((string)ViewData["ThreeListComboBox_ID"]),
+            Mode = ParameterMode.Value
+        });
+        de.Change.ExtraParams.Add(new Parameter()
+        {
+            Name = "sSelID",
+            Value = "this.getValue()",
+            Mode = ParameterMode.Raw
+        });
+        de.Change.ExtraParams.Add(new Parameter()
+        {
+            Name = "ParentVariable",
+            Value = "App." + (string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable" + ".getValue()",
+            Mode = ParameterMode.Raw
+        });
+    })
+)
+@(
+    X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_SetSelID").Value("")
+    .DirectEvents(de =>
+    {
+        de.Change.Url = Url.Action("ChangeSetSelID", "ThreeListComboBox", new { Area = "UserControl" });
+        de.Change.ExtraParams.Add(new Parameter()
+        {
+            Name = "PanelID",
+            Value = ((string)ViewData["ThreeListComboBox_ID"]),
+            Mode = ParameterMode.Value
+        });
+        de.Change.ExtraParams.Add(new Parameter()
+        {
+            Name = "sSelID",
+            Value = "this.getValue()",
+            Mode = ParameterMode.Raw
+        });
+        de.Change.ExtraParams.Add(new Parameter()
+        {
+            Name = "ParentVariable",
+            Value = "App." + (string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable" + ".getValue()",
+            Mode = ParameterMode.Raw
+        });
+    })
+)
+@(X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_Disabled").Text("0")
+    .DirectEvents(de =>
+    {
+        de.Change.Url = Url.Action("ChangeThreeListDisabled", "ThreeListComboBox", new { Area = "UserControl" });
+        de.Change.ExtraParams.Add(new Parameter()
+        {
+            Name = "PanelID",
+            Value = ((string)ViewData["ThreeListComboBox_ID"]),
+            Mode = ParameterMode.Value
+        });
+        de.Change.ExtraParams.Add(new Parameter()
+        {
+            Name = "disable",
+            Value = "this.getValue()",
+            Mode = ParameterMode.Raw
+        });
+    })
+)
+
+@(
+ X.Panel()
+        .ID((string)ViewData["ThreeListComboBox_ID"])
+        .Border(false)
+        .Header(false)
+        .Layout(LayoutType.Absolute)
+        .BodyStyle("background-color:transparent;")
+        .AnchorHorizontal("100%")
+        .Items(
+            X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_SelID1").Value(""),
+            X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_SelID2").Value(""),
+            X.Hidden().ID((string)ViewData["ThreeListComboBox_ID"] + "_SelID3").Value(""),
+            X.ComboBox()
+                .ID((string)ViewData["ThreeListComboBox_ID"] + "_cmbThreeCombo1")
+                .AnchorHorizontal("100%")
+                .DisplayField("name")
+                .ValueField("id")
+                .X(0).Y(0)
+                .Editable(false)
+                .QueryMode(DataLoadMode.Local)
+                .AutoDataBind(false)
+                .EmptyText("全部")                
+                .Store(X.Store()
+                    .AutoLoad(false)
+                    .Model(X.Model()
+                        .IDProperty("ID")
+                        .Fields(
+                            new ModelField("id", ModelFieldType.String) { Mapping = "ID" },
+                            new ModelField("name", ModelFieldType.String) { Mapping = "Name" }
+                        )
+                    )
+                    .Proxy(
+                        X.AjaxProxy()
+                            .Url(Url.Action("InitThreeComboBox1", "ThreeListComboBox", new { Area = "UserControl" }))
+                            .Reader(X.JsonReader().RootProperty("data"))
+                            .ExtraParams(pa => pa.Add(new Parameter("PanelID", (string)ViewData["ThreeListComboBox_ID"], ParameterMode.Value)))
+                            )
+                    .Parameters(ps =>
+                    {
+                        ps.Add(new StoreParameter("sParentID", "-1", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("ParentVariable", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowNames", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowValues", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowSigns", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+                    }
+                    )
+                    .DirectEvents(de =>
+                    {
+                        de.Load.Url = Url.Action("SetThreeListCombo1", "ThreeListComboBox", new { Area = "UserControl" });
+                        de.Load.ExtraParams.Add(new Parameter("PanelID", ((string)ViewData["ThreeListComboBox_ID"]), ParameterMode.Value));
+                        de.Load.ExtraParams.Add(new Parameter("sNowID", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_SelID1" + ".getValue()", ParameterMode.Raw));
+                        //de.Load.EventMask.ShowMask = true;
+                        //de.Load.EventMask.Msg = "正在加载,请稍后...";
+                    })
+                )
+                .DirectEvents(de =>
+                {                    
+                    de.Select.Url = Url.Action("SelectThreeComboBox1", "ThreeListComboBox", new { Area = "UserControl" });
+                    de.Select.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "PanelID",
+                        Value = (string)ViewData["ThreeListComboBox_ID"],
+                        Mode = ParameterMode.Value
+                    });
+                    de.Select.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "sSelID",
+                        Value = "this.getValue()",
+                        Mode = ParameterMode.Raw
+                    });
+                    de.Select.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "ParentVariable",
+                        Value = "App." + (string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable" + ".getValue()",
+                        Mode = ParameterMode.Raw
+                    });
+
+                }),
+            X.ComboBox()
+                .ID((string)ViewData["ThreeListComboBox_ID"] + "_cmbThreeCombo2")
+                .AnchorHorizontal("100%")
+                .DisplayField("name")
+                .ValueField("id")
+                .X(0).Y(25)
+                .Editable(false)
+                .QueryMode(DataLoadMode.Local)
+                .AutoDataBind(false)
+                .EmptyText("全部")
+                .Store(X.Store()
+                    .AutoLoad(false)
+                    .Model(X.Model()
+                        .IDProperty("ID")
+                        .Fields(
+                            new ModelField("id", ModelFieldType.String) { Mapping = "ID" },
+                            new ModelField("name", ModelFieldType.String) { Mapping = "Name" }
+                        )
+                    )
+                    .Proxy(X.AjaxProxy()
+                        .Url(Url.Action("InitThreeComboBox2", "ThreeListComboBox", new { Area = "UserControl" }))
+                        .Reader(X.JsonReader().RootProperty("data"))
+                            .ExtraParams(pa => pa.Add(new Parameter("PanelID", (string)ViewData["ThreeListComboBox_ID"], ParameterMode.Value)))
+                        )
+                    .Parameters(ps =>
+                    {
+                        ps.Add(new StoreParameter("sParentID", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_SelID1" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("ParentVariable", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowNames", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowValues", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowSigns", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+                    }
+                    )
+                    .DirectEvents(de =>
+                    {
+                        de.Load.Url = Url.Action("SetThreeListCombo2", "ThreeListComboBox", new { Area = "UserControl" });
+                        de.Load.ExtraParams.Add(new Parameter("PanelID", ((string)ViewData["ThreeListComboBox_ID"]), ParameterMode.Value));
+                        de.Load.ExtraParams.Add(new Parameter("sNowID", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_SelID2" + ".getValue()", ParameterMode.Raw));
+                        //de.Load.EventMask.ShowMask = true;
+                        //de.Load.EventMask.Msg = "正在加载,请稍后...";
+                    })
+                 )
+                .DirectEvents(de =>
+                {
+                    de.Select.Url = Url.Action("SelectThreeComboBox2", "ThreeListComboBox", new { Area = "UserControl" });
+                    de.Select.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "PanelID",
+                        Value = (string)ViewData["ThreeListComboBox_ID"],
+                        Mode = ParameterMode.Value
+                    });
+                    de.Select.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "sParentID",
+                        Value = "App." + (string)ViewData["ThreeListComboBox_ID"] + "_SelID1" + ".getValue()",
+                        Mode = ParameterMode.Raw
+                    });
+                    de.Select.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "sSelID",
+                        Value = "this.getValue()",
+                        Mode = ParameterMode.Raw
+                    });
+                    de.Select.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "ParentVariable",
+                        Value = "App." + (string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable" + ".getValue()",
+                        Mode = ParameterMode.Raw
+                    });
+                }),
+            X.ComboBox()
+                .ID((string)ViewData["ThreeListComboBox_ID"] + "_cmbThreeCombo3")
+                .AnchorHorizontal("100%")
+                .DisplayField("name")
+                .ValueField("id")
+                .Editable(false)
+                .X(0).Y(50)
+                .QueryMode(DataLoadMode.Local)
+                .AutoDataBind(false)
+                .EmptyText("全部")
+                .Store(X.Store()
+                    .AutoLoad(false)
+                    .Model(X.Model()
+                        .IDProperty("ID")
+                        .Fields(
+                            new ModelField("id", ModelFieldType.String) { Mapping = "ID" },
+                            new ModelField("name", ModelFieldType.String) { Mapping = "Name" }
+                        )
+                    )
+                    .Proxy(X.AjaxProxy()
+                        .Url(Url.Action("InitThreeComboBox3", "ThreeListComboBox", new { Area = "UserControl" }))
+                        .Reader(X.JsonReader().RootProperty("data"))
+                            .ExtraParams(pa => pa.Add(new Parameter("PanelID", (string)ViewData["ThreeListComboBox_ID"], ParameterMode.Value)))
+                       )
+                    .Parameters(ps =>
+                    {
+                        ps.Add(new StoreParameter("sParentID", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_SelID2" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("ParentVariable", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowNames", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowValues", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+                        ps.Add(new StoreParameter("sNowSigns", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+                    }
+                )
+                .DirectEvents(de =>
+                {
+                    de.Load.Url = Url.Action("SetThreeListCombo3", "ThreeListComboBox", new { Area = "UserControl" });
+                    de.Load.ExtraParams.Add(new Parameter("PanelID", ((string)ViewData["ThreeListComboBox_ID"]), ParameterMode.Value));
+                    de.Load.ExtraParams.Add(new Parameter("sNowID", "App." + (string)ViewData["ThreeListComboBox_ID"] + "_SelID3" + ".getValue()", ParameterMode.Raw));
+                    //de.Load.EventMask.ShowMask = true;
+                    //de.Load.EventMask.Msg = "正在加载,请稍后...";
+                })
+            )
+            .DirectEvents(de =>
+            {
+                de.Select.Url = Url.Action("SelectThreeComboBox3", "ThreeListComboBox", new { Area = "UserControl" });
+                de.Select.ExtraParams.Add(new Parameter()
+                {
+                    Name = "PanelID",
+                    Value = (string)ViewData["ThreeListComboBox_ID"],
+                    Mode = ParameterMode.Value
+                });
+                de.Select.ExtraParams.Add(new Parameter()
+                {
+                    Name = "sParentID",
+                    Value = "App." + (string)ViewData["ThreeListComboBox_ID"] + "_SelID2" + ".getValue()",
+                    Mode = ParameterMode.Raw
+                });
+
+                de.Select.ExtraParams.Add(new Parameter()
+                {
+                    Name = "sSelID",
+                    Value = "this.getValue()",
+                    Mode = ParameterMode.Raw
+                });
+                de.Select.ExtraParams.Add(new Parameter()
+                {
+                    Name = "ParentVariable",
+                    Value = "App." + (string)ViewData["ThreeListComboBox_ID"] + "_ParentVariable" + ".getValue()",
+                    Mode = ParameterMode.Raw
+                });
+
+            })
+        )
+
+)
+

@@ -1,0 +1,87 @@
+﻿@{
+    var X = Html.X();
+}
+
+@(
+    X.TreePanel()
+    .ID((string)ViewData["DataTreeGrid_PanelID"]).AutoScroll(true).UseArrows(false).Animate(false).RootVisible(false).Border(false).Header(false)
+    .TopBar(
+        X.Toolbar()
+            .Items(
+                X.Hidden().ID(ViewData["DataTreeGrid_PanelID"] + "_HiddenAuthorizationID").Value("0"),
+                X.Hidden().ID(ViewData["DataTreeGrid_PanelID"] + "_RelationID").Text((string)(ViewData["DataTreeGrid_RelationID"]))
+            )
+    )
+    .ColumnModel(
+        X.TreeColumn().Text("ID").Width(0).DataIndex("sID"),
+        X.CheckColumn().Text("Leaf").Width(0).DataIndex("IsLeaf"),
+        X.TreeColumn().Text("权限项名称").Width(200).DataIndex("sName"),
+        X.CheckColumn().Text("新增").DataIndex("bAdd").Width(40).Editable(true)
+            .DirectEvents(de =>
+            {
+                de.CheckChange.Url = Url.Action("TreeGridNodeAddClick", "DataTreeGrid", new { Area = "UserControl" });
+                de.CheckChange.ExtraParams.Add(new Parameter("PanelID", "this.up('treepanel').id", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("node", "record.data", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("authorizationId", "App." + (string)ViewData["DataTreeGrid_PanelID"] + "_RelationID" + ".getValue()", ParameterMode.Raw));
+                de.CheckChange.EventMask.ShowMask = true;
+            }),
+        X.CheckColumn().Text("修改").DataIndex("bEdit").Width(40).Editable(true)
+            .DirectEvents(de =>
+            {
+                de.CheckChange.Url = Url.Action("TreeGridNodeEditClick", "DataTreeGrid", new { Area = "UserControl" });
+                de.CheckChange.ExtraParams.Add(new Parameter("PanelID", "this.up('treepanel').id", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("node", "record.data", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("authorizationId", "App." + (string)ViewData["DataTreeGrid_PanelID"] + "_RelationID" + ".getValue()", ParameterMode.Raw));
+                de.CheckChange.EventMask.ShowMask = true;
+            }),
+        X.CheckColumn().Text("删除").DataIndex("bDelete").Width(40).Editable(true)
+            .DirectEvents(de =>
+            {
+                de.CheckChange.Url = Url.Action("TreeGridNodeDeleteClick", "DataTreeGrid", new { Area = "UserControl" });
+                de.CheckChange.ExtraParams.Add(new Parameter("PanelID", "this.up('treepanel').id", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("node", "record.data", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("authorizationId", "App." + (string)ViewData["DataTreeGrid_PanelID"] + "_RelationID" + ".getValue()", ParameterMode.Raw));
+                de.CheckChange.EventMask.ShowMask = true;
+            }),
+        X.CheckColumn()
+            .Text("查询").DataIndex("bSearch").Width(40).Editable(true)
+            .DirectEvents(de =>
+            {
+                de.CheckChange.Url = Url.Action("TreeGridNodeSearchClick", "DataTreeGrid", new { Area = "UserControl" });
+                de.CheckChange.ExtraParams.Add(new Parameter("PanelID", "this.up('treepanel').id", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("node", "record.data", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("authorizationId", "App." + (string)ViewData["DataTreeGrid_PanelID"] + "_RelationID" + ".getValue()", ParameterMode.Raw));
+                de.CheckChange.EventMask.ShowMask = true;
+            }),
+        X.CheckColumn().Text("全部").DataIndex("bAll").Width(40).Editable(true)
+            .DirectEvents(de =>
+            {
+                de.CheckChange.Url = Url.Action("TreeGridNodeAllClick", "DataTreeGrid", new { Area = "UserControl" });
+                de.CheckChange.ExtraParams.Add(new Parameter("PanelID", "this.up('treepanel').id", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("node", "record.data", ParameterMode.Raw));
+                de.CheckChange.ExtraParams.Add(new Parameter("authorizationId", "App." + (string)ViewData["DataTreeGrid_PanelID"] + "_RelationID" + ".getValue()", ParameterMode.Raw));
+                de.CheckChange.EventMask.ShowMask = true;
+            })
+    )
+    //.Root(X.Node().NodeID("0").Text("Root"))
+    .Root(X.Node().NodeID("Root"))
+    .Store(
+        X.TreeStore()
+            .AutoLoad(false)
+            .ID(ViewData["DataTreeGrid_PanelID"] + "_Store")
+            .Model(X.Model().Fields("sID", "IsLeaf", "sName", "bAdd", "bEdit", "bDelete", "bSearch", "bAll"))
+            .Proxy(X.AjaxProxy().Url(Url.Action("InitTreeGridNodes", "DataTreeGrid", new { Area = "UserControl" })))
+            .Parameters(ps =>
+            {
+                ps.Add(new StoreParameter("ParentVariable", (string)(ViewData["DataTreeGrid_ParentVariable"]), ParameterMode.Value));
+                ps.Add(new StoreParameter("sRelationIDs", "App." + (string)ViewData["DataTreeGrid_PanelID"] + "_RelationID" + ".getValue()", ParameterMode.Raw));
+            })
+    )
+    .SubmitUrl(Url.Action("TreeGridPanelCommit", "DataTreeGrid", new { area = "UserControl", ParentVariable = (string)ViewData["DataTreeGrid_ParentVariable"], PanelID = (string)ViewData["DataTreeGrid_PanelID"] })
+    )
+    .DirectEvents(de =>
+    {
+        de.AfterLayout.Url = Url.Action("ExpandTreeGridPanel", "DataTreeGrid", new { Area = "UserControl" });
+        de.AfterLayout.ExtraParams.Add(new Parameter("PanelID", "this.id", ParameterMode.Raw));
+    })
+)

@@ -1,0 +1,77 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ViewPortLayout5.cshtml";
+    var X = Html.X();
+}
+
+@section Hidden{
+
+}
+
+
+
+@section SearchPanel {
+@(    
+    X.FormPanel()
+        .Layout(LayoutType.Absolute)
+        .ID("JHKSearch_SearchForm")
+        .Header(false)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().ID("JHKSearch_SearchPcdm").Name("SearchPcdm").Text("0"),
+            X.Hidden().ID("JHKSearch_SearchKldm").Name("SearchKldm").Text("0"),
+            X.Hidden().ID("JHKSearch_SearchJhxzdm").Name("SearchJhxzdm").Text("0"),
+            X.Hidden().ID("JHKSearch_SearchJhlbdm").Name("SearchJhlbdm").Text("0"),
+            X.Hidden().ID("JHKSearch_ProvinceID").Name("ProvinceID").Text("0"),
+            X.Hidden().ID("JHKSearch_SearchXzdm").Name("SearchXzdm").Text("0"),
+            X.Label().X(5).Y(5).Text("专业代码:"),
+            X.TextField().X(60).Y(5).Name("SearchZydm").Width(100),
+            X.Label().X(5).Y(30).Text("专业代号:"),
+            X.TextField().X(60).Y(30).Name("SearchZydh").Width(100),
+            X.Label().X(5).Y(55).Text("专业名称:"),
+            X.TextField().X(60).Y(55).Name("SearchZymc").Width(100),
+            X.Label().X(165).Y(5).Text("批次:"),
+            X.Panel().Header(false).X(195).Y(5).Width(100)
+                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                ViewData["DataComboBox_ID"] = "JHKSearch_cmbPcdm"),
+            X.Label().X(165).Y(30).Text("科类:"),
+            X.Panel().Header(false).X(195).Y(30).Width(100)
+                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                ViewData["DataComboBox_ID"] = "JHKSearch_cmbKldm"),
+            X.Label().X(165).Y(55).Text("省份:"),
+            X.Panel().Header(false).X(195).Y(55).Width(100)
+                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                ViewData["DataComboBox_ID"] = "JHKSearch_cmbDqdm"),
+            X.Label().X(300).Y(5).Text("计划性质:"),
+            X.Panel().Header(false).X(355).Y(5).Width(100)
+                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                ViewData["DataComboBox_ID"] = "JHKSearch_cmbJhxzdm"),
+            X.Label().X(300).Y(30).Text("计划类别:"),
+            X.Panel().Header(false).X(355).Y(30).Width(100)
+                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                ViewData["DataComboBox_ID"] = "JHKSearch_cmbJhlbdm"),
+            X.Label().X(300).Y(55).Text("学制年限:"),
+            X.Panel().Header(false).X(355).Y(55).Width(100)
+                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                ViewData["DataComboBox_ID"] = "JHKSearch_cmbXzdm"),
+            X.Label().X(460).Y(5).Text("操作年份 从:"),
+            X.NumberField().X(530).Y(5).Name("SearchStartYear").Width(70),
+            X.Label().X(605).Y(5).Text("到:"),
+            X.NumberField().X(625).Y(5).Name("SearchEndYear").Width(70),
+            X.Label().X(460).Y(30).Text("计划人数 从:"),
+            X.NumberField().X(530).Y(30).Name("SearchStartJhrs").Width(70),
+            X.Label().X(605).Y(30).Text("到:"),
+            X.NumberField().X(625).Y(30).Name("SearchEndJhrs").Width(70),
+            X.Label().X(460).Y(55).Text("执行人数 从:"),
+            X.NumberField().X(530).Y(55).Name("SearchStartJhzxs").Width(70),
+            X.Label().X(605).Y(55).Text("到:"),
+            X.NumberField().X(625).Y(55).Name("SearchEndJhzxs").Width(70)
+        )
+    )
+}

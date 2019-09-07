@@ -1,0 +1,12 @@
+﻿
+@(Html.X().Panel()
+            .Header(false)
+            .ID("AccordionMenuPanel")
+            .Border(true)
+            .Layout(LayoutType.Fit)
+            .Loader(Html.X().ComponentLoader()
+                .Url(Url.Action("InitAccordionMenu"))
+                .Mode(LoadMode.Component)
+                .LoadMask(lm => lm.ShowMask = true)
+                )
+)

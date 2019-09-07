@@ -1,0 +1,13 @@
+﻿
+@(Html.X().Panel()
+            .Header(false)
+            .ID("ImageMenuPanel")
+            .Border(true)
+            .Width(110)            
+            .Layout(LayoutType.Fit)
+            .Loader(Html.X().ComponentLoader()
+                .Url(Url.Action("InitImageMenu"))
+                .Mode(LoadMode.Component)
+                .LoadMask(lm => lm.ShowMask = true)
+                )
+)

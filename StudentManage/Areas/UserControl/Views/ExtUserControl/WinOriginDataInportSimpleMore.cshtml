@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Absolute)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().Name("ID").Text("0"),
+            X.Label().X(20).Y(10).Text("原始文件名:"),
+            X.TextField().Name("OriginName").X(90).Y(10).Width(190)
+            //X.Label().X(20).Y(40).Text("其他说明:"),
+            //X.TextArea().Name("Remark").X(80).Y(40).Width(200)
+        )
+   )
+}

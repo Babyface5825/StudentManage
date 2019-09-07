@@ -1,0 +1,137 @@
+﻿@{
+    var X = Html.X();
+}
+@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@section WindowItemField
+{
+    @(
+        X.Panel()
+            .ID(ViewData["WindowID"] + "_Panel")
+            .Layout(LayoutType.Absolute)
+            .BodyPadding(5)
+            .Border(false)
+            .BodyStyle("background-color:transparent;")
+            .Items(
+                X.GridPanel()
+                    .ID((string)ViewData["WindowID"] + "_AllPanel")
+                    .X(10).Y(10)
+                    .Height(280).Width(230)
+                    .Border(false)
+                    .Header(false)
+                    .Store(
+                        X.Store()
+                            .PageSize(40)
+                            .RemotePaging(false)
+                            .ID((string)ViewData["WindowID"] + "_AllZYStore")
+                            .AutoLoad(false)
+                            .Model(
+                                    X.Model()
+                                    .IDProperty("ID")
+                                    .Fields(new ModelField("ID", ModelFieldType.Int), new ModelField("Name"))
+                                )
+                            .Proxy(
+                                    X.AjaxProxy()
+                                        .Url(Url.Action("WinDepartmentAddZY_ZYAllRead", "WinDepartmentAddZY", new { Area = "UserControl" }))
+                                        .Reader(X.ArrayReader().RootProperty("data"))
+                                        .ExtraParams(pa => pa.Add(new Parameter("ParentVariable", "App." + (ViewData["WindowID"] + "_ParentVariable") + ".getValue()", ParameterMode.Raw)))
+                                )
+                            .Parameters(ps =>
+                            {
+                                ps.Add(new StoreParameter("sGxID", "App." + (ViewData["WindowID"] + "_ParentKey") + ".getValue()", ParameterMode.Raw));
+                            })
+                    )
+                    .BottomBar(X.PagingToolbar().HideRefresh(true))
+                    .ColumnModel(X.Column().Text("可选项").DataIndex("Name").Flex(1))
+                    .SelectionModel(X.RowSelectionModel().Mode(SelectionMode.Multi)),
+                X.GridPanel()
+                    .ID((string)ViewData["WindowID"] + "_NowPanel")
+                    .X(280).Y(10)
+                    .Height(280).Width(230)
+                    .Border(false)
+                    .Header(false)
+                    .Store(
+                        X.Store()
+                            //.PageSize(40)
+                            //.RemotePaging(false)
+                            .ID((string)ViewData["WindowID"] + "_NowZYStore")
+                            .AutoLoad(false)
+                            .Model(
+                                    X.Model()
+                                    .IDProperty("ID")
+                                    .Fields(new ModelField("ID", ModelFieldType.Int), new ModelField("Name"))
+                                )
+                            .Proxy(
+                                    X.AjaxProxy()
+                                        .Url(Url.Action("WinDepartmentAddZY_ZYSelRead", "WinDepartmentAddZY", new { Area = "UserControl" }))
+                                        .Reader(X.ArrayReader().RootProperty("data").TotalProperty("total"))
+                                        .ExtraParams(pa => pa.Add(new Parameter("ParentVariable", "App." + (ViewData["WindowID"] + "_ParentVariable") + ".getValue()", ParameterMode.Raw)))
+                                )
+                            .Parameters(ps =>
+                            {
+                                ps.Add(new StoreParameter("sGxID", "App." + (ViewData["WindowID"] + "_ParentKey") + ".getValue()", ParameterMode.Raw));
+                            })
+                        )
+                    //.BottomBar(X.PagingToolbar().HideRefresh(true))
+                    .ColumnModel(X.Column().Text("已选项").DataIndex("Name").Flex(1))
+                    .SelectionModel(X.RowSelectionModel().Mode(SelectionMode.Multi)),
+                X.Button()
+                    .Icon(Icon.ResultsetNext)
+                    .ToolTip("加入")
+                    .X(250).Y(80)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("WinDepartmentAddZY_AddClick", "WinDepartmentAddZY", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = "this.up('window').id",
+                            Mode = ParameterMode.Raw
+                        });
+                    }),
+                //X.Button()
+                //    .Icon(Icon.ResultsetLast)
+                //    .ToolTip("全部加入")
+                //    .X(250).Y(120)
+                //    .DirectEvents(de =>
+                //    {
+                //        de.Click.Url = Url.Action("WinDepartmentAddZY_AddAllClick", "WinDepartmentAddZY", new { Area = "UserControl" });
+                //        de.Click.ExtraParams.Add(new Parameter()
+                //        {
+                //            Name = "PanelID",
+                //            Value = "this.up('window').id",
+                //            Mode = ParameterMode.Raw
+                //        });
+                //    }),
+                X.Button()
+                    .Icon(Icon.ResultsetPrevious)
+                    .ToolTip("移出")
+                    .X(250).Y(160)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("WinDepartmentAddZY_RemoveClick", "WinDepartmentAddZY", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = "this.up('window').id",
+                            Mode = ParameterMode.Raw
+                        });
+                    })
+                //X.Button()
+                //    .Icon(Icon.ResultsetFirst)
+                //    .ToolTip("全部移出")
+                //    .X(250).Y(200)
+                //    .DirectEvents(de =>
+                //    {
+                //        de.Click.Url = Url.Action("WinDepartmentAddZY_RemoveAllClick", "WinDepartmentAddZY", new { Area = "UserControl" });
+                //        de.Click.ExtraParams.Add(new Parameter()
+                //        {
+                //            Name = "PanelID",
+                //            Value = "this.up('window').id",
+                //            Mode = ParameterMode.Raw
+                //        });
+                //    })
+                )
+)}

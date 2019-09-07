@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_DataListSelMaster1.cshtml";
+    var X = Html.X();
+}
+
+
+@section SearchPanel {
+
+}
+
+@section HiddenMore{
+    @(X.Hidden().ID("ReportCreate_SelTypeID").Name("ReportTypeID").Text("0"))
+    @(X.Hidden().ID("ReportCreate_NowWatchIDs").Text(""))
+    @(X.TaskManager().ID("ReportCreate_Task")
+        .Tasks(
+            X.Task().TaskID("ServerTime").Interval(3000).AutoRun(false)
+            .DirectEvents(de =>
+            {
+                de.Update.Url = Url.Action("ReportCreate_TaskCreate");
+                de.Update.ExtraParams.Add(new Parameter()
+                {
+                    Name = "sWatchIDs",
+                    Value = "App.ReportCreate_NowWatchIDs.getValue()",
+                    Mode = ParameterMode.Raw
+                });
+            })
+        ))
+}
+
+@section Hidden{    
+    }

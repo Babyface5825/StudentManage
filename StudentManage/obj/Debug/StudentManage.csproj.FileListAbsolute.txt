@@ -1,0 +1,1068 @@
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\csc.exe
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\vbc.exe
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\StudentManage.dll.config
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\StudentManage.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\StudentManage.pdb
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Antlr3.Runtime.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\EntityFramework.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Newtonsoft.Json.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Owin.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Swashbuckle.Core.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Helpers.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Http.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Mvc.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Optimization.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Razor.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.WebPages.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\WebActivatorEx.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\WebGrease.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\office.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.Vbe.Interop.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\stdole.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\EntityFramework.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Newtonsoft.Json.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Helpers.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Http.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Mvc.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Optimization.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.Razor.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.WebPages.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\office.xml
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\obj\Debug\StudentManage.dll
+C:\Users\19837\Desktop\代码1\StudentManage\StudentManage\obj\Debug\StudentManage.pdb
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\csc.exe
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\vbc.exe
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\StudentManage.dll.config
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\StudentManage.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\StudentManage.pdb
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Antlr3.Runtime.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\EntityFramework.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\EntityFramework.SqlServer.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Newtonsoft.Json.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Owin.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Swashbuckle.Core.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Net.Http.Formatting.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Helpers.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Http.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Http.WebHost.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Mvc.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Optimization.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Razor.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.WebPages.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\WebActivatorEx.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\WebGrease.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\office.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.Vbe.Interop.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\stdole.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\EntityFramework.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\EntityFramework.SqlServer.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Newtonsoft.Json.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Net.Http.Formatting.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Helpers.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Http.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Http.WebHost.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Mvc.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Optimization.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.Razor.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.WebPages.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Antlr3.Runtime.pdb
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\office.xml
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\obj\Debug\StudentManage.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\obj\Debug\StudentManage.pdb
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\obj\Debug\StudentManage.dll
+D:\sl\高校招生数据管理\代码\StudentManage\obj\Debug\StudentManage.pdb
+D:\sl\高校招生数据管理\代码\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+D:\sl\高校招生数据管理\代码\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\csc.exe
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\vbc.exe
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\VBCSCompiler.exe
+D:\sl\高校招生数据管理\代码\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+D:\sl\高校招生数据管理\代码\StudentManage\bin\StudentManage.dll.config
+D:\sl\高校招生数据管理\代码\StudentManage\bin\StudentManage.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\StudentManage.pdb
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Antlr3.Runtime.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\EntityFramework.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\EntityFramework.SqlServer.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Newtonsoft.Json.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Owin.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Swashbuckle.Core.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Net.Http.Formatting.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Helpers.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Http.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Http.WebHost.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Mvc.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Optimization.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Razor.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.WebPages.Deployment.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.WebPages.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.WebPages.Razor.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\WebActivatorEx.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\WebGrease.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\office.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.Vbe.Interop.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\stdole.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\EntityFramework.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\EntityFramework.SqlServer.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Newtonsoft.Json.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Net.Http.Formatting.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Helpers.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Http.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Http.WebHost.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Mvc.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Optimization.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.Razor.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.WebPages.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.WebPages.Deployment.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\System.Web.WebPages.Razor.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Antlr3.Runtime.pdb
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Z.EntityFramework.Extensions.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\office.xml
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\csc.exe
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\vbc.exe
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\StudentManage.dll.config
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\StudentManage.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\StudentManage.pdb
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Antlr3.Runtime.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\EntityFramework.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Newtonsoft.Json.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Owin.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Swashbuckle.Core.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Helpers.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Http.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Mvc.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Optimization.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Razor.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.WebPages.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\WebActivatorEx.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\WebGrease.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\EntityFramework.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Newtonsoft.Json.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Helpers.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Http.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Mvc.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Optimization.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.Razor.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.WebPages.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\obj\Debug\StudentManage.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\obj\Debug\StudentManage.pdb
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\csc.exe
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\vbc.exe
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\StudentManage.dll.config
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\StudentManage.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\StudentManage.pdb
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Antlr3.Runtime.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\EntityFramework.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Newtonsoft.Json.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Owin.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Swashbuckle.Core.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Helpers.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Http.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Mvc.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Optimization.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Razor.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.WebPages.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\WebActivatorEx.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\WebGrease.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\office.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.Vbe.Interop.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\stdole.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\EntityFramework.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Newtonsoft.Json.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Helpers.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Http.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Mvc.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Optimization.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.Razor.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.WebPages.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\office.xml
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\obj\Debug\StudentManage.dll
+C:\Users\19837\Desktop\代码\StudentManage\StudentManage\StudentManage\obj\Debug\StudentManage.pdb
+F:\StudentManage\bin\roslyn\csc.exe
+F:\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+F:\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+F:\StudentManage\bin\roslyn\vbc.exe
+F:\StudentManage\bin\roslyn\VBCSCompiler.exe
+F:\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+F:\StudentManage\bin\StudentManage.dll.config
+F:\StudentManage\bin\StudentManage.dll
+F:\StudentManage\bin\StudentManage.pdb
+F:\StudentManage\bin\Antlr3.Runtime.dll
+F:\StudentManage\bin\EntityFramework.dll
+F:\StudentManage\bin\EntityFramework.SqlServer.dll
+F:\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+F:\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+F:\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+F:\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+F:\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+F:\StudentManage\bin\Newtonsoft.Json.dll
+F:\StudentManage\bin\Owin.dll
+F:\StudentManage\bin\Swashbuckle.Core.dll
+F:\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\StudentManage\bin\System.Net.Http.Formatting.dll
+F:\StudentManage\bin\System.Web.Helpers.dll
+F:\StudentManage\bin\System.Web.Http.dll
+F:\StudentManage\bin\System.Web.Http.WebHost.dll
+F:\StudentManage\bin\System.Web.Mvc.dll
+F:\StudentManage\bin\System.Web.Optimization.dll
+F:\StudentManage\bin\System.Web.Razor.dll
+F:\StudentManage\bin\System.Web.WebPages.Deployment.dll
+F:\StudentManage\bin\System.Web.WebPages.dll
+F:\StudentManage\bin\System.Web.WebPages.Razor.dll
+F:\StudentManage\bin\WebActivatorEx.dll
+F:\StudentManage\bin\WebGrease.dll
+F:\StudentManage\bin\Z.EntityFramework.Extensions.dll
+F:\StudentManage\bin\office.dll
+F:\StudentManage\bin\Microsoft.Vbe.Interop.dll
+F:\StudentManage\bin\stdole.dll
+F:\StudentManage\bin\EntityFramework.xml
+F:\StudentManage\bin\EntityFramework.SqlServer.xml
+F:\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\StudentManage\bin\Newtonsoft.Json.xml
+F:\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+F:\StudentManage\bin\System.Net.Http.Formatting.xml
+F:\StudentManage\bin\System.Web.Helpers.xml
+F:\StudentManage\bin\System.Web.Http.xml
+F:\StudentManage\bin\System.Web.Http.WebHost.xml
+F:\StudentManage\bin\System.Web.Mvc.xml
+F:\StudentManage\bin\System.Web.Optimization.xml
+F:\StudentManage\bin\System.Web.Razor.xml
+F:\StudentManage\bin\System.Web.WebPages.xml
+F:\StudentManage\bin\System.Web.WebPages.Deployment.xml
+F:\StudentManage\bin\System.Web.WebPages.Razor.xml
+F:\StudentManage\bin\Antlr3.Runtime.pdb
+F:\StudentManage\bin\Z.EntityFramework.Extensions.xml
+F:\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+F:\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\StudentManage\bin\office.xml
+F:\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+F:\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+F:\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+F:\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+F:\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+F:\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+F:\StudentManage\obj\Debug\StudentManage.dll
+F:\StudentManage\obj\Debug\StudentManage.pdb
+D:\sl\高校招生数据管理\代码\StudentManage\bin\Z.EntityFramework.Extensions.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\csc.exe
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\System.Collections.Immutable.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\System.Reflection.Metadata.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\vbc.exe
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\VBCSCompiler.exe
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\roslyn\VBCSCompiler.exe.config
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\StudentManage.dll.config
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\StudentManage.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\StudentManage.pdb
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Antlr3.Runtime.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\EntityFramework.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\EntityFramework.SqlServer.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.AspNet.Identity.Core.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.Office.Interop.Excel.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.Office.Interop.Word.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.Web.Infrastructure.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Newtonsoft.Json.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Owin.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Swashbuckle.Core.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Net.Http.Formatting.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Helpers.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Http.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Http.WebHost.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Mvc.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Optimization.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Razor.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.WebPages.Deployment.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.WebPages.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.WebPages.Razor.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\WebActivatorEx.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\WebGrease.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Z.EntityFramework.Extensions.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\office.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.Vbe.Interop.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\stdole.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\EntityFramework.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\EntityFramework.SqlServer.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Newtonsoft.Json.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Net.Http.Formatting.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Helpers.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Http.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Http.WebHost.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Mvc.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Optimization.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.Razor.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.WebPages.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.WebPages.Deployment.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\System.Web.WebPages.Razor.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Antlr3.Runtime.pdb
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Z.EntityFramework.Extensions.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.AspNet.Identity.Core.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\office.xml
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\EntityFramework.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\System.Web.Helpers.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\System.Web.Mvc.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\System.Web.Optimization.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\System.Web.Razor.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\System.Web.WebPages.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+D:\sl\高校招生数据管理\代码\StudentManage.Now\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+D:\sl\高校招生数据管理\代码\StudentManage.Now\obj\Debug\StudentManage.dll
+D:\sl\高校招生数据管理\代码\StudentManage.Now\obj\Debug\StudentManage.pdb
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\csc.exe
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\vbc.exe
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\StudentManage.dll.config
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\StudentManage.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\StudentManage.pdb
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Antlr3.Runtime.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\EntityFramework.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Newtonsoft.Json.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Owin.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Swashbuckle.Core.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Helpers.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Http.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Mvc.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Optimization.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Razor.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.WebPages.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\WebActivatorEx.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\WebGrease.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\office.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.Vbe.Interop.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\stdole.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\EntityFramework.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Newtonsoft.Json.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Helpers.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Http.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Mvc.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Optimization.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.Razor.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.WebPages.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\office.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\obj\Debug\StudentManage.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(5)\StudentManage\obj\Debug\StudentManage.pdb
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\csc.exe
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\vbc.exe
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Desktop\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Desktop\StudentManage\bin\StudentManage.dll.config
+C:\Users\19837\Desktop\StudentManage\bin\StudentManage.dll
+C:\Users\19837\Desktop\StudentManage\bin\StudentManage.pdb
+C:\Users\19837\Desktop\StudentManage\bin\Antlr3.Runtime.dll
+C:\Users\19837\Desktop\StudentManage\bin\EntityFramework.dll
+C:\Users\19837\Desktop\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Desktop\StudentManage\bin\Newtonsoft.Json.dll
+C:\Users\19837\Desktop\StudentManage\bin\Owin.dll
+C:\Users\19837\Desktop\StudentManage\bin\Swashbuckle.Core.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Helpers.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Http.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Mvc.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Optimization.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Razor.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.WebPages.dll
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Desktop\StudentManage\bin\WebActivatorEx.dll
+C:\Users\19837\Desktop\StudentManage\bin\WebGrease.dll
+C:\Users\19837\Desktop\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\Users\19837\Desktop\StudentManage\bin\EntityFramework.xml
+C:\Users\19837\Desktop\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Desktop\StudentManage\bin\Newtonsoft.Json.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Helpers.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Http.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Mvc.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Optimization.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.Razor.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.WebPages.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Desktop\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Desktop\StudentManage\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Desktop\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\19837\Desktop\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\19837\Desktop\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\Users\19837\Desktop\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\Users\19837\Desktop\StudentManage\obj\Debug\StudentManage.dll
+C:\Users\19837\Desktop\StudentManage\obj\Debug\StudentManage.pdb
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\csc.exe
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\vbc.exe
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\StudentManage.dll.config
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\StudentManage.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\StudentManage.pdb
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Antlr3.Runtime.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\EntityFramework.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Newtonsoft.Json.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Owin.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Swashbuckle.Core.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Helpers.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Http.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Mvc.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Optimization.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Razor.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.WebPages.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\WebActivatorEx.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\WebGrease.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\office.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.Vbe.Interop.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\stdole.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\EntityFramework.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Newtonsoft.Json.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Helpers.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Http.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Mvc.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Optimization.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.Razor.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.WebPages.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\office.xml
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\obj\Debug\StudentManage.dll
+C:\Users\19837\Desktop\StudentManage(3)\StudentManage\obj\Debug\StudentManage.pdb
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\csc.exe
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\vbc.exe
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\StudentManage.dll.config
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\StudentManage.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\StudentManage.pdb
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Antlr3.Runtime.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\EntityFramework.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Newtonsoft.Json.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Owin.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Swashbuckle.Core.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Helpers.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Http.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Mvc.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Optimization.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Razor.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.WebPages.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\WebActivatorEx.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\WebGrease.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\office.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.Vbe.Interop.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\stdole.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\EntityFramework.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Newtonsoft.Json.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Helpers.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Http.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Mvc.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Optimization.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.Razor.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.WebPages.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\office.xml
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\obj\Debug\StudentManage.dll
+C:\Users\19837\Documents\Tencent Files\1983781567\FileRecv\StudentManage(1)\StudentManage\obj\Debug\StudentManage.pdb
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\csc.exe
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\vbc.exe
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\Users\19837\Desktop\代码\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\19837\Desktop\代码\StudentManage\bin\StudentManage.dll.config
+C:\Users\19837\Desktop\代码\StudentManage\bin\StudentManage.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\StudentManage.pdb
+C:\Users\19837\Desktop\代码\StudentManage\bin\Antlr3.Runtime.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\EntityFramework.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Newtonsoft.Json.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Owin.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Swashbuckle.Core.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Helpers.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Http.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Mvc.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Optimization.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Razor.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.WebPages.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\WebActivatorEx.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\WebGrease.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\office.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.Vbe.Interop.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\stdole.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\EntityFramework.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\Newtonsoft.Json.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Helpers.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Http.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Mvc.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Optimization.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.Razor.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.WebPages.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\Antlr3.Runtime.pdb
+C:\Users\19837\Desktop\代码\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\office.xml
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\19837\Desktop\代码\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\Users\19837\Desktop\代码\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\Users\19837\Desktop\代码\StudentManage\obj\Debug\StudentManage.dll
+C:\Users\19837\Desktop\代码\StudentManage\obj\Debug\StudentManage.pdb
+C:\Users\19837\Desktop\StudentManage\bin\office.dll
+C:\Users\19837\Desktop\StudentManage\bin\Microsoft.Vbe.Interop.dll
+C:\Users\19837\Desktop\StudentManage\bin\stdole.dll
+C:\Users\19837\Desktop\StudentManage\bin\office.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\csc.exe
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\System.Collections.Immutable.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\System.Reflection.Metadata.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\vbc.exe
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\roslyn\VBCSCompiler.exe.config
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\StudentManage.dll.config
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\StudentManage.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\StudentManage.pdb
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Antlr3.Runtime.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\EntityFramework.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\EntityFramework.SqlServer.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Excel.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.Office.Interop.Word.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.Web.Infrastructure.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Newtonsoft.Json.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Owin.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Swashbuckle.Core.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Net.Http.Formatting.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Helpers.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Http.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Http.WebHost.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Mvc.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Optimization.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Razor.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.WebPages.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\WebActivatorEx.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\WebGrease.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\office.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.Vbe.Interop.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\stdole.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\EntityFramework.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\EntityFramework.SqlServer.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Newtonsoft.Json.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Net.Http.Formatting.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Helpers.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Http.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Http.WebHost.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Mvc.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Optimization.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.Razor.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.WebPages.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.WebPages.Deployment.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\System.Web.WebPages.Razor.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Antlr3.Runtime.pdb
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Z.EntityFramework.Extensions.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Core.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\office.xml
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Core.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\bin\zh-Hans\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\obj\Debug\StudentManage.csprojResolveAssemblyReference.cache
+C:\workspace\Project.NET\StudentManage\StudentManage\obj\Debug\StudentManage.csproj.ResolveComReference.cache
+C:\workspace\Project.NET\StudentManage\StudentManage\obj\Debug\StudentManage.dll
+C:\workspace\Project.NET\StudentManage\StudentManage\obj\Debug\StudentManage.pdb

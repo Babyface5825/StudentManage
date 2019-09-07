@@ -1,0 +1,31 @@
+﻿@{
+    //左中结构(左边较大)
+    Layout = "_ExtLayout.cshtml";
+    var X = Html.X();
+}
+
+@RenderBody()
+
+@section center
+{
+    @(X.Viewport()
+        .Layout(LayoutType.Border)
+        .Items(
+            X.Panel()
+                .Header(false)
+                .Region(Region.West)
+                .Layout(LayoutType.Fit)
+                .Width(380)
+                .Split(true)
+                .Collapsible(true)
+                .CollapseMode(CollapseMode.Mini)
+                .MarginSpec("0 0 0 4")
+                .ItemsFromSection(this, "LeftPanelField"),
+            X.Panel()
+                .Region(Region.Center)
+                .Layout(LayoutType.Fit)
+                .ItemsFromSection(this, "CenterPanelField")
+        )
+    )
+    @RenderSection("Hidden", true)
+}

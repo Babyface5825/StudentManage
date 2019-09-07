@@ -1,0 +1,106 @@
+﻿@* 需要传递的ViewData *@
+@* ViewData["WindowID"] ViewData["WindowParentVariable"] ViewData["CurrentController"] ViewData["WindowParentKey"]*@
+
+    @{
+        var X = Html.X();
+    }
+    @X.Hidden().ID((string)(ViewData["WindowID"]) + "_ParentVariable").Text((string)ViewData["WindowParentVariable"])
+    @(X.Hidden().ID((string)ViewData["WindowID"] + "_ExitCode").Text("0"))
+    @X.Hidden().ID((string)ViewData["WindowID"] + "_ParentKey").Text((string)ViewData["WindowParentKey"])
+    @(
+        X.Window()
+            .ID((string)ViewData["WindowID"])
+            .Draggable(true)            
+            .Modal(true)            
+            .Layout(LayoutType.Fit)
+            .Hidden(false)
+            .DirectEvents(de =>
+            {
+                de.BeforeShow.Url = Url.Action("WindowCommonBeforeShow", (string)ViewData["CurrentController"], new { Area = "UserControl" });
+                de.BeforeShow.ExtraParams.Add(new Parameter()
+                {
+                    Name = "PanelID",
+                    Value = "this.id",
+                    Mode = ParameterMode.Raw
+                });
+                de.BeforeShow.ExtraParams.Add(new Parameter("sWidth", "document.body.clientWidth", ParameterMode.Raw));
+                de.BeforeShow.ExtraParams.Add(new Parameter("sHeight", "document.body.clientHeight", ParameterMode.Raw));
+                de.Show.Url = Url.Action("WindowCommonShow", (string)ViewData["CurrentController"], new { Area = "UserControl" });
+                de.Show.ExtraParams.Add(new Parameter()
+                {
+                    Name = "PanelID",
+                    Value = "this.id",
+                    Mode = ParameterMode.Raw
+                });
+                de.Show.ExtraParams.Add(new Parameter()
+                {
+                    Name = "ParentVariable",
+                    Value = (string)ViewData["WindowParentVariable"],
+                    Mode = ParameterMode.Value
+                });
+                de.Show.ExtraParams.Add(new Parameter()
+                {
+                    Name = "ParentKey",
+                    Value = (string)ViewData["WindowParentKey"],
+                    Mode = ParameterMode.Value
+                });
+                de.Close.Url = Url.Action("WindowCommonHide", (string)ViewData["CurrentController"], new { Area = "UserControl" });
+                de.Close.ExtraParams.Add(new Parameter()
+                {
+                    Name = "ParentVariable",
+                    Value = "App." + (string)ViewData["WindowID"] + "_ParentVariable" + ".getValue()",
+                    Mode = ParameterMode.Raw
+                });
+                de.Close.ExtraParams.Add(new Parameter()
+                {
+                    Name = "PanelID",
+                    Value = "this.id",
+                    Mode = ParameterMode.Raw
+                });
+                de.Close.ExtraParams.Add(new Parameter()
+                {
+                    Name = "sExitCode",
+                    Value = "App." + (string)ViewData["WindowID"] + "_ExitCode" + ".getValue()",
+                    Mode = ParameterMode.Raw
+                });
+            })
+            .ItemsFromSection(this, "WindowItemField")
+            .ButtonAlign(Alignment.Center)
+            .Buttons(
+                X.Button()
+                .Text("确定")
+                .Icon(Icon.Accept)
+                .DirectEvents(de =>
+                {
+                    de.Click.Url = Url.Action("WindowSaveClick", (string)ViewData["CurrentController"], new { Area = "UserControl" });
+                    de.Click.FormID = "#(return this.up('window').down('form');)";
+                    de.Click.EventMask.ShowMask = true;
+                    de.Click.EventMask.Msg = "正在处理,请稍后...";
+                    de.Click.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "PanelID",
+                        Value = "this.up('window').id",
+                        Mode = ParameterMode.Raw
+                    });
+                    de.Click.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "ParentVariable",
+                        Value = (string)ViewData["WindowParentVariable"],
+                        Mode = ParameterMode.Value
+                    });
+                    de.Click.Success = "this.up('window').close();";
+                    de.Click.Failure = @"Ext.Msg.show({
+                                title   : '错误',
+                                msg     : result.errorMessage,
+                                minWidth: 200,
+                                modal   : true,
+                                icon    : Ext.Msg.ERROR,
+                                buttons : Ext.Msg.OK
+                            });";
+                }),
+                X.Button()
+                    .Text("退出")
+                    .Icon(Icon.Cancel)
+                    .Handler("function(){this.up('window').close();}")
+            )
+    )

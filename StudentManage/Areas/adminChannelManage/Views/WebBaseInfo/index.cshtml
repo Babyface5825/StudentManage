@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = "~/Views/ExtLayout/_ViewPortLayout4.cshtml";
+    var X = Html.X();
+}
+
+@section MainPanelField
+{
+    @(X.FormPanel()
+        .Layout(LayoutType.Absolute)
+        .ID("WebBaseInfo_Form")
+        .Header(false)
+        .Border(false)
+        .TopBar(
+            X.Toolbar().ClassicButtonStyle(true)
+            .Items(
+                X.ToolbarFill(),
+                X.Button().Text("保存").Width(80).Icon(Icon.Disk)
+                .DirectEvents(de =>
+                {
+                    de.Click.Url = Url.Action("WebBaseInfo_SaveClick");
+                    de.Click.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "sData",
+                        Value = "HTMLEnCode(this.up('form').getForm().getValues())",
+                        Mode = ParameterMode.Raw
+                    });
+                }
+                ),
+                X.ToolbarFill()
+            )
+        )
+        .Items(
+            X.Hidden().Name("ID"),
+            X.Label().Text("本站名称：").X(10).Y(5),
+            X.TextField().Name("MainIName").X(70).Y(5).AnchorHorizontal("99%"),
+            X.Label().Text("本站网址：").X(10).Y(35),
+            X.TextField().Name("MainIURL").X(70).Y(35).AnchorHorizontal("99%"),
+            X.Label().Text("站长信箱：").X(10).Y(65),
+            X.TextField().Name("MainIEmail").X(70).Y(65).Width(150),
+            X.Label().Text("信箱密码：").X(225).Y(65),
+            X.TextField().Name("MainIEmailPass").X(285).Y(65).Width(150).InputType(Ext.Net.InputType.Password),
+            X.Label().Text("smtp设置：").X(440).Y(65),
+            X.TextField().Name("MainIEmailEmailSmtp").X(505).Y(65).Width(150).AnchorHorizontal("99%"),
+            X.Label().Text("本站简介：").X(10).Y(95),
+            X.HtmlEditor().Name("MainIInformation").X(70).Y(95).Height(115).AnchorHorizontal("99%"),
+            X.Label().Text("关于我们：").X(10).Y(220),
+            X.HtmlEditor().Name("MainIAboutUS").X(70).Y(220).Height(115).AnchorHorizontal("99%"),
+            X.Label().Text("页脚信息：").X(10).Y(345),
+            X.HtmlEditor().Name("MainIFootMark").X(70).Y(345).Height(115).AnchorHorizontal("99%")
+        )
+    )
+}
+
+@section Hidden{
+
+
+}

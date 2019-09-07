@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="dtproperty">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="objectid" Type="Int32" />
+    <Property Name="property" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uvalue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="version" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblAfterMarkInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+    <Property Name="AfterMarkIGetNum" Type="Int16" />
+    <Property Name="AfterMarkIDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tblAuthorizationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblChannelContent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChannelCChannelTID" Type="Int64" Nullable="false" />
+    <Property Name="ChannelCName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCTime" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ChannelCUserIID" Type="Int64" Nullable="false" />
+    <Property Name="ChannelCComeFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCAudio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCVedio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCTemplete" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCPop" Type="Boolean" Nullable="false" />
+    <Property Name="ChannelCTop" Type="Boolean" Nullable="false" />
+    <Property Name="ChannelCVerify" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="ChannelCAuthor" Type="Int64" Nullable="false" />
+    <Property Name="ChannelCAuthorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HitTime" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblChannelContentDoc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblChannelContentPic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCommunicateInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+    <Property Name="CommunicateIPageNum" Type="Int16" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FoundDate" Type="DateTime" Precision="0" />
+    <Property Name="Type" Type="Int64" Nullable="false" />
+    <Property Name="score" Type="Int16" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCourseFileInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" />
+    <Property Name="OpenFlag" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCourseInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ParentIndex" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="TheLevel" Type="Int16" Nullable="false" />
+    <Property Name="ChildNum" Type="Int16" Nullable="false" />
+    <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblCoursePeriodRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblDepartmentInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ParentIndex" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="TheLevel" Type="Byte" Nullable="false" />
+    <Property Name="ChildNum" Type="Int16" Nullable="false" />
+    <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="DepartmentICode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIADD" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIPostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIFax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIeMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblDutyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblFriendLink">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMarkInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+    <Property Name="MarkIGetNum" Type="Int16" />
+    <Property Name="MarkIDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tblOperationAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblOperationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ParentIndex" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Byte" Nullable="false" />
+    <Property Name="TheLevel" Type="Byte" Nullable="false" />
+    <Property Name="ChildNum" Type="Byte" Nullable="false" />
+    <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="OperationIURL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblPeriodInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStudentDutyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentDutyIDate" Type="DateTime" Precision="0" />
+    <Property Name="StudentDutyStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStudentSelCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTeacherCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTestMainInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="TestMainIDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TestMainAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTestQuestion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Question" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Degree" Type="Int16" Nullable="false" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTestScoreInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+    <Property Name="MarkIGetNum" Type="Int16" />
+  </EntityType>
+  <EntityType Name="tblUserAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserICode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIPsd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIRegisterDate" Type="DateTime" Precision="0" />
+    <Property Name="UserISex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="UserIIDCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIBirth" Type="DateTime" Precision="0" />
+    <Property Name="UserIAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserIPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UserIStudentNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserIMobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserIeMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIRemarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserIDutyIID" Type="Int64" />
+    <Property Name="UserIDepartmentIID" Type="Int64" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="UserIIntroduction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIResearchField" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIContacted" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblUserLoginInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="UserLoginIIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserLoginIDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tblChannelAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="RelationID1" />
+      <PropertyRef Name="RelationID2" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblChannelType">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ParentIndex" />
+      <PropertyRef Name="TheOrder" />
+      <PropertyRef Name="TheLevel" />
+      <PropertyRef Name="ChildNum" />
+      <PropertyRef Name="IsLeaf" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ParentIndex" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Byte" Nullable="false" />
+    <Property Name="TheLevel" Type="Byte" Nullable="false" />
+    <Property Name="ChildNum" Type="Byte" Nullable="false" />
+    <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="ChannelTTemplete" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblGuestBook">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="GuestBAnswerFlag" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GuestBName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GuestBHead" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GuestBText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GuestBAnswerFlag" Type="Boolean" Nullable="false" />
+    <Property Name="GuestBAnswer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GuestBTime" Type="DateTime" Precision="0" />
+    <Property Name="GuestBAnswerTime" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="tblMainInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="MainIVisitedVisiable" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainIName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MainIURL" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MainILogoPic" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MainIEmail" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MainIKeyWords" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="MainIFootMark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIVisitedNum" Type="Int32" />
+    <Property Name="MainIVisitedVisiable" Type="Boolean" Nullable="false" />
+    <Property Name="MainIInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIAboutUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIAboutPic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewforAfterMarkInfo">
+    <Key>
+      <PropertyRef Name="CourseID" />
+      <PropertyRef Name="PeriodID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="DepartmentID" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="CourseID" Type="Int64" Nullable="false" />
+    <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PeriodID" Type="Int64" Nullable="false" />
+    <Property Name="PeriodName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="Int64" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserIStudentNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Int64" Nullable="false" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserISex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="AfterMarkIGetNum" Type="Int16" />
+    <Property Name="AfterMarkIDate" Type="DateTime" Precision="0" />
+    <Property Name="ID" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ViewForCommunicateInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="RelationID1" />
+      <PropertyRef Name="RelationID2" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="score" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="RelationID1" Type="Int64" Nullable="false" />
+    <Property Name="RelationID2" Type="Int64" Nullable="false" />
+    <Property Name="CommunicateIPageNum" Type="Int16" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FoundDate" Type="DateTime" Precision="0" />
+    <Property Name="Type" Type="Int64" Nullable="false" />
+    <Property Name="score" Type="Int16" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewForCoursePeriodRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="CourseID" />
+      <PropertyRef Name="PeriodID" />
+      <PropertyRef Name="TheOrder" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="CourseID" Type="Int64" Nullable="false" />
+    <Property Name="PeriodID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewforStudentDutyInfo">
+    <Key>
+      <PropertyRef Name="CourseID" />
+      <PropertyRef Name="PeriodID" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="StudentDutyStatus" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="CourseID" Type="Int64" Nullable="false" />
+    <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PeriodID" Type="Int64" Nullable="false" />
+    <Property Name="PeriodName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="StudentDutyIDate" Type="DateTime" Precision="0" />
+    <Property Name="StudentDutyStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserID" Type="Int64" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserIStudentNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Int64" Nullable="false" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserISex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewForStudentSelCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserISex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="UserIIDCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Int64" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="DutyID" Type="Int64" />
+    <Property Name="DutyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIMobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserIStudentNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewForTeacherCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="UserID" Type="Int64" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CourseID" Type="Int64" Nullable="false" />
+    <Property Name="CourseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIMobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ViewForUserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DutyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentID" Type="Int64" />
+    <Property Name="DutyID" Type="Int64" />
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserICode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIPsd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIRegisterDate" Type="DateTime" Precision="0" />
+    <Property Name="UserISex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="UserIIDCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIBirth" Type="DateTime" Precision="0" />
+    <Property Name="UserIAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserIPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="UserIStudentNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserIMobilePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UserIeMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserIRemarks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserIDutyIID" Type="Int64" />
+    <Property Name="UserIDepartmentIID" Type="Int64" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MvcTywzV2Entities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperty" />
+    <EntitySet Name="tblAfterMarkInfoes" EntityType="Self.tblAfterMarkInfo" />
+    <EntitySet Name="tblAuthorizationInfoes" EntityType="Self.tblAuthorizationInfo" />
+    <EntitySet Name="tblChannelContents" EntityType="Self.tblChannelContent" />
+    <EntitySet Name="tblChannelContentDocs" EntityType="Self.tblChannelContentDoc" />
+    <EntitySet Name="tblChannelContentPics" EntityType="Self.tblChannelContentPic" />
+    <EntitySet Name="tblCommunicateInfoes" EntityType="Self.tblCommunicateInfo" />
+    <EntitySet Name="tblCourseFileInfoes" EntityType="Self.tblCourseFileInfo" />
+    <EntitySet Name="tblCourseInfoes" EntityType="Self.tblCourseInfo" />
+    <EntitySet Name="tblCoursePeriodRelations" EntityType="Self.tblCoursePeriodRelation" />
+    <EntitySet Name="tblDepartmentInfoes" EntityType="Self.tblDepartmentInfo" />
+    <EntitySet Name="tblDutyInfoes" EntityType="Self.tblDutyInfo" />
+    <EntitySet Name="tblFriendLinks" EntityType="Self.tblFriendLink" />
+    <EntitySet Name="tblMarkInfoes" EntityType="Self.tblMarkInfo" />
+    <EntitySet Name="tblOperationAuthorRelations" EntityType="Self.tblOperationAuthorRelation" />
+    <EntitySet Name="tblOperationInfoes" EntityType="Self.tblOperationInfo" />
+    <EntitySet Name="tblPeriodInfoes" EntityType="Self.tblPeriodInfo" />
+    <EntitySet Name="tblStudentDutyInfoes" EntityType="Self.tblStudentDutyInfo" />
+    <EntitySet Name="tblStudentSelCourseRelations" EntityType="Self.tblStudentSelCourseRelation" />
+    <EntitySet Name="tblTeacherCourseRelations" EntityType="Self.tblTeacherCourseRelation" />
+    <EntitySet Name="tblTestMainInfoes" EntityType="Self.tblTestMainInfo" />
+    <EntitySet Name="tblTestQuestions" EntityType="Self.tblTestQuestion" />
+    <EntitySet Name="tblTestScoreInfoes" EntityType="Self.tblTestScoreInfo" />
+    <EntitySet Name="tblUserAuthorRelations" EntityType="Self.tblUserAuthorRelation" />
+    <EntitySet Name="tblUserInfoes" EntityType="Self.tblUserInfo" />
+    <EntitySet Name="tblUserLoginInfoes" EntityType="Self.tblUserLoginInfo" />
+    <EntitySet Name="tblChannelAuthorRelations" EntityType="Self.tblChannelAuthorRelation" />
+    <EntitySet Name="tblChannelTypes" EntityType="Self.tblChannelType" />
+    <EntitySet Name="tblGuestBooks" EntityType="Self.tblGuestBook" />
+    <EntitySet Name="tblMainInfoes" EntityType="Self.tblMainInfo" />
+    <EntitySet Name="ViewforAfterMarkInfoes" EntityType="Self.ViewforAfterMarkInfo" />
+    <EntitySet Name="ViewForCommunicateInfoes" EntityType="Self.ViewForCommunicateInfo" />
+    <EntitySet Name="ViewForCoursePeriodRelations" EntityType="Self.ViewForCoursePeriodRelation" />
+    <EntitySet Name="ViewforStudentDutyInfoes" EntityType="Self.ViewforStudentDutyInfo" />
+    <EntitySet Name="ViewForStudentSelCourseRelations" EntityType="Self.ViewForStudentSelCourseRelation" />
+    <EntitySet Name="ViewForTeacherCourseRelations" EntityType="Self.ViewForTeacherCourseRelation" />
+    <EntitySet Name="ViewForUserInfoes" EntityType="Self.ViewForUserInfo" />
+  </EntityContainer>
+</Schema>

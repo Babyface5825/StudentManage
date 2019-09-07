@@ -1,0 +1,181 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Absolute)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().Name("ID").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelGxdm").Name("GxID").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelOldItemIDs").Text(""),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelNowItemIDs").Text(""),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_TempNowItemsStore").Text(""),//用来存储各项目里的详细选择项
+    X.MultiCombo().X(10).Y(10).Width(230).ID((string)ViewData["WindowID"] + "_ComboType")
+    .Items(
+        X.ListItem().Text("招生批次").Value("pcdmTable"),
+        X.ListItem().Text("省份").Value("Province"),
+        X.ListItem().Text("院系").Value("Department"),
+        //X.ListItem().Text("毕业类别").Value("bylbdmTable"),
+        //X.ListItem().Text("考生类别").Value("kslbdmTable"),
+        //X.ListItem().Text("考试类型").Value("kslxdmTable"),
+        X.ListItem().Text("毕业学校").Value("byxxdmTable"),
+        X.ListItem().Text("政治面貌").Value("zzmmdmTable"),
+        X.ListItem().Text("民族").Value("mzdmTable"),
+        //X.ListItem().Text("户籍类别").Value("hjlbdmTable"),
+        X.ListItem().Text("性别").Value("xbdmTable")
+    )
+    .DirectEvents(de =>
+    {
+        de.Select.Url = Url.Action("WinCreateReport_SelectItems", "WinCreateReport3", new { Area = "UserControl" });
+        de.Select.ExtraParams.Add(new Parameter("sOldSelIDs", "App." + (ViewData["WindowID"] + "_SelNowItemIDs") + ".getValue()", ParameterMode.Raw));
+        de.Select.ExtraParams.Add(new Parameter("sNowSelIDs", "this.getValue()", ParameterMode.Raw));
+        de.Select.ExtraParams.Add(new Parameter("PanelID",(string)ViewData["WindowID"],ParameterMode.Value));
+        de.Select.ExtraParams.Add(new Parameter("ParentVariable","App." + (ViewData["WindowID"] + "_ParentVariable") + ".getValue()",ParameterMode.Raw));
+    }),
+            X.GridPanel()
+                .ID((string)ViewData["WindowID"] + "_AllPanel")
+                .X(10).Y(40)
+                .Height(300).Width(230)
+                .Border(false)
+                .Header(false)
+                .Store(
+                    X.Store()
+                        .PageSize(40)
+                        .RemotePaging(false)
+                        .ID((string)ViewData["WindowID"] + "_AllItemsStore")
+                        .AutoLoad(false)
+                        .Model(
+                            X.Model()
+                                .IDProperty("TypeID" + "|" + "ID")
+                                .Fields(new ModelField("TypeID"), new ModelField("ID"), new ModelField("Name"))
+                                )
+                        .Proxy(
+                            X.AjaxProxy()
+                                .Url(Url.Action("WinCreateReport_ItemsAllRead", "WinCreateReport3", new { Area = "UserControl" }))
+                                .Reader(X.ArrayReader().RootProperty("data"))
+                                .ExtraParams(pa =>
+                                    pa.Add(new Parameter("ParentVariable", "App." + (ViewData["WindowID"] + "_ParentVariable") + ".getValue()", ParameterMode.Raw)))
+
+                                )
+                        .Parameters(ps =>
+                        {
+                            ps.Add(new StoreParameter("sGxID", "App." + (ViewData["WindowID"] + "_SelGxdm") + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("SelOldItemIDs", "App." + (ViewData["WindowID"] + "_SelOldItemIDs") + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("SelNowItemIDs", "App." + (ViewData["WindowID"] + "_SelNowItemIDs") + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("SelectedStore", "App." + (ViewData["WindowID"] + "_TempNowItemsStore") + ".getValue()", ParameterMode.Raw));
+                        })
+                )
+                .BottomBar(X.PagingToolbar().HideRefresh(true))
+                .ColumnModel(X.Column().Text("可选项").DataIndex("Name").Flex(1))
+                .SelectionModel(X.RowSelectionModel().Mode(SelectionMode.Multi)),
+            X.Label().Text("操作年份:从").X(280).Y(10),
+            X.NumberField().ID((string)ViewData["WindowID"] + "_OperateStartYear").Name("StartYear").X(345).Y(8).Width(70),
+            X.Label().Text("到").X(420).Y(10),
+            X.NumberField().ID((string)ViewData["WindowID"] + "_OperateEndYear").Name("EndYear").X(440).Y(8).Width(70),
+            X.GridPanel()
+                .ID((string)ViewData["WindowID"] + "_NowPanel")
+                .X(280).Y(40)
+                .Height(270).Width(230)
+                .Border(false)
+                .Header(false)
+                .Store(
+                    X.Store()
+                        .ID((string)ViewData["WindowID"] + "_NowItemsStore")
+                        .AutoLoad(false)
+                        .Model(
+                                X.Model()
+                                .IDProperty("TypeID"+"|"+ "ID")
+                                .Fields(new ModelField("TypeID"), new ModelField("ID"), new ModelField("Name"))
+                            )
+                        .Proxy(
+                                X.AjaxProxy()
+                                    .Url(Url.Action("WinCreateReport_ItemsSelRead", "WinCreateReport3", new { Area = "UserControl" }))
+                                    .Reader(X.ArrayReader().RootProperty("data").TotalProperty("total"))
+                                    .ExtraParams(pa => pa.Add(new Parameter("PanelID", (string)ViewData["WindowID"], ParameterMode.Value)))
+                            )
+                        .Parameters(ps =>
+                        {
+                            ps.Add(new StoreParameter("sGxID", "App." + (ViewData["WindowID"] + "_SelGxdm") + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("SelOldItemIDs", "App." + (ViewData["WindowID"] + "_SelOldItemIDs") + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("SelNowItemIDs", "App." + (ViewData["WindowID"] + "_SelNowItemIDs") + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("SelectedStore", "App." + (ViewData["WindowID"] + "_TempNowItemsStore") + ".getValue()", ParameterMode.Raw));
+                        })
+                    )
+                .ColumnModel(X.Column().Text("已选项").DataIndex("Name").Flex(1))
+                .SelectionModel(X.RowSelectionModel().Mode(SelectionMode.Multi)),
+                X.Label().Text("同时生成图表类型").X(280).Y(315),
+    X.MultiCombo().X(380).Y(315).Width(130).ID((string)ViewData["WindowID"] + "_ComboChart").Name("ChartType")
+    .Items(
+        X.ListItem().Text("柱状图").Value("-4100"),// Value("XlChartType.xl3DColumn")
+        X.ListItem().Text("饼状图").Value("-4102"),//XlChartType.xl3DPie
+        X.ListItem().Text("折线图").Value("-4101")//XlChartType.xl3DLine
+        ),
+    X.Button()
+        .Icon(Icon.ResultsetNext)
+        .ToolTip("加入")
+        .X(250).Y(80)
+        .DirectEvents(de =>
+        {
+            de.Click.Url = Url.Action("WinCreateReport_AddClick", "WinCreateReport3", new { Area = "UserControl" });
+            de.Click.ExtraParams.Add(new Parameter()
+            {
+                Name = "PanelID",
+                Value = "this.up('window').id",
+                Mode = ParameterMode.Raw
+            });
+        }),
+    X.Button()
+        .Icon(Icon.ResultsetLast)
+        .ToolTip("全部加入")
+        .X(250).Y(120)
+        .DirectEvents(de =>
+        {
+            de.Click.Url = Url.Action("WinCreateReport_AddAllClick", "WinCreateReport3", new { Area = "UserControl" });
+            de.Click.ExtraParams.Add(new Parameter()
+            {
+                Name = "PanelID",
+                Value = "this.up('window').id",
+                Mode = ParameterMode.Raw
+            });
+        }),
+    X.Button()
+        .Icon(Icon.ResultsetPrevious)
+        .ToolTip("移出")
+        .X(250).Y(160)
+        .DirectEvents(de =>
+        {
+            de.Click.Url = Url.Action("WinCreateReport_RemoveClick", "WinCreateReport3", new { Area = "UserControl" });
+            de.Click.ExtraParams.Add(new Parameter()
+            {
+                Name = "PanelID",
+                Value = "this.up('window').id",
+                Mode = ParameterMode.Raw
+            });
+        }),
+    X.Button()
+        .Icon(Icon.ResultsetFirst)
+        .ToolTip("全部移出")
+        .X(250).Y(200)
+        .DirectEvents(de =>
+        {
+            de.Click.Url = Url.Action("WinCreateReport_RemoveAllClick", "WinCreateReport3", new { Area = "UserControl" });
+            de.Click.ExtraParams.Add(new Parameter()
+            {
+                Name = "PanelID",
+                Value = "this.up('window').id",
+                Mode = ParameterMode.Raw
+            });
+        })
+    )
+)}

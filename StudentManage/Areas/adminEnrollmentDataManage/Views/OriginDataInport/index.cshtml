@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ViewPortLayout4.cshtml";
+}
+
+@section MainPanelField
+{
+    @RenderPage("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataList.cshtml",
+        ViewData["DataList_PanelID"],        
+        ViewData["DataList_ParentVariable"])
+}
+
+@section Hidden{
+    @Html.X().Hidden().ID("OriginDataInport_NowWatchIDs").Value("")
+    @(
+        Html.X().TaskManager().ID("OriginDataInport_Task")
+        .Tasks(
+            Html.X().Task().TaskID("ServerTime").Interval(5000).AutoRun(false)
+            .DirectEvents(de =>
+            {
+                de.Update.Url = Url.Action("OriginDataInport_TaskUpdate");
+                de.Update.ExtraParams.Add(new Parameter()
+                {
+                    Name = "sWatchIDs",
+                    Value = "App.OriginDataInport_NowWatchIDs.getValue()",
+                    Mode = ParameterMode.Raw
+                });
+            })
+        )
+)}

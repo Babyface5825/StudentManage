@@ -1,0 +1,532 @@
+﻿@{
+    var X = Html.X();
+}
+
+
+@(
+ X.GridPanel()
+    .ID((string)ViewData["DataList_PanelID"])
+    .Header(false)
+    .Border(false)
+    .AutoScroll(true)
+    .Store(
+        X.Store()
+            .AutoLoad(false)
+            .ID(ViewData["DataList_PanelID"] + "_Store")
+            .RemotePaging(true)
+            .RemoteSort(true)
+            .Model(
+                X.Model()
+                .IDProperty("ID")
+                .Fields(new ModelField("temp"))
+            )
+            .Proxy(
+                X.AjaxProxy()
+                .Url(Url.Action("DataListRead", "DataList", new { Area = "UserControl" }))
+                .Reader(X.JsonReader().RootProperty("data"))
+            )
+            .Parameters(ps =>
+            {
+                ps.Add(new StoreParameter("ParentVariable", (string)ViewData["DataList_ParentVariable"], ParameterMode.Value));
+                ps.Add(new StoreParameter("sInitNames", "App." + (string)ViewData["DataList_PanelID"] + "_InitNames" + ".getValue()", ParameterMode.Raw));
+                ps.Add(new StoreParameter("sInitValues", "App." + (string)ViewData["DataList_PanelID"] + "_InitValues" + ".getValue()", ParameterMode.Raw));
+                ps.Add(new StoreParameter("sInitSigns", "App." + (string)ViewData["DataList_PanelID"] + "_InitSigns" + ".getValue()", ParameterMode.Raw));
+                ps.Add(new StoreParameter("sInitAndors", "App." + (string)ViewData["DataList_PanelID"] + "_InitAndors" + ".getValue()", ParameterMode.Raw));
+                ps.Add(new StoreParameter("sNowNames", "App." + (string)ViewData["DataList_PanelID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+                ps.Add(new StoreParameter("sNowValues", "App." + (string)ViewData["DataList_PanelID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+                ps.Add(new StoreParameter("sNowSigns", "App." + (string)ViewData["DataList_PanelID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+                ps.Add(new StoreParameter("sNowAndors", "App." + (string)ViewData["DataList_PanelID"] + "_NowAndors" + ".getValue()", ParameterMode.Raw));
+                ps.Add(new StoreParameter("sVisitStatus", "App." + (string)ViewData["DataList_PanelID"] + "_VisitStatus" + ".getValue()", ParameterMode.Raw));
+            })
+        )
+    .BottomBar(
+        X.PagingToolbar().HideRefresh(true)
+            .DirectEvents(de => {
+                de.Change.Url= Url.Action("PageChange", "DataList", new { Area = "UserControl" });
+                de.Change.ExtraParams.Add(new Parameter()
+                {
+                    Name = "PanelID",
+                    Value = (string)ViewData["DataList_PanelID"],
+                    Mode = ParameterMode.Value
+                });
+            }
+            )
+    )
+    .SelectionModel(
+        X.CheckboxSelectionModel()
+            .ID(ViewData["DataList_PanelID"] + "_SelectedModel")
+            .Mode(SelectionMode.Simple)
+            )
+    .DirectEvents(de =>
+    {
+        de.BeforeRender.Url = Url.Action("InitDataList", "DataList", new { Area = "UserControl" });
+        de.BeforeRender.ExtraParams.Add(new Parameter()
+        {
+            Name = "ParentVariable",
+            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+            Mode = ParameterMode.Raw
+        });
+        de.BeforeRender.ExtraParams.Add(new Parameter()
+        {
+            Name = "PanelID",
+            Value = (string)ViewData["DataList_PanelID"],
+            Mode = ParameterMode.Value
+        });
+        de.BeforeRender.ExtraParams.Add(new Parameter()
+        {
+            Name = "Center_PageID",
+            Value = "App.Center_PageID.getValue()",
+            Mode = ParameterMode.Raw
+        });
+        de.SelectionChange.Url = Url.Action("DataList_ListRowClick", "DataList", new { Area = "UserControl" });
+        de.SelectionChange.ExtraParams.Add(new Parameter("ParentVariable", (string)(ViewData["DataList_ParentVariable"]), ParameterMode.Value));
+        de.SelectionChange.ExtraParams.Add(new Parameter()
+        {
+            Name = "selection",
+            Value = "this.getSelectionSubmit().getSelectionModelField().getValue()",
+            Mode = ParameterMode.Raw
+        });
+        de.SelectionChange.ExtraParams.Add(new Parameter()
+        {
+            Name = "PanelID",
+            Value = (string)ViewData["DataList_PanelID"],
+            Mode = ParameterMode.Value
+        });
+    })
+    .TopBar(
+        X.Toolbar()
+            .Items(
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_NowNames").Text((string)ViewData["DataList_NowNames"]),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_NowValues").Text((string)ViewData["DataList_NowValues"]),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_NowSigns").Text((string)ViewData["DataList_NowSigns"]),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_NowAndors").Text((string)ViewData["DataList_NowAndors"]),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_ParentVariable").Text((string)(ViewData["DataList_ParentVariable"])),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_VisitStatus").Text(""),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_InitNames").Text((string)ViewData["DataList_InitNames"]),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_InitValues").Text((string)ViewData["DataList_InitValues"]),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_InitSigns").Text((string)ViewData["DataList_InitSigns"]),
+                X.Hidden().ID(ViewData["DataList_PanelID"] + "_InitAndors").Text((string)ViewData["DataList_InitAndors"]),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnReverse")
+                    .Text("转换")
+                    .Icon(Icon.ArrowRefresh)
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnSearch")
+                    .Text("查询")
+                    .Icon(Icon.Zoom)
+                    .Handler("App."+ ViewData["DataList_PanelID"] + "_VisitStatus.setValue('1');")
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_SearchClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter("ParentVariable", "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()", ParameterMode.Raw));
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnReset")
+                    .Text("重置")
+                    .Icon(Icon.Database)
+                    .Handler("App." + ViewData["DataList_PanelID"] + "_VisitStatus.setValue('0');")
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_ResetClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnAdd")
+                    .Text("新增")
+                    .Icon(Icon.Add)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_AddClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                        de.Click.EventMask.ShowMask = true;
+                        de.Click.EventMask.Msg = "正在读取,请稍后...";
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnEdit")
+                    .Text("修改")
+                    .Icon(Icon.NoteEdit)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_EditClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                        de.Click.EventMask.ShowMask = true;
+                        de.Click.EventMask.Msg = "正在读取,请稍后...";
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnDelete")
+                    .Text("删除")
+                    .Icon(Icon.Delete)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_DeleteClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                        de.Click.Confirmation.ConfirmRequest = true;
+                        de.Click.Confirmation.Title = "注意";
+                        de.Click.Confirmation.Message = "确定删除选定内容吗？";
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnMoreSearch")
+                    .Text("更多查询")
+                    .Icon(Icon.ZoomIn)
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnOrderUp")
+                    .Text("上移")
+                    .Icon(Icon.ArrowUp)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_OrderUpClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnOrderDown")
+                    .Text("下移")
+                    .Icon(Icon.ArrowDown)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_OrderDownClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnVerify")
+                    .Text("审核/反审核")
+                    .Icon(Icon.PlayGreen)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_VerifyClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                        de.Click.EventMask.ShowMask = true;
+                        de.Click.EventMask.Msg = "正在审核,请稍后...";
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnVerifyAll")
+                    .Text("审核全部")
+                    .Icon(Icon.ForwardGreen)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_VerifyAllClick", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter("sInitNames", "App." + (string)ViewData["DataList_PanelID"] + "_InitNames" + ".getValue()", ParameterMode.Raw));
+                        de.Click.ExtraParams.Add(new Parameter("sInitValues", "App." + (string)ViewData["DataList_PanelID"] + "_InitValues" + ".getValue()", ParameterMode.Raw));
+                        de.Click.ExtraParams.Add(new Parameter("sInitSigns", "App." + (string)ViewData["DataList_PanelID"] + "_InitSigns" + ".getValue()", ParameterMode.Raw));
+                        de.Click.ExtraParams.Add(new Parameter("sNowNames", "App." + (string)ViewData["DataList_PanelID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+                        de.Click.ExtraParams.Add(new Parameter("sNowValues", "App." + (string)ViewData["DataList_PanelID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+                        de.Click.ExtraParams.Add(new Parameter("sNowSigns", "App." + (string)ViewData["DataList_PanelID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+                        de.Click.EventMask.ShowMask = true;
+                        de.Click.EventMask.Msg = "正在审核,请稍后...";
+                    })
+                    .Hidden(true),
+                X.FormPanel()
+                    .Header(false)
+                    .Border(false)
+                    .Layout(LayoutType.Fit)
+                    .BodyStyle("background-color:transparent;")
+                    .Items(
+                        X.FileUploadField().Hidden(true),
+                        X.Button()
+                            .ID(ViewData["DataList_PanelID"] + "_btnRegularExport")
+                            .Text("导出")
+                            .Hidden(true)
+                            .Icon(Icon.PageExcel)
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("DataList_RegularExportClick", "DataList", new { Area = "UserControl" });
+                                de.Click.ExtraParams.Add(new Parameter()
+                                {
+                                    Name = "ParentVariable",
+                                    Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                                    Mode = ParameterMode.Raw
+                                });
+                                de.Click.ExtraParams.Add(new Parameter("sInitNames", "App." + (string)ViewData["DataList_PanelID"] + "_InitNames" + ".getValue()", ParameterMode.Raw));
+                                de.Click.ExtraParams.Add(new Parameter("sInitValues", "App." + (string)ViewData["DataList_PanelID"] + "_InitValues" + ".getValue()", ParameterMode.Raw));
+                                de.Click.ExtraParams.Add(new Parameter("sInitSigns", "App." + (string)ViewData["DataList_PanelID"] + "_InitSigns" + ".getValue()", ParameterMode.Raw));
+                                de.Click.ExtraParams.Add(new Parameter("sNowNames", "App." + (string)ViewData["DataList_PanelID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+                                de.Click.ExtraParams.Add(new Parameter("sNowValues", "App." + (string)ViewData["DataList_PanelID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+                                de.Click.ExtraParams.Add(new Parameter("sNowSigns", "App." + (string)ViewData["DataList_PanelID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+                            })
+                    ),
+                X.FormPanel()
+                    .Header(false)
+                    .Border(false)
+                    .Layout(LayoutType.Fit)
+                    .BodyStyle("background-color:transparent;")
+                    .Items(
+                        X.Hidden()
+                            .ID(ViewData["DataList_PanelID"] + "_txtInportFileName")
+                            .DirectEvents(de=>
+                            {
+                                de.Change.Url = Url.Action("DataList_AfterInportClick", "DataList", new { Area = "UserControl" });
+                                de.Change.ExtraParams.Add(new Parameter()
+                                {
+                                    Name = "ParentVariable",
+                                    Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                                    Mode = ParameterMode.Raw
+                                });
+                                de.Change.ExtraParams.Add(new Parameter()
+                                {
+                                    Name = "sAddress",
+                                    Value = "this.getValue()",
+                                    Mode = ParameterMode.Raw
+                                });
+                                de.Change.ExtraParams.Add(new Parameter()
+                                {
+                                    Name = "PanelID",
+                                    Value = (string)ViewData["DataList_PanelID"],
+                                    Mode = ParameterMode.Value
+                                });
+                                de.Change.EventMask.ShowMask = true;
+                                de.Change.EventMask.Msg = "正在处理,请稍后...";
+                            }),
+                        X.Button()
+                            .ID(ViewData["DataList_PanelID"] + "_btnExport")
+                            .Text("导出")
+                            .Hidden(true)
+                            .Icon(Icon.PageExcel)
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("DataList_ExportClick", "DataList", new { Area = "UserControl" });
+                                de.Click.ExtraParams.Add(new Parameter()
+                                {
+                                    Name = "ParentVariable",
+                                    Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                                    Mode = ParameterMode.Raw
+                                });
+                                de.Click.ExtraParams.Add(new Parameter()
+                                {
+                                    Name = "selection",
+                                    Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                                    Mode = ParameterMode.Raw
+                                });
+                                de.Click.ExtraParams.Add(new Parameter()
+                                {
+                                    Name = "PanelID",
+                                    Value = (string)ViewData["DataList_PanelID"],
+                                    Mode = ParameterMode.Value
+                                });
+                                //de.Click.EventMask.ShowMask = true;
+                                //de.Click.EventMask.Msg = "正在处理,请稍后...";
+                            }),
+                        X.FileUploadField()
+                            .ButtonOnly(true)
+                            .ID(ViewData["DataList_PanelID"] + "_btnInport")
+                            .ButtonText("导入")
+                            .Width(55)
+                            .Hidden(true)
+                            .Icon(Icon.PrinterAdd)
+                            .DirectEvents(de =>
+                            {
+                                de.Change.Url = Url.Action("DataList_InportClick", "DataList", new { Area = "UserControl" });
+                                de.Change.FormID = "#(return this.up('form');)";
+                                de.Change.ExtraParams.Add(new Parameter()
+                                {
+                                    Name = "ParentVariable",
+                                    Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                                    Mode = ParameterMode.Raw
+                                });
+                                de.Change.EventMask.ShowMask = true;
+                                de.Change.EventMask.Msg = "正在处理,请稍后...";
+                                de.Change.Failure = @"Ext.Msg.show({ 
+                                    title   : '错误', 
+                                    msg     : '文件上传失败！', 
+                                    minWidth: 200, 
+                                    modal   : true, 
+                                    icon    : Ext.Msg.ERROR, 
+                                    buttons : Ext.Msg.OK 
+                                });";
+                            })
+                   ),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnMore1")
+                    .Text("更多操作1")
+                    .Icon(Icon.ForwardGreen)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_More1Click", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                        de.Click.EventMask.ShowMask = true;
+                        de.Click.EventMask.Msg = "正在处理,请稍后...";
+                    })
+                    .Hidden(true),
+                X.Button()
+                    .ID(ViewData["DataList_PanelID"] + "_btnMore2")
+                    .Text("更多操作2")
+                    .Icon(Icon.ForwardGreen)
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Url = Url.Action("DataList_More2Click", "DataList", new { Area = "UserControl" });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "ParentVariable",
+                            Value = "App." + (string)ViewData["DataList_PanelID"] + "_ParentVariable" + ".getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "PanelID",
+                            Value = (string)ViewData["DataList_PanelID"],
+                            Mode = ParameterMode.Value
+                        });
+                        de.Click.EventMask.ShowMask = true;
+                        de.Click.EventMask.Msg = "正在处理,请稍后...";
+                    })
+                    .Hidden(true)
+
+            )
+        )
+)

@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtLayout.cshtml";
+    var X = Html.X();
+}
+
+@section center
+{
+    @(X.FormPanel()
+        .Header(false)
+        .ID("SetConstValue_Form")
+        .Layout(LayoutType.Absolute)
+        .Width(500)
+        .Height(500)
+        .BodyPadding(5)
+        .Items(
+            //X.Label().Text("数据连接:").X(15).Y(5),
+            //X.TextField().ID("sConnStr").X(70).Y(5).AnchorHorizontal("100%"),
+            X.Label().Text("列表分页:").X(15).Y(30),
+            X.NumberField().ID("sDataListPageLimit").X(70).Y(30).AnchorHorizontal("100%").AllowDecimals(false),
+            X.Label().Text("实数精度:").X(15).Y(55),
+            X.NumberField().ID("sFloatDecimal").X(70).Y(55).AnchorHorizontal("100%").AllowDecimals(false),
+            X.Label().Text("菜单样式:").X(15).Y(80),
+            X.ComboBox()
+                .X(70)
+                .Y(80)
+                .ID("cmbMenuType")
+                .AnchorHorizontal("100%")
+                .Items(
+                    X.ListItem().Value("Default").Text("Default"),
+                    X.ListItem().Value("Tree").Text("Tree"),
+                    X.ListItem().Value("Image").Text("Image")
+                ),
+            //X.Label().Text("外观样式:").X(5).Y(125),
+            //X.ComboBox()
+            //    .X(70)
+            //    .Y(105)
+            //    .ID("cmbTheme")
+            //    .AnchorHorizontal("100%")
+            //    .Items(
+            //        X.ListItem().Value("None").Text("None"),
+            //        X.ListItem().Value("Default").Text("Default"),
+            //        X.ListItem().Value("Gray").Text("Gray"),
+            //        X.ListItem().Value("Access").Text("Access"),
+            //        X.ListItem().Value("Neptune").Text("Neptune")
+            //    ),
+            X.Label().Text("TAB样式:").X(15).Y(105),
+            X.ComboBox()
+                .X(70)
+                .Y(105)
+                .ID("cmbTabType")
+                .AnchorHorizontal("100%")
+                .Items(
+                    X.ListItem().Value("Single").Text("单页"),
+                    X.ListItem().Value("Multiple").Text("多页")
+                ),
+            X.Button()
+                .Text("保存")
+                .X(200)
+                .Y(200)
+                .Width(60)
+                .DirectEvents(de =>
+                {
+                    de.Click.Url = Url.Action("SetConstValue_Save");
+                    de.Click.ExtraParams.Add(new Parameter("sData", "this.up('form').getForm().getValues()", ParameterMode.Raw));
+                })
+                //X.FormPanel()
+                //.Header(false)
+                //.Border(false)
+                //.X(200)
+                //.Y(300)
+                //.Height(30)
+                //.Width(60)
+                //.Layout(LayoutType.Absolute)                
+                //.Items(
+                //    X.FileUploadField()
+                //        .ButtonOnly(true)
+                //        .ID("SetConstValue_File")
+                //        .ButtonText("导入")                        
+                //        .Icon(Icon.PrinterAdd)
+                //        .DirectEvents(de =>
+                //        {
+                //            de.Change.Url = Url.Action("SetConstValue_InportClick");
+                //            de.Change.FormID = "#(return this.up('form');)";
+                //            de.Change.EventMask.ShowMask = true;
+                //            de.Change.EventMask.Msg = "正在处理,请稍后...";
+                //            de.Change.Failure = @"Ext.Msg.show({ 
+                //                title   : '错误', 
+                //                msg     : '文件上传失败！', 
+                //                minWidth: 200, 
+                //                modal   : true, 
+                //                icon    : Ext.Msg.ERROR, 
+                //                buttons : Ext.Msg.OK 
+                //            });";
+                //        })
+                //        )
+        )
+    )
+}

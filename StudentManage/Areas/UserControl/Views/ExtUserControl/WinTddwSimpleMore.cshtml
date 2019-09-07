@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Absolute)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().Name("ID").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelPcdm").Name("Pcdm").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelKldm").Name("Kldm").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelJhxzdm").Name("Jhxzdm").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelJhlbdm").Name("Jhlbdm").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelGxdm").Name("GxID").Text("0"),
+            X.Label().X(2).Y(2).Text("投档单位代码:"),
+            X.TextField().Name("Code").X(80).Y(2).Width(200),
+            X.Label().X(2).Y(27).Text("投档单位名称:"),
+            X.TextField().Name("Name").X(80).Y(27).Width(200).AllowBlank(false),
+            X.Label().X(2).Y(52).Text("所在院校名称:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(80).Y(52).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbGxdm"),
+            X.Label().X(50).Y(77).Text("批次:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(80).Y(77).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbPcdm"),
+            X.Label().X(50).Y(102).Text("科类:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(80).Y(102).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbKldm"),
+            X.Label().X(25).Y(127).Text("计划性质:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(80).Y(127).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbJhxzdm"),
+            X.Label().X(25).Y(152).Text("计划类别:"),
+            X.Panel().Header(false).Layout(LayoutType.Fit).Border(false).X(80).Y(152).Width(200)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbJhlbdm"),
+
+            X.Label().X(50).Y(177).Text("备注:"),
+            X.TextArea().Name("Remark").X(80).Y(177).Width(200)
+        )
+   )
+}

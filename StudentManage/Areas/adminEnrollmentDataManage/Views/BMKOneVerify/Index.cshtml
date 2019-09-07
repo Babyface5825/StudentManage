@@ -1,0 +1,179 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_TreeSelMaster1.cshtml";
+    var X = Html.X();
+}
+
+
+@section SearchPanel {
+@(    
+    X.FormPanel()
+        .Layout(LayoutType.Absolute)
+        .ID("BMKOneVerify_SearchForm")
+        .Header(false)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().ID("BMKOneVerify_SearchMzdmID").Name("Mzdm").Text("0"),
+            X.Hidden().ID("BMKOneVerify_SearchXbdmID").Name("Xbdm").Text("0"),
+            X.Hidden().ID("BMKOneVerify_SearchDqdmID").Name("Dqdm").Text("0"),
+            X.Hidden().ID("BMKOneVerify_SearchZzmmdmID").Name("Zzmmdm").Text("0"),
+            X.Hidden().ID("BMKOneVerify_SearchKslbdmID").Name("Kslbdm").Text("0"),
+            X.Hidden().ID("BMKOneVerify_SearchBylbdmID").Name("Bylbdm").Text("0"),
+            X.Hidden().ID("BMKOneVerify_SearchKslxdmID").Name("Kslxdm").Text("0"),
+            X.Hidden().ID("BMKOneVerify_SearchWyyzdmID").Name("Wyyzdm").Text("0"),
+            X.Hidden().ID("BMKOneVerify_SearchByxxdmID").Name("Byxxdm").Text("0"),
+            X.Label().X(5).Y(5).Text("姓名:"),
+            X.TextField().X(35).Y(5).Name("Xm").Width(100),
+            X.Label().X(5).Y(30).Text("性别:"),
+            X.Panel()
+                .Header(false)
+                .ID("BMKOneVerify_XbdmContainer")
+                .X(35).Y(30)
+                .Width(100)
+                .Layout(LayoutType.Fit)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbXbdm"),
+            X.Label().X(5).Y(55).Text("民族:"),
+            X.Panel()
+                .Header(false)
+                .ID("BMKOneVerify_MzdmContainer")
+                .X(35).Y(55)
+                .Width(100)
+                .Layout(LayoutType.Fit)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbMzdm"),
+            X.Label().X(140).Y(5).Text("考生号:"),
+            X.TextField().X(195).Y(5).Name("Ksh").Width(100),
+            X.Label().X(140).Y(30).Text("身份证号:"),
+            X.TextField().X(195).Y(30).Name("Zjhm").Width(100),
+            X.Label().X(140).Y(55).Text("准考证号:"),
+            X.TextField().X(195).Y(55).Name("Zkzh").Width(100),
+            X.Label().X(300).Y(5).Text("毕业学校:"),
+            X.Panel()
+                .Header(false)
+                .ID("BMKOneVerify_ByxxdmContainer")
+                .X(355).Y(5)
+                .Width(100)
+                .Layout(LayoutType.Fit)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbByxxdm"),
+            X.Label().X(300).Y(30).Text("政治面貌:"),
+            X.Panel()
+                .Header(false)
+                .ID("BMKOneVerify_ZzmmdmContainer")
+                .X(355).Y(30)
+                .Width(100)
+                .Layout(LayoutType.Fit)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbZzmmdm"),
+            X.Label().X(300).Y(55).Text("考生类别:"),
+            X.Panel()
+                .Header(false)
+                .ID("BMKOneVerify_KslbdmContainer")
+                .X(355).Y(55)
+                .Width(100)
+                .Layout(LayoutType.Fit)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbKslbdm"),
+            X.Label().X(460).Y(5).Text("毕业类别:"),
+            X.Panel()
+                .Header(false)
+                .ID("BMKOneVerify_BylbdmContainer")
+                .X(515).Y(5)
+                .Width(100)
+                .Layout(LayoutType.Fit)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbBylbdm"),
+            X.Label().X(460).Y(30).Text("考试类型:"),
+            X.Panel()
+                .Header(false)
+                .ID("BMKOneVerify_KslxdmContainer")
+                .X(515).Y(30)
+                .Width(100)
+                .Layout(LayoutType.Fit)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbKslxdm"),
+            X.Label().X(460).Y(55).Text("外语语种:"),
+            X.Panel()
+                .Header(false)
+                .ID("BMKOneVerify_WyyzdmContainer")
+                .X(515).Y(55)
+                .Width(100)
+                .Layout(LayoutType.Fit)
+                .Border(false)
+                .BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbWyyzdm"),
+            //X.Label().X(620).Y(5).Text("录取学校:"),
+            //X.Panel()
+            //.Header(false)
+            ////.ID("BMKOneVerify_ByxxdmContainer")
+            //.X(675).Y(5)
+            //.Width(100)
+            //.Layout(LayoutType.Fit)
+            //.Border(false)
+            //.BodyStyle("background-color:transparent;")
+            //.ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+            // ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbByxxdm"),
+            //X.Label().X(620).Y(30).Text("录取专业:"),
+            //X.Panel()
+            //    .Header(false)
+            //    //.ID("BMKOneVerify_ByxxdmContainer")
+            //    .X(675).Y(30)
+            //    .Width(100)
+            //    .Layout(LayoutType.Fit)
+            //    .Border(false)
+            //    .BodyStyle("background-color:transparent;")
+            //    .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+            //ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbByxxdm"),
+            X.Label().X(620).Y(5).Text("操作年份 从:"),
+            X.NumberField().X(690).Y(5).Name("SearchStartYear").Width(80),
+            X.Label().X(775).Y(5).Text("到:"),
+            X.NumberField().X(795).Y(5).Name("SearchEndYear").Width(80),
+            X.Label().X(620).Y(30).Text("出生日期 从:"),
+            X.DateField().X(690).Y(30).Name("SearchStartCsrq").Width(80),
+            X.Label().X(775).Y(30).Text("到:"),
+            X.DateField().X(795).Y(30).Name("SearchEndCsrq").Width(80)
+        //X.Label().X(275).Y(5).Text("审核:"),
+        //X.ComboBox().Name("SearchVerifyFlag").X(305).Y(5).Width(80).Editable(false).EmptyText("全部")
+        //.Items(
+        //    X.ListItem().Text("已审核").Value("true"),
+        //    X.ListItem().Text("未审核").Value("false")
+        //),
+        //X.Label().X(390).Y(5).Text("职责:"),
+        //X.Panel()
+        //    .Header(false)
+        //    .ID("BMKOneVerify_DutyContainer")
+        //    .X(420).Y(5)
+        //    .Width(100)
+        //    .Layout(LayoutType.Fit)
+        //    .Border(false)
+        //    .BodyStyle("background-color:transparent;")
+        //    .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+        //        ViewData["DataComboBox_ID"] = "BMKOneVerify_cmbDutyInfo"),
+        //X.Label().X(525).Y(5).Text("手机号码:"),
+        //X.TextField().X(580).Y(5).Name("UserIMobilePhone").Width(100).AnchorHorizontal("99%")
+        )
+    )
+}
+
+    @section HiddenMore{
+        @*@RenderPage("\\Areas\\UserControl\\Views\\ExtUserControl\\WinStudentMore.cshtml",
+            ViewData["WindowID"] = "BMKOneVerify_WinStudentMore",
+            ViewData["WindowParentKey"] = "",
+            ViewData["CurrentController"] = "WinStudentMore")*@
+    }

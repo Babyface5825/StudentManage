@@ -1,0 +1,31 @@
+﻿@{
+    //左中结构
+    Layout = "_ExtLayout.cshtml";
+    var X = Html.X();
+}
+
+@RenderBody()
+
+@section center
+{
+    @(X.Viewport()
+        .Layout(LayoutType.Border)
+        .Items(
+            X.Panel()
+                .Header(false)
+                .Region(Region.West)
+                .Layout(LayoutType.Fit)
+                .Width(180)
+                .Split(true)
+                .Collapsible(true)
+                .CollapseMode(CollapseMode.Mini)
+                .MarginSpec("0 0 0 4")
+                .ItemsFromSection(this, "TreePanelField"),
+            X.Panel()
+                .Region(Region.Center)
+                .Layout(LayoutType.Fit)
+                .ItemsFromSection(this, "MainPanelField")
+        )
+    )
+    @RenderSection("Hidden", true)
+}

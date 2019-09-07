@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Absolute)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().Name("ID").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelTddwdm").Name("Tddwdm").Text("0"),
+            X.Hidden().ID((string)ViewData["WindowID"] + "_SelZydh").Name("Zydh").Text("0"),
+            X.Label().X(5).Y(5).Text("院校名称:"),
+            X.TextField().X(58).Y(3).Name("GxName").ReadOnly(true).Width(295),
+            X.Label().X(5).Y(30).Text("投档单位:"),
+            X.Panel().Header(false).X(58).Y(28).Width(295)
+                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbTddwdm"),
+            X.Label().X(5).Y(55).Text("计划性质:"),
+            X.TextField().X(58).Y(53).Name("JhxzName").ReadOnly(true).Width(120),
+            X.Label().X(180).Y(55).Text("计划类别:"),
+            X.TextField().X(232).Y(53).Name("JhlbName").ReadOnly(true).Width(120),
+            X.Label().X(30).Y(80).Text("批次:"),
+            X.TextField().X(58).Y(78).Name("PcName").ReadOnly(true).Width(120),
+            X.Label().X(203).Y(80).Text("科类:"),
+            X.TextField().X(232).Y(78).Name("KlName").ReadOnly(true).Width(120),
+            X.Label().X(5).Y(105).Text("专业代号:"),
+            X.Panel().Header(false).X(58).Y(103).Width(295)
+                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbZydh"),
+            X.Label().X(5).Y(130).Text("计划年份:"),
+            X.TextField().X(58).Y(128).Name("YearCode").ReadOnly(true).Width(120),
+            X.Label().X(180).Y(130).Text("计划省份:"),
+            X.TextField().X(232).Y(128).Name("ProvinceName").ReadOnly(true).Width(120),
+            X.Label().X(5).Y(155).Text("计划人数:"),
+            X.TextField().X(58).Y(153).Name("Jhrs").ReadOnly(true).Width(120),
+            X.Label().X(180).Y(155).Text("执行人数:"),
+            X.TextField().X(232).Y(153).Name("Jhzxs").ReadOnly(true).Width(120)
+
+
+        )
+   )
+}

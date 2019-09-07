@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+    HttpContext.Current.Items["StudentManage"] = true;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="@Url.Content("~/resources/css/css.css")" />
+    <script src="@Url.Content("~/resources/js/main.js")"></script>    
+</head>
+<body>
+    @Html.X().ResourceManager(ViewBag.ManagerConfig as MvcResourceManagerConfig)
+    @Html.X().Hidden().ID("Center_PageID").Text((string)ViewData["Center_PageID"])
+    @RenderSection("center", true)
+    
+</body>
+</html>

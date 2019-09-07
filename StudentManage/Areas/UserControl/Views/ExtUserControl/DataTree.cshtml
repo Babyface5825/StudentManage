@@ -1,0 +1,94 @@
+﻿@{
+    var X = Html.X();
+}
+
+@(
+ X.TreePanel()
+    .ID((string)ViewData["DataTree_PanelID"])
+    .AutoScroll(true)
+    .UseArrows(false)
+    .CollapseFirst(false)
+    .Animate(true)
+    .RootVisible(false)
+    .Mode(TreePanelMode.Remote)
+    .Border(false)
+    .RemoteEditUrl(Url.Action("RemoteEdit","DataTree",new { Area = "UserControl" }))
+    .RemoteAppendUrl(Url.Action("RemoteAppend", "DataTree", new { Area = "UserControl" }))
+    .RemoteRemoveUrl(Url.Action("RemoteRemove", "DataTree", new { Area = "UserControl" }))
+    .Header(true)
+    .TopBar(
+        X.Toolbar()
+            .Items(
+                X.Hidden().ID(ViewData["DataTree_PanelID"] + "_HiddenAuthorizationID").Text((string)ViewData["DataTree_AuthorID"]),
+                X.Hidden().ID(ViewData["DataTree_PanelID"] + "_RelationID").Text((string)(ViewData["DataTree_RelationID"])),
+                X.Hidden().ID(ViewData["DataTree_PanelID"] + "_NowNames").Text((string)ViewData["DataTree_NowNames"]),
+                X.Hidden().ID(ViewData["DataTree_PanelID"] + "_NowValues").Text((string)ViewData["DataTree_NowValues"]),
+                X.Hidden().ID(ViewData["DataTree_PanelID"] + "_NowSigns").Text((string)ViewData["DataTree_NowSigns"]),
+                X.Button()
+                    .Text("展开")
+                    .Icon(Icon.ArrowOut)
+                    .Handler("this.up('treepanel').expandAll();"),
+                X.Button()
+                    .Text("收缩")
+                    .Icon(Icon.ArrowIn)
+                    .Handler("this.up('treepanel').collapseAll();")
+            )
+    )
+    .View(
+        X.TreeView()
+            .ID(ViewData["DataTree_PanelID"] + "_View")
+    )
+    .Store(
+        X.TreeStore()
+            .ID(ViewData["DataTree_PanelID"] + "_Store")
+            .Root(
+                X.Node()
+                    .NodeID("Root")
+                    .Expanded(true)
+            )
+            .Proxy(
+                X.AjaxProxy()
+                    .Url(Url.Action("InitTreeNodes", "DataTree", new { Area = "UserControl" }))
+                    .ExtraParams(pa => {
+                        pa.Add(new StoreParameter("ParentVariable", (string)(ViewData["DataTree_ParentVariable"]), ParameterMode.Value));
+                        pa.Add(new StoreParameter("PanelID", (string)(ViewData["DataTree_PanelID"]), ParameterMode.Value));
+                        pa.Add(new StoreParameter("sRelationIDs", (string)(ViewData["DataTree_RelationID"]), ParameterMode.Value));
+                        pa.Add(new StoreParameter("sNowNames", (string)(ViewData["DataTree_NowNames"]), ParameterMode.Value));
+                        pa.Add(new StoreParameter("sNowValues", (string)(ViewData["DataTree_NowValues"]), ParameterMode.Value));
+                        pa.Add(new StoreParameter("sNowSigns", (string)(ViewData["DataTree_NowSigns"]), ParameterMode.Value));
+                        pa.Add(new StoreParameter("sAuthorIDs", (string)(ViewData["DataTree_AuthorID"]), ParameterMode.Value));
+                    })
+            )
+    )
+    .SubmitUrl(
+        Url.Action("DataTreePanelCommit", "DataTree", new { area = "UserControl", PanelID = (string)ViewData["DataTree_PanelID"], ParentVariable = (string)ViewData["DataTree_ParentVariable"] })
+    )
+
+    .DirectEvents(de =>
+    {   
+        de.ItemClick.Url = Url.Action("TreeNodeClick", "DataTree", new { Area = "UserControl" });
+        de.ItemClick.ExtraParams.Add(new Parameter("nodeId", "record.data.id", ParameterMode.Raw));
+        de.ItemClick.ExtraParams.Add(new Parameter("ParentVariable", (string)(ViewData["DataTree_ParentVariable"]), ParameterMode.Value));
+        de.ItemClick.ExtraParams.Add(new Parameter("sNowNames", "App." + (string)ViewData["DataTree_PanelID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+        de.ItemClick.ExtraParams.Add(new Parameter("sNowValues", "App." + (string)ViewData["DataTree_PanelID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+        de.ItemClick.ExtraParams.Add(new Parameter("sNowSigns", "App." + (string)ViewData["DataTree_PanelID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+        //de.ItemClick.EventMask.ShowMask = true;
+        //de.ItemClick.EventMask.Msg = "正在加载,请稍后...";
+        de.Select.Url = Url.Action("TreeNodeClick", "DataTree", new { Area = "UserControl" });
+        de.Select.ExtraParams.Add(new Parameter("nodeId", "record.data.id", ParameterMode.Raw));
+        de.Select.ExtraParams.Add(new Parameter("ParentVariable", (string)(ViewData["DataTree_ParentVariable"]), ParameterMode.Value));
+        de.ItemClick.ExtraParams.Add(new Parameter("sNowNames", "App." + (string)ViewData["DataTree_PanelID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+        de.ItemClick.ExtraParams.Add(new Parameter("sNowValues", "App." + (string)ViewData["DataTree_PanelID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+        de.ItemClick.ExtraParams.Add(new Parameter("sNowSigns", "App." + (string)ViewData["DataTree_PanelID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+        //de.Select.EventMask.ShowMask = true;
+        //de.Select.EventMask.Msg = "正在加载,请稍后...";
+        de.AfterRender.Url = Url.Action("InitMenuCenter", "DataTree", new { Area = "UserControl" });
+        de.AfterRender.Delay = 500;
+        de.AfterRender.ExtraParams.Add(new Parameter("ParentVariable", (string)(ViewData["DataTree_ParentVariable"]), ParameterMode.Value));
+
+        de.AfterLayout.Url = Url.Action("ExpandTreePanel", "DataTree", new { Area = "UserControl" });
+        de.AfterLayout.ExtraParams.Add(new Parameter("PanelID", "this.id", ParameterMode.Raw));
+        de.AfterLayout.ExtraParams.Add(new Parameter("ParentVariable", (string)(ViewData["DataTree_ParentVariable"]), ParameterMode.Value));
+    })
+)
+

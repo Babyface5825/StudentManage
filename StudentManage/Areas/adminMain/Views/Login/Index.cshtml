@@ -1,0 +1,104 @@
+﻿@{
+    Layout = null;
+    var X = Html.X();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>        
+    <style type="text/css">
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-color: #096487;
+        }
+        #unlicensed
+        {
+            filter:alpha(opacity:0);
+	        opacity:0;
+	        position:absolute;
+	        z-index:-1;
+        }
+        .td1 {
+            background-image: url(img/loginlt3.gif);
+            background-repeat: no-repeat;
+        }
+
+        .td2 {
+            background-image: url(img/loginrt.jpg);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    @X.ResourceManager(ViewBag.ManagerConfig as MvcResourceManagerConfig)    
+    @(X.Viewport()
+        .Layout(LayoutType.Fit)
+        .Items(
+          X.Panel()
+            .Header(false)
+            .BodyStyle("background-color:#096487;")
+            .Layout(LayoutType.Absolute)
+            .Items(
+              X.Panel()
+                .ID("Login_MainPanel")
+                .Region(Region.Center)
+                .Header(false)
+                .Border(false)
+                .Layout(LayoutType.Absolute)
+                .BodyStyle("background-color:transparent;background-image: url(img/loginbk.jpg);")
+                .Width(1006)
+                .Height(600)
+                .Hidden(true)
+                .X(0).Y(0)
+                .DirectEvents(de =>
+                {
+                    de.Render.Url = Url.Action("Login_Show");
+                    de.Render.ExtraParams.Add(new Parameter("sWidth", "this.up('panel').getWidth()", ParameterMode.Raw));
+                    de.Render.ExtraParams.Add(new Parameter("sHeight", "this.up('panel').getHeight()", ParameterMode.Raw));
+                    de.Render.Delay = 50;
+                })
+                .Items(
+                     X.FormPanel()
+                        .X(500)
+                        .Y(240)
+                        .Width(250)
+                        .Layout(LayoutType.Form)
+                        .ID("Login_Form")
+                        .Border(false)
+                        .BodyStyle("background-color:transparent;")
+                        .Items(
+                            Html.X().TextField()
+                                .FieldLabel("用户名")
+                                .Name("UserICode")
+                                .AllowBlank(false),
+                            Html.X().TextField()
+                                .InputType(Ext.Net.InputType.Password)
+                                .FieldLabel("密　码")
+                                .Name("UserIPsd")
+                                .AllowBlank(false)
+                            )
+                        .Buttons(
+                            X.Button()
+                               .Text("登录")
+                               .Icon(Icon.Accept)
+                                .DirectEvents(de =>
+                                {
+                                    de.Click.Action = "Login_SureClick";
+                                    de.Click.EventMask.ShowMask = true;
+                                    de.Click.EventMask.Msg = "登录中...";
+                                    de.Click.FormID = "#(return this.up('form');)";
+                                }),
+                            X.Button()
+                               .Text("立即注册")
+                               .Icon(Icon.Cancel)
+                        )                     
+                     //X.Label().Text("系统开发：傻子石").X(540).Y(360)
+                  )
+              )
+        )
+    )
+</body>
+</html>

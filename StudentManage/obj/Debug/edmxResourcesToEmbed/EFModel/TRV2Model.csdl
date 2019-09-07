@@ -1,0 +1,1499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TeachingResearchV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblAfterMarkInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AfterMarkIGetNum" Type="Int16" Nullable="false" />
+    <Property Name="AfterMarkIDate" Type="DateTime" Precision="3" />
+    <Property Name="StudentID" Type="Int64" />
+    <Property Name="ChapterID" Type="Int64" />
+    <Property Name="PeriodID" Type="Int64" />
+    <Property Name="SelStudentID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tblCourseInfo" Relationship="Self.FK_dbo_tblAfterMarkInfo_dbo_tblCourseInfo_ChapterID" FromRole="tblAfterMarkInfo" ToRole="tblCourseInfo" />
+    <NavigationProperty Name="tblPeriodInfo" Relationship="Self.FK_dbo_tblAfterMarkInfo_dbo_tblPeriodInfo_PeriodID" FromRole="tblAfterMarkInfo" ToRole="tblPeriodInfo" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblAfterMarkInfo_dbo_tblUserInfo_StudentID" FromRole="tblAfterMarkInfo" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblStudentSelCourseRelation" Relationship="Self.FK_tblAfterMarkInfo_tblStudentSelCourseRelation" FromRole="tblAfterMarkInfo" ToRole="tblStudentSelCourseRelation" />
+  </EntityType>
+  <EntityType Name="tblAllocate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllocaterID" Type="Int64" Nullable="false" />
+    <Property Name="ExpertID" Type="Int64" Nullable="false" />
+    <Property Name="GroupWorkID" Type="Int64" Nullable="false" />
+    <Property Name="AllocateStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AllocateEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SubmitFlag" Type="Boolean" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblGroupWorkInfo" Relationship="Self.FK_tblAllocate_tblGroupWorkInfo" FromRole="tblAllocate" ToRole="tblGroupWorkInfo" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_tblAllocate_tblUserInfo" FromRole="tblAllocate" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblUserInfo1" Relationship="Self.FK_tblAllocate_tblUserInfo1" FromRole="tblAllocate" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblPaticalScore" Relationship="Self.FK_tblPaticalScore_tblAllocate" FromRole="tblAllocate" ToRole="tblPaticalScore" />
+  </EntityType>
+  <EntityType Name="tblAuthorizationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblChannelAuthorRelation" Relationship="Self.FK_dbo_tblChannelAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" FromRole="tblAuthorizationInfo" ToRole="tblChannelAuthorRelation" />
+    <NavigationProperty Name="tblOperationAuthorRelation" Relationship="Self.FK_dbo_tblOperationAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" FromRole="tblAuthorizationInfo" ToRole="tblOperationAuthorRelation" />
+    <NavigationProperty Name="tblUserAuthorRelation" Relationship="Self.FK_dbo_tblUserAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" FromRole="tblAuthorizationInfo" ToRole="tblUserAuthorRelation" />
+  </EntityType>
+  <EntityType Name="tblChannelAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AuthorID" Type="Int64" Nullable="false" />
+    <Property Name="ChannelID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tblAuthorizationInfo" Relationship="Self.FK_dbo_tblChannelAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" FromRole="tblChannelAuthorRelation" ToRole="tblAuthorizationInfo" />
+    <NavigationProperty Name="tblChannelType" Relationship="Self.FK_dbo_tblChannelAuthorRelation_dbo_tblChannelType_ChannelID" FromRole="tblChannelAuthorRelation" ToRole="tblChannelType" />
+  </EntityType>
+  <EntityType Name="tblChannelContent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChannelCName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ChannelCComeFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCAudio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCVedio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCTemplete" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChannelCPop" Type="Boolean" Nullable="false" />
+    <Property Name="ChannelCTop" Type="Boolean" Nullable="false" />
+    <Property Name="ChannelCVerify" Type="Boolean" Nullable="false" />
+    <Property Name="ChannelCDefaultFont" Type="Boolean" Nullable="false" />
+    <Property Name="ChannelTypeID" Type="Int64" />
+    <Property Name="UserID" Type="Int64" />
+    <Property Name="HitTime" Type="Int32" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblChannelType" Relationship="Self.FK_dbo_tblChannelContent_dbo_tblChannelType_ChannelTypeID" FromRole="tblChannelContent" ToRole="tblChannelType" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblChannelContent_dbo_tblUserInfo_UserID" FromRole="tblChannelContent" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblChannelContentDoc" Relationship="Self.FK_dbo_tblChannelContentDoc_dbo_tblChannelContent_RelationID" FromRole="tblChannelContent" ToRole="tblChannelContentDoc" />
+    <NavigationProperty Name="tblChannelContentPic" Relationship="Self.FK_dbo_tblChannelContentPic_dbo_tblChannelContent_RelationID" FromRole="tblChannelContent" ToRole="tblChannelContentPic" />
+  </EntityType>
+  <EntityType Name="tblChannelContentDoc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="tblChannelContent" Relationship="Self.FK_dbo_tblChannelContentDoc_dbo_tblChannelContent_RelationID" FromRole="tblChannelContentDoc" ToRole="tblChannelContent" />
+  </EntityType>
+  <EntityType Name="tblChannelContentPic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="tblChannelContent" Relationship="Self.FK_dbo_tblChannelContentPic_dbo_tblChannelContent_RelationID" FromRole="tblChannelContentPic" ToRole="tblChannelContent" />
+  </EntityType>
+  <EntityType Name="tblChannelType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentIndex" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="TheLevel" Type="Int16" Nullable="false" />
+    <Property Name="ChildNum" Type="Int32" Nullable="false" />
+    <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblChannelAuthorRelation" Relationship="Self.FK_dbo_tblChannelAuthorRelation_dbo_tblChannelType_ChannelID" FromRole="tblChannelType" ToRole="tblChannelAuthorRelation" />
+    <NavigationProperty Name="tblChannelContent" Relationship="Self.FK_dbo_tblChannelContent_dbo_tblChannelType_ChannelTypeID" FromRole="tblChannelType" ToRole="tblChannelContent" />
+  </EntityType>
+  <EntityType Name="tblCommunicateInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommunicateIPageNum" Type="Int32" Nullable="false" />
+    <Property Name="FoundDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ParentID" Type="Int64" Nullable="false" />
+    <Property Name="score" Type="Int16" Nullable="false" />
+    <Property Name="status" Type="Boolean" Nullable="false" />
+    <Property Name="StudentID" Type="Int64" Nullable="false" />
+    <Property Name="ChapterID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="SelStudentID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblCommunicateInfo_dbo_tblUserInfo_StudentID" FromRole="tblCommunicateInfo" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblCourseInfo" Relationship="Self.FK_tblCommunicateInfo_tblCourseInfo" FromRole="tblCommunicateInfo" ToRole="tblCourseInfo" />
+    <NavigationProperty Name="tblStudentSelCourseRelation" Relationship="Self.FK_tblCommunicateInfo_tblStudentSelCourseRelation" FromRole="tblCommunicateInfo" ToRole="tblStudentSelCourseRelation" />
+  </EntityType>
+  <EntityType Name="tblContestFlowDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FlowTypeID" Type="Int64" Nullable="false" />
+    <Property Name="ContestInfoID" Type="Int64" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="Weights" Type="Double" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblContestFlowType" Relationship="Self.FK_tblContestFlowDetail_tblContestFlowType" FromRole="tblContestFlowDetail" ToRole="tblContestFlowType" />
+    <NavigationProperty Name="tblContestInfo" Relationship="Self.FK_tblContestFlowDetail_tblContestInfo" FromRole="tblContestFlowDetail" ToRole="tblContestInfo" />
+    <NavigationProperty Name="tblGroupWorkInfo" Relationship="Self.FK_tblGroupWorkInfo_tblContestFlowDetail" FromRole="tblContestFlowDetail" ToRole="tblGroupWorkInfo" />
+    <NavigationProperty Name="tblScoreTypeInfo" Relationship="Self.FK_tblScoreTypeInfo_tblContestFlowDetail" FromRole="tblContestFlowDetail" ToRole="tblScoreTypeInfo" />
+  </EntityType>
+  <EntityType Name="tblContestFlowType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="tblContestFlowDetail" Relationship="Self.FK_tblContestFlowDetail_tblContestFlowType" FromRole="tblContestFlowType" ToRole="tblContestFlowDetail" />
+  </EntityType>
+  <EntityType Name="tblContestInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatorID" Type="Int64" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblContestFlowDetail" Relationship="Self.FK_tblContestFlowDetail_tblContestInfo" FromRole="tblContestInfo" ToRole="tblContestFlowDetail" />
+    <NavigationProperty Name="tblContestType" Relationship="Self.FK_tblContestInfo_tblContestType" FromRole="tblContestInfo" ToRole="tblContestType" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_tblContestInfo_tblUserInfo" FromRole="tblContestInfo" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblRegisterGroup" Relationship="Self.FK_tblRegisterGroup_tblContestInfo" FromRole="tblContestInfo" ToRole="tblRegisterGroup" />
+  </EntityType>
+  <EntityType Name="tblContestType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="RelationID" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblContestInfo" Relationship="Self.FK_tblContestInfo_tblContestType" FromRole="tblContestType" ToRole="tblContestInfo" />
+  </EntityType>
+  <EntityType Name="tblCourseFileInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OpenFlag" Type="Boolean" Nullable="false" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="RelationID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="tblCourseInfo" Relationship="Self.FK_dbo_tblCourseFileInfo_dbo_tblCourseInfo_RelationID" FromRole="tblCourseFileInfo" ToRole="tblCourseInfo" />
+  </EntityType>
+  <EntityType Name="tblCourseInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentIndex" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="TheLevel" Type="Int16" Nullable="false" />
+    <Property Name="ChildNum" Type="Int32" Nullable="false" />
+    <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblAfterMarkInfo" Relationship="Self.FK_dbo_tblAfterMarkInfo_dbo_tblCourseInfo_ChapterID" FromRole="tblCourseInfo" ToRole="tblAfterMarkInfo" />
+    <NavigationProperty Name="tblCommunicateInfo" Relationship="Self.FK_tblCommunicateInfo_tblCourseInfo" FromRole="tblCourseInfo" ToRole="tblCommunicateInfo" />
+    <NavigationProperty Name="tblCourseFileInfo" Relationship="Self.FK_dbo_tblCourseFileInfo_dbo_tblCourseInfo_RelationID" FromRole="tblCourseInfo" ToRole="tblCourseFileInfo" />
+    <NavigationProperty Name="tblCoursePeriodRelation" Relationship="Self.FK_dbo_tblCoursePeriodRelation_dbo_tblCourseInfo_CourseID" FromRole="tblCourseInfo" ToRole="tblCoursePeriodRelation" />
+    <NavigationProperty Name="tblStudentCourseTestFile" Relationship="Self.FK_dbo_tblStudentCourseTestFile_dbo_tblCourseInfo_ChapterID" FromRole="tblCourseInfo" ToRole="tblStudentCourseTestFile" />
+    <NavigationProperty Name="tblTeacherCourseRelation" Relationship="Self.FK_dbo_tblTeacherCourseRelation_dbo_tblCourseInfo_CourseID" FromRole="tblCourseInfo" ToRole="tblTeacherCourseRelation" />
+    <NavigationProperty Name="tblTestQuestion" Relationship="Self.FK_dbo_tblTestQuestion_dbo_tblCourseInfo_ChapterID" FromRole="tblCourseInfo" ToRole="tblTestQuestion" />
+  </EntityType>
+  <EntityType Name="tblCoursePeriodRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PeriodID" Type="Int64" />
+    <Property Name="CourseID" Type="Int64" />
+    <NavigationProperty Name="tblCourseInfo" Relationship="Self.FK_dbo_tblCoursePeriodRelation_dbo_tblCourseInfo_CourseID" FromRole="tblCoursePeriodRelation" ToRole="tblCourseInfo" />
+    <NavigationProperty Name="tblPeriodInfo" Relationship="Self.FK_dbo_tblCoursePeriodRelation_dbo_tblPeriodInfo_PeriodID" FromRole="tblCoursePeriodRelation" ToRole="tblPeriodInfo" />
+    <NavigationProperty Name="tblStudentDutyInfo" Relationship="Self.FK_dbo_tblStudentDutyInfo_dbo_tblCoursePeriodRelation_CoursePeriodID" FromRole="tblCoursePeriodRelation" ToRole="tblStudentDutyInfo" />
+    <NavigationProperty Name="tblStudentSelCourseRelation" Relationship="Self.FK_dbo_tblStudentSelCourseRelation_dbo_tblCoursePeriodRelation_CoursePeriodID" FromRole="tblCoursePeriodRelation" ToRole="tblStudentSelCourseRelation" />
+  </EntityType>
+  <EntityType Name="tblDepartmentInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentIADD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIPostalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIFax" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentIeMail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ParentIndex" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="TheLevel" Type="Int16" Nullable="false" />
+    <Property Name="ChildNum" Type="Int32" Nullable="false" />
+    <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblUserInfo_dbo_tblDepartmentInfo_UserIDepartmentIID" FromRole="tblDepartmentInfo" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblRegisterGroup" Relationship="Self.FK_tblRegisterGroup_tblDepartmentInfo" FromRole="tblDepartmentInfo" ToRole="tblRegisterGroup" />
+  </EntityType>
+  <EntityType Name="tblDutyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblUserInfo_dbo_tblDutyInfo_UserIDutyIID" FromRole="tblDutyInfo" ToRole="tblUserInfo" />
+  </EntityType>
+  <EntityType Name="tblGroupWorkInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegisterGroupID" Type="Int64" Nullable="false" />
+    <Property Name="ContestFlowDetailId" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Int32" Nullable="false" />
+    <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FileType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubScore" Type="Double" />
+    <NavigationProperty Name="tblAllocate" Relationship="Self.FK_tblAllocate_tblGroupWorkInfo" FromRole="tblGroupWorkInfo" ToRole="tblAllocate" />
+    <NavigationProperty Name="tblContestFlowDetail" Relationship="Self.FK_tblGroupWorkInfo_tblContestFlowDetail" FromRole="tblGroupWorkInfo" ToRole="tblContestFlowDetail" />
+    <NavigationProperty Name="tblRegisterGroup" Relationship="Self.FK_tblGroupWorkInfo_tblRegisterGroup" FromRole="tblGroupWorkInfo" ToRole="tblRegisterGroup" />
+  </EntityType>
+  <EntityType Name="tblGuestBook">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GuestBName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GuestBHead" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GuestBText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GuestBAnswerFlag" Type="Boolean" Nullable="false" />
+    <Property Name="GuestBAnswer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GuestBTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblMainInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MainIName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIURL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIEmailPass" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIEmailEmailSmtp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIKeyWords" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIFootMark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIVisitedNum" Type="Int32" Nullable="false" />
+    <Property Name="MainIVisitedVisiable" Type="Boolean" Nullable="false" />
+    <Property Name="MainIInformation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MainIAboutUS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblMarkInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MarkIGetNum" Type="Int16" Nullable="false" />
+    <Property Name="MarkIDate" Type="DateTime" Precision="3" />
+    <Property Name="StudentID" Type="Int64" />
+    <Property Name="TestQuestionID" Type="Int64" />
+    <Property Name="PeriodID" Type="Int64" />
+    <Property Name="SelStudentID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tblPeriodInfo" Relationship="Self.FK_dbo_tblMarkInfo_dbo_tblPeriodInfo_PeriodID" FromRole="tblMarkInfo" ToRole="tblPeriodInfo" />
+    <NavigationProperty Name="tblTestQuestion" Relationship="Self.FK_dbo_tblMarkInfo_dbo_tblTestQuestion_TestQuestionID" FromRole="tblMarkInfo" ToRole="tblTestQuestion" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblMarkInfo_dbo_tblUserInfo_StudentID" FromRole="tblMarkInfo" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblStudentSelCourseRelation" Relationship="Self.FK_tblMarkInfo_tblStudentSelCourseRelation" FromRole="tblMarkInfo" ToRole="tblStudentSelCourseRelation" />
+  </EntityType>
+  <EntityType Name="tblOperationAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="AuthorID" Type="Int64" Nullable="false" />
+    <Property Name="OperationID" Type="Int64" Nullable="false" />
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SearchFlag" Type="Boolean" Nullable="false" />
+    <Property Name="AddFlag" Type="Boolean" Nullable="false" />
+    <Property Name="EditFlag" Type="Boolean" Nullable="false" />
+    <Property Name="DeleteFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblAuthorizationInfo" Relationship="Self.FK_dbo_tblOperationAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" FromRole="tblOperationAuthorRelation" ToRole="tblAuthorizationInfo" />
+    <NavigationProperty Name="tblOperationInfo" Relationship="Self.FK_dbo_tblOperationAuthorRelation_dbo_tblOperationInfo_OperationID" FromRole="tblOperationAuthorRelation" ToRole="tblOperationInfo" />
+  </EntityType>
+  <EntityType Name="tblOperationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentIndex" Type="Int64" Nullable="false" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="TheLevel" Type="Int16" Nullable="false" />
+    <Property Name="ChildNum" Type="Int32" Nullable="false" />
+    <Property Name="IsLeaf" Type="Boolean" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblOperationAuthorRelation" Relationship="Self.FK_dbo_tblOperationAuthorRelation_dbo_tblOperationInfo_OperationID" FromRole="tblOperationInfo" ToRole="tblOperationAuthorRelation" />
+  </EntityType>
+  <EntityType Name="tblPaticalScore">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllocateID" Type="Int64" Nullable="false" />
+    <Property Name="TypeID" Type="Int64" Nullable="false" />
+    <Property Name="Score" Type="Double" />
+    <NavigationProperty Name="tblAllocate" Relationship="Self.FK_tblPaticalScore_tblAllocate" FromRole="tblPaticalScore" ToRole="tblAllocate" />
+    <NavigationProperty Name="tblScoreTypeInfo" Relationship="Self.FK_tblPaticalScore_tblScoreTypeInfo" FromRole="tblPaticalScore" ToRole="tblScoreTypeInfo" />
+  </EntityType>
+  <EntityType Name="tblPeriodInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TheOrder" Type="Int16" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblAfterMarkInfo" Relationship="Self.FK_dbo_tblAfterMarkInfo_dbo_tblPeriodInfo_PeriodID" FromRole="tblPeriodInfo" ToRole="tblAfterMarkInfo" />
+    <NavigationProperty Name="tblCoursePeriodRelation" Relationship="Self.FK_dbo_tblCoursePeriodRelation_dbo_tblPeriodInfo_PeriodID" FromRole="tblPeriodInfo" ToRole="tblCoursePeriodRelation" />
+    <NavigationProperty Name="tblMarkInfo" Relationship="Self.FK_dbo_tblMarkInfo_dbo_tblPeriodInfo_PeriodID" FromRole="tblPeriodInfo" ToRole="tblMarkInfo" />
+  </EntityType>
+  <EntityType Name="tblRegisterGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContestInfoID" Type="Int64" Nullable="false" />
+    <Property Name="CreatorID" Type="Int64" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="SchoolID" Type="Int64" Nullable="false" />
+    <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Score" Type="Double" />
+    <Property Name="GroupResult" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblContestInfo" Relationship="Self.FK_tblRegisterGroup_tblContestInfo" FromRole="tblRegisterGroup" ToRole="tblContestInfo" />
+    <NavigationProperty Name="tblDepartmentInfo" Relationship="Self.FK_tblRegisterGroup_tblDepartmentInfo" FromRole="tblRegisterGroup" ToRole="tblDepartmentInfo" />
+    <NavigationProperty Name="tblGroupWorkInfo" Relationship="Self.FK_tblGroupWorkInfo_tblRegisterGroup" FromRole="tblRegisterGroup" ToRole="tblGroupWorkInfo" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_tblRegisterGroup_tblUserInfo" FromRole="tblRegisterGroup" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblRegisterUser" Relationship="Self.FK_tblRegisterUser_tblRegisterGroup" FromRole="tblRegisterGroup" ToRole="tblRegisterUser" />
+  </EntityType>
+  <EntityType Name="tblRegisterUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegisterGroupID" Type="Int64" Nullable="false" />
+    <Property Name="UserID" Type="Int64" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TheOrder" Type="Int32" />
+    <NavigationProperty Name="tblRegisterGroup" Relationship="Self.FK_tblRegisterUser_tblRegisterGroup" FromRole="tblRegisterUser" ToRole="tblRegisterGroup" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_tblRegisterUser_tblUserInfo" FromRole="tblRegisterUser" ToRole="tblUserInfo" />
+  </EntityType>
+  <EntityType Name="tblScoreTypeInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContestFlowDetailId" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ScorePercent" Type="Int32" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="TheOrder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblContestFlowDetail" Relationship="Self.FK_tblScoreTypeInfo_tblContestFlowDetail" FromRole="tblScoreTypeInfo" ToRole="tblContestFlowDetail" />
+    <NavigationProperty Name="tblPaticalScore" Relationship="Self.FK_tblPaticalScore_tblScoreTypeInfo" FromRole="tblScoreTypeInfo" ToRole="tblPaticalScore" />
+  </EntityType>
+  <EntityType Name="tblStudentCourseTestFile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentSelCourseID" Type="Int64" Nullable="false" />
+    <Property Name="ChapterID" Type="Int64" Nullable="false" />
+    <Property Name="StudentCTFDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastScore" Type="Int16" Nullable="false" />
+    <Property Name="ReadResult" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblCourseInfo" Relationship="Self.FK_dbo_tblStudentCourseTestFile_dbo_tblCourseInfo_ChapterID" FromRole="tblStudentCourseTestFile" ToRole="tblCourseInfo" />
+    <NavigationProperty Name="tblStudentSelCourseRelation" Relationship="Self.FK_dbo_tblStudentCourseTestFile_dbo_tblStudentSelCourseRelation_StudentSelCourseID" FromRole="tblStudentCourseTestFile" ToRole="tblStudentSelCourseRelation" />
+  </EntityType>
+  <EntityType Name="tblStudentDutyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentDutyIDate" Type="DateTime" Precision="3" />
+    <Property Name="StudentDutyStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StudentID" Type="Int64" Nullable="false" />
+    <Property Name="CoursePeriodID" Type="Int64" Nullable="false" />
+    <Property Name="SelStudentID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tblCoursePeriodRelation" Relationship="Self.FK_dbo_tblStudentDutyInfo_dbo_tblCoursePeriodRelation_CoursePeriodID" FromRole="tblStudentDutyInfo" ToRole="tblCoursePeriodRelation" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblStudentDutyInfo_dbo_tblUserInfo_StudentID" FromRole="tblStudentDutyInfo" ToRole="tblUserInfo" />
+    <NavigationProperty Name="tblStudentSelCourseRelation" Relationship="Self.FK_tblStudentDutyInfo_tblStudentSelCourseRelation" FromRole="tblStudentDutyInfo" ToRole="tblStudentSelCourseRelation" />
+  </EntityType>
+  <EntityType Name="tblStudentSelCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="Int64" Nullable="false" />
+    <Property Name="CoursePeriodID" Type="Int64" Nullable="false" />
+    <Property Name="LastScore" Type="Double" Nullable="false" />
+    <Property Name="DutyScore" Type="Double" Nullable="false" />
+    <Property Name="MarkScore" Type="Double" Nullable="false" />
+    <Property Name="AfterMarkScore" Type="Double" Nullable="false" />
+    <Property Name="CommunicationScore" Type="Double" Nullable="false" />
+    <Property Name="TestReportScore" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblAfterMarkInfo" Relationship="Self.FK_tblAfterMarkInfo_tblStudentSelCourseRelation" FromRole="tblStudentSelCourseRelation" ToRole="tblAfterMarkInfo" />
+    <NavigationProperty Name="tblCommunicateInfo" Relationship="Self.FK_tblCommunicateInfo_tblStudentSelCourseRelation" FromRole="tblStudentSelCourseRelation" ToRole="tblCommunicateInfo" />
+    <NavigationProperty Name="tblCoursePeriodRelation" Relationship="Self.FK_dbo_tblStudentSelCourseRelation_dbo_tblCoursePeriodRelation_CoursePeriodID" FromRole="tblStudentSelCourseRelation" ToRole="tblCoursePeriodRelation" />
+    <NavigationProperty Name="tblMarkInfo" Relationship="Self.FK_tblMarkInfo_tblStudentSelCourseRelation" FromRole="tblStudentSelCourseRelation" ToRole="tblMarkInfo" />
+    <NavigationProperty Name="tblStudentCourseTestFile" Relationship="Self.FK_dbo_tblStudentCourseTestFile_dbo_tblStudentSelCourseRelation_StudentSelCourseID" FromRole="tblStudentSelCourseRelation" ToRole="tblStudentCourseTestFile" />
+    <NavigationProperty Name="tblStudentDutyInfo" Relationship="Self.FK_tblStudentDutyInfo_tblStudentSelCourseRelation" FromRole="tblStudentSelCourseRelation" ToRole="tblStudentDutyInfo" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblStudentSelCourseRelation_dbo_tblUserInfo_StudentID" FromRole="tblStudentSelCourseRelation" ToRole="tblUserInfo" />
+  </EntityType>
+  <EntityType Name="tblTeacherCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeacherID" Type="Int64" Nullable="false" />
+    <Property Name="CourseID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tblCourseInfo" Relationship="Self.FK_dbo_tblTeacherCourseRelation_dbo_tblCourseInfo_CourseID" FromRole="tblTeacherCourseRelation" ToRole="tblCourseInfo" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblTeacherCourseRelation_dbo_tblUserInfo_TeacherID" FromRole="tblTeacherCourseRelation" ToRole="tblUserInfo" />
+  </EntityType>
+  <EntityType Name="tblTestQuestion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Degree" Type="Int16" Nullable="false" />
+    <Property Name="ChapterID" Type="Int64" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblCourseInfo" Relationship="Self.FK_dbo_tblTestQuestion_dbo_tblCourseInfo_ChapterID" FromRole="tblTestQuestion" ToRole="tblCourseInfo" />
+    <NavigationProperty Name="tblMarkInfo" Relationship="Self.FK_dbo_tblMarkInfo_dbo_tblTestQuestion_TestQuestionID" FromRole="tblTestQuestion" ToRole="tblMarkInfo" />
+  </EntityType>
+  <EntityType Name="tblUserAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AuthorID" Type="Int64" Nullable="false" />
+    <Property Name="UserID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="tblAuthorizationInfo" Relationship="Self.FK_dbo_tblUserAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" FromRole="tblUserAuthorRelation" ToRole="tblAuthorizationInfo" />
+    <NavigationProperty Name="tblUserInfo" Relationship="Self.FK_dbo_tblUserAuthorRelation_dbo_tblUserInfo_UserID" FromRole="tblUserAuthorRelation" ToRole="tblUserInfo" />
+  </EntityType>
+  <EntityType Name="tblUserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserICode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIPsd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIRegisterDate" Type="DateTime" Precision="3" />
+    <Property Name="UserISex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="UserIIDCard" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIBirth" Type="DateTime" Precision="3" />
+    <Property Name="UserIAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIPostalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIStudentNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIMobilePhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIeMail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserIDutyIID" Type="Int64" />
+    <Property Name="UserIDepartmentIID" Type="Int64" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tblAfterMarkInfo" Relationship="Self.FK_dbo_tblAfterMarkInfo_dbo_tblUserInfo_StudentID" FromRole="tblUserInfo" ToRole="tblAfterMarkInfo" />
+    <NavigationProperty Name="tblAllocate" Relationship="Self.FK_tblAllocate_tblUserInfo" FromRole="tblUserInfo" ToRole="tblAllocate" />
+    <NavigationProperty Name="tblAllocate1" Relationship="Self.FK_tblAllocate_tblUserInfo1" FromRole="tblUserInfo" ToRole="tblAllocate" />
+    <NavigationProperty Name="tblChannelContent" Relationship="Self.FK_dbo_tblChannelContent_dbo_tblUserInfo_UserID" FromRole="tblUserInfo" ToRole="tblChannelContent" />
+    <NavigationProperty Name="tblCommunicateInfo" Relationship="Self.FK_dbo_tblCommunicateInfo_dbo_tblUserInfo_StudentID" FromRole="tblUserInfo" ToRole="tblCommunicateInfo" />
+    <NavigationProperty Name="tblContestInfo" Relationship="Self.FK_tblContestInfo_tblUserInfo" FromRole="tblUserInfo" ToRole="tblContestInfo" />
+    <NavigationProperty Name="tblDepartmentInfo" Relationship="Self.FK_dbo_tblUserInfo_dbo_tblDepartmentInfo_UserIDepartmentIID" FromRole="tblUserInfo" ToRole="tblDepartmentInfo" />
+    <NavigationProperty Name="tblDutyInfo" Relationship="Self.FK_dbo_tblUserInfo_dbo_tblDutyInfo_UserIDutyIID" FromRole="tblUserInfo" ToRole="tblDutyInfo" />
+    <NavigationProperty Name="tblMarkInfo" Relationship="Self.FK_dbo_tblMarkInfo_dbo_tblUserInfo_StudentID" FromRole="tblUserInfo" ToRole="tblMarkInfo" />
+    <NavigationProperty Name="tblRegisterGroup" Relationship="Self.FK_tblRegisterGroup_tblUserInfo" FromRole="tblUserInfo" ToRole="tblRegisterGroup" />
+    <NavigationProperty Name="tblRegisterUser" Relationship="Self.FK_tblRegisterUser_tblUserInfo" FromRole="tblUserInfo" ToRole="tblRegisterUser" />
+    <NavigationProperty Name="tblStudentDutyInfo" Relationship="Self.FK_dbo_tblStudentDutyInfo_dbo_tblUserInfo_StudentID" FromRole="tblUserInfo" ToRole="tblStudentDutyInfo" />
+    <NavigationProperty Name="tblStudentSelCourseRelation" Relationship="Self.FK_dbo_tblStudentSelCourseRelation_dbo_tblUserInfo_StudentID" FromRole="tblUserInfo" ToRole="tblStudentSelCourseRelation" />
+    <NavigationProperty Name="tblTeacherCourseRelation" Relationship="Self.FK_dbo_tblTeacherCourseRelation_dbo_tblUserInfo_TeacherID" FromRole="tblUserInfo" ToRole="tblTeacherCourseRelation" />
+    <NavigationProperty Name="tblUserAuthorRelation" Relationship="Self.FK_dbo_tblUserAuthorRelation_dbo_tblUserInfo_UserID" FromRole="tblUserInfo" ToRole="tblUserAuthorRelation" />
+  </EntityType>
+  <EntityType Name="ViewContestInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Remark" />
+      <PropertyRef Name="CreatorID" />
+      <PropertyRef Name="TypeID" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatorID" Type="Int64" Nullable="false" />
+    <Property Name="TypeID" Type="Int64" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+    <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserICode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_dbo_tblAfterMarkInfo_dbo_tblCourseInfo_ChapterID">
+    <End Role="tblCourseInfo" Type="Self.tblCourseInfo" Multiplicity="0..1" />
+    <End Role="tblAfterMarkInfo" Type="Self.tblAfterMarkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCourseInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAfterMarkInfo">
+        <PropertyRef Name="ChapterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblAfterMarkInfo_dbo_tblPeriodInfo_PeriodID">
+    <End Role="tblPeriodInfo" Type="Self.tblPeriodInfo" Multiplicity="0..1" />
+    <End Role="tblAfterMarkInfo" Type="Self.tblAfterMarkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPeriodInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAfterMarkInfo">
+        <PropertyRef Name="PeriodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblAfterMarkInfo_dbo_tblUserInfo_StudentID">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="0..1" />
+    <End Role="tblAfterMarkInfo" Type="Self.tblAfterMarkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAfterMarkInfo">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAfterMarkInfo_tblStudentSelCourseRelation">
+    <End Role="tblStudentSelCourseRelation" Type="Self.tblStudentSelCourseRelation" Multiplicity="1" />
+    <End Role="tblAfterMarkInfo" Type="Self.tblAfterMarkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStudentSelCourseRelation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAfterMarkInfo">
+        <PropertyRef Name="SelStudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAllocate_tblGroupWorkInfo">
+    <End Role="tblGroupWorkInfo" Type="Self.tblGroupWorkInfo" Multiplicity="1" />
+    <End Role="tblAllocate" Type="Self.tblAllocate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblGroupWorkInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAllocate">
+        <PropertyRef Name="GroupWorkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAllocate_tblUserInfo">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1" />
+    <End Role="tblAllocate" Type="Self.tblAllocate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAllocate">
+        <PropertyRef Name="AllocaterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAllocate_tblUserInfo1">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1" />
+    <End Role="tblAllocate" Type="Self.tblAllocate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblAllocate">
+        <PropertyRef Name="ExpertID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPaticalScore_tblAllocate">
+    <End Role="tblAllocate" Type="Self.tblAllocate" Multiplicity="1" />
+    <End Role="tblPaticalScore" Type="Self.tblPaticalScore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAllocate">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblPaticalScore">
+        <PropertyRef Name="AllocateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblChannelAuthorRelation_dbo_tblAuthorizationInfo_AuthorID">
+    <End Role="tblAuthorizationInfo" Type="Self.tblAuthorizationInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblChannelAuthorRelation" Type="Self.tblChannelAuthorRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAuthorizationInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblChannelAuthorRelation">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblOperationAuthorRelation_dbo_tblAuthorizationInfo_AuthorID">
+    <End Role="tblAuthorizationInfo" Type="Self.tblAuthorizationInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblOperationAuthorRelation" Type="Self.tblOperationAuthorRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAuthorizationInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblOperationAuthorRelation">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblUserAuthorRelation_dbo_tblAuthorizationInfo_AuthorID">
+    <End Role="tblAuthorizationInfo" Type="Self.tblAuthorizationInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblUserAuthorRelation" Type="Self.tblUserAuthorRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAuthorizationInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblUserAuthorRelation">
+        <PropertyRef Name="AuthorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblChannelAuthorRelation_dbo_tblChannelType_ChannelID">
+    <End Role="tblChannelType" Type="Self.tblChannelType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblChannelAuthorRelation" Type="Self.tblChannelAuthorRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblChannelType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblChannelAuthorRelation">
+        <PropertyRef Name="ChannelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblChannelContent_dbo_tblChannelType_ChannelTypeID">
+    <End Role="tblChannelType" Type="Self.tblChannelType" Multiplicity="0..1" />
+    <End Role="tblChannelContent" Type="Self.tblChannelContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblChannelType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblChannelContent">
+        <PropertyRef Name="ChannelTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblChannelContent_dbo_tblUserInfo_UserID">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="0..1" />
+    <End Role="tblChannelContent" Type="Self.tblChannelContent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblChannelContent">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblChannelContentDoc_dbo_tblChannelContent_RelationID">
+    <End Role="tblChannelContent" Type="Self.tblChannelContent" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblChannelContentDoc" Type="Self.tblChannelContentDoc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblChannelContent">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblChannelContentDoc">
+        <PropertyRef Name="RelationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblChannelContentPic_dbo_tblChannelContent_RelationID">
+    <End Role="tblChannelContent" Type="Self.tblChannelContent" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblChannelContentPic" Type="Self.tblChannelContentPic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblChannelContent">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblChannelContentPic">
+        <PropertyRef Name="RelationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblCommunicateInfo_dbo_tblUserInfo_StudentID">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblCommunicateInfo" Type="Self.tblCommunicateInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblCommunicateInfo">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCommunicateInfo_tblCourseInfo">
+    <End Role="tblCourseInfo" Type="Self.tblCourseInfo" Multiplicity="1" />
+    <End Role="tblCommunicateInfo" Type="Self.tblCommunicateInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCourseInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblCommunicateInfo">
+        <PropertyRef Name="ChapterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCommunicateInfo_tblStudentSelCourseRelation">
+    <End Role="tblStudentSelCourseRelation" Type="Self.tblStudentSelCourseRelation" Multiplicity="1" />
+    <End Role="tblCommunicateInfo" Type="Self.tblCommunicateInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStudentSelCourseRelation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblCommunicateInfo">
+        <PropertyRef Name="SelStudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblContestFlowDetail_tblContestFlowType">
+    <End Role="tblContestFlowType" Type="Self.tblContestFlowType" Multiplicity="1" />
+    <End Role="tblContestFlowDetail" Type="Self.tblContestFlowDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblContestFlowType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblContestFlowDetail">
+        <PropertyRef Name="FlowTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblContestFlowDetail_tblContestInfo">
+    <End Role="tblContestInfo" Type="Self.tblContestInfo" Multiplicity="1" />
+    <End Role="tblContestFlowDetail" Type="Self.tblContestFlowDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblContestInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblContestFlowDetail">
+        <PropertyRef Name="ContestInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblGroupWorkInfo_tblContestFlowDetail">
+    <End Role="tblContestFlowDetail" Type="Self.tblContestFlowDetail" Multiplicity="1" />
+    <End Role="tblGroupWorkInfo" Type="Self.tblGroupWorkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblContestFlowDetail">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblGroupWorkInfo">
+        <PropertyRef Name="ContestFlowDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblScoreTypeInfo_tblContestFlowDetail">
+    <End Role="tblContestFlowDetail" Type="Self.tblContestFlowDetail" Multiplicity="1" />
+    <End Role="tblScoreTypeInfo" Type="Self.tblScoreTypeInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblContestFlowDetail">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblScoreTypeInfo">
+        <PropertyRef Name="ContestFlowDetailId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblContestInfo_tblContestType">
+    <End Role="tblContestType" Type="Self.tblContestType" Multiplicity="1" />
+    <End Role="tblContestInfo" Type="Self.tblContestInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblContestType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblContestInfo">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblContestInfo_tblUserInfo">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1" />
+    <End Role="tblContestInfo" Type="Self.tblContestInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblContestInfo">
+        <PropertyRef Name="CreatorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblRegisterGroup_tblContestInfo">
+    <End Role="tblContestInfo" Type="Self.tblContestInfo" Multiplicity="1" />
+    <End Role="tblRegisterGroup" Type="Self.tblRegisterGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblContestInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblRegisterGroup">
+        <PropertyRef Name="ContestInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblCourseFileInfo_dbo_tblCourseInfo_RelationID">
+    <End Role="tblCourseInfo" Type="Self.tblCourseInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblCourseFileInfo" Type="Self.tblCourseFileInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCourseInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblCourseFileInfo">
+        <PropertyRef Name="RelationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblCoursePeriodRelation_dbo_tblCourseInfo_CourseID">
+    <End Role="tblCourseInfo" Type="Self.tblCourseInfo" Multiplicity="0..1" />
+    <End Role="tblCoursePeriodRelation" Type="Self.tblCoursePeriodRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCourseInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblCoursePeriodRelation">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblStudentCourseTestFile_dbo_tblCourseInfo_ChapterID">
+    <End Role="tblCourseInfo" Type="Self.tblCourseInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblStudentCourseTestFile" Type="Self.tblStudentCourseTestFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCourseInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblStudentCourseTestFile">
+        <PropertyRef Name="ChapterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblTeacherCourseRelation_dbo_tblCourseInfo_CourseID">
+    <End Role="tblCourseInfo" Type="Self.tblCourseInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblTeacherCourseRelation" Type="Self.tblTeacherCourseRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCourseInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblTeacherCourseRelation">
+        <PropertyRef Name="CourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblTestQuestion_dbo_tblCourseInfo_ChapterID">
+    <End Role="tblCourseInfo" Type="Self.tblCourseInfo" Multiplicity="0..1" />
+    <End Role="tblTestQuestion" Type="Self.tblTestQuestion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCourseInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblTestQuestion">
+        <PropertyRef Name="ChapterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblCoursePeriodRelation_dbo_tblPeriodInfo_PeriodID">
+    <End Role="tblPeriodInfo" Type="Self.tblPeriodInfo" Multiplicity="0..1" />
+    <End Role="tblCoursePeriodRelation" Type="Self.tblCoursePeriodRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPeriodInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblCoursePeriodRelation">
+        <PropertyRef Name="PeriodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblStudentDutyInfo_dbo_tblCoursePeriodRelation_CoursePeriodID">
+    <End Role="tblCoursePeriodRelation" Type="Self.tblCoursePeriodRelation" Multiplicity="1" />
+    <End Role="tblStudentDutyInfo" Type="Self.tblStudentDutyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCoursePeriodRelation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblStudentDutyInfo">
+        <PropertyRef Name="CoursePeriodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblStudentSelCourseRelation_dbo_tblCoursePeriodRelation_CoursePeriodID">
+    <End Role="tblCoursePeriodRelation" Type="Self.tblCoursePeriodRelation" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblStudentSelCourseRelation" Type="Self.tblStudentSelCourseRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCoursePeriodRelation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblStudentSelCourseRelation">
+        <PropertyRef Name="CoursePeriodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblUserInfo_dbo_tblDepartmentInfo_UserIDepartmentIID">
+    <End Role="tblDepartmentInfo" Type="Self.tblDepartmentInfo" Multiplicity="0..1" />
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartmentInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblUserInfo">
+        <PropertyRef Name="UserIDepartmentIID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblRegisterGroup_tblDepartmentInfo">
+    <End Role="tblDepartmentInfo" Type="Self.tblDepartmentInfo" Multiplicity="1" />
+    <End Role="tblRegisterGroup" Type="Self.tblRegisterGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDepartmentInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblRegisterGroup">
+        <PropertyRef Name="SchoolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblUserInfo_dbo_tblDutyInfo_UserIDutyIID">
+    <End Role="tblDutyInfo" Type="Self.tblDutyInfo" Multiplicity="0..1" />
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDutyInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblUserInfo">
+        <PropertyRef Name="UserIDutyIID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblGroupWorkInfo_tblRegisterGroup">
+    <End Role="tblRegisterGroup" Type="Self.tblRegisterGroup" Multiplicity="1" />
+    <End Role="tblGroupWorkInfo" Type="Self.tblGroupWorkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRegisterGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblGroupWorkInfo">
+        <PropertyRef Name="RegisterGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblMarkInfo_dbo_tblPeriodInfo_PeriodID">
+    <End Role="tblPeriodInfo" Type="Self.tblPeriodInfo" Multiplicity="0..1" />
+    <End Role="tblMarkInfo" Type="Self.tblMarkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPeriodInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblMarkInfo">
+        <PropertyRef Name="PeriodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblMarkInfo_dbo_tblTestQuestion_TestQuestionID">
+    <End Role="tblTestQuestion" Type="Self.tblTestQuestion" Multiplicity="0..1" />
+    <End Role="tblMarkInfo" Type="Self.tblMarkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTestQuestion">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblMarkInfo">
+        <PropertyRef Name="TestQuestionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblMarkInfo_dbo_tblUserInfo_StudentID">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="0..1" />
+    <End Role="tblMarkInfo" Type="Self.tblMarkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblMarkInfo">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMarkInfo_tblStudentSelCourseRelation">
+    <End Role="tblStudentSelCourseRelation" Type="Self.tblStudentSelCourseRelation" Multiplicity="1" />
+    <End Role="tblMarkInfo" Type="Self.tblMarkInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStudentSelCourseRelation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblMarkInfo">
+        <PropertyRef Name="SelStudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblOperationAuthorRelation_dbo_tblOperationInfo_OperationID">
+    <End Role="tblOperationInfo" Type="Self.tblOperationInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblOperationAuthorRelation" Type="Self.tblOperationAuthorRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblOperationInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblOperationAuthorRelation">
+        <PropertyRef Name="OperationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPaticalScore_tblScoreTypeInfo">
+    <End Role="tblScoreTypeInfo" Type="Self.tblScoreTypeInfo" Multiplicity="1" />
+    <End Role="tblPaticalScore" Type="Self.tblPaticalScore" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblScoreTypeInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblPaticalScore">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblRegisterGroup_tblUserInfo">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1" />
+    <End Role="tblRegisterGroup" Type="Self.tblRegisterGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblRegisterGroup">
+        <PropertyRef Name="CreatorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblRegisterUser_tblRegisterGroup">
+    <End Role="tblRegisterGroup" Type="Self.tblRegisterGroup" Multiplicity="1" />
+    <End Role="tblRegisterUser" Type="Self.tblRegisterUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblRegisterGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblRegisterUser">
+        <PropertyRef Name="RegisterGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblRegisterUser_tblUserInfo">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1" />
+    <End Role="tblRegisterUser" Type="Self.tblRegisterUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblRegisterUser">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblStudentCourseTestFile_dbo_tblStudentSelCourseRelation_StudentSelCourseID">
+    <End Role="tblStudentSelCourseRelation" Type="Self.tblStudentSelCourseRelation" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblStudentCourseTestFile" Type="Self.tblStudentCourseTestFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStudentSelCourseRelation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblStudentCourseTestFile">
+        <PropertyRef Name="StudentSelCourseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblStudentDutyInfo_dbo_tblUserInfo_StudentID">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1" />
+    <End Role="tblStudentDutyInfo" Type="Self.tblStudentDutyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblStudentDutyInfo">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblStudentDutyInfo_tblStudentSelCourseRelation">
+    <End Role="tblStudentSelCourseRelation" Type="Self.tblStudentSelCourseRelation" Multiplicity="1" />
+    <End Role="tblStudentDutyInfo" Type="Self.tblStudentDutyInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblStudentSelCourseRelation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblStudentDutyInfo">
+        <PropertyRef Name="SelStudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblStudentSelCourseRelation_dbo_tblUserInfo_StudentID">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblStudentSelCourseRelation" Type="Self.tblStudentSelCourseRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblStudentSelCourseRelation">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblTeacherCourseRelation_dbo_tblUserInfo_TeacherID">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblTeacherCourseRelation" Type="Self.tblTeacherCourseRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblTeacherCourseRelation">
+        <PropertyRef Name="TeacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_tblUserAuthorRelation_dbo_tblUserInfo_UserID">
+    <End Role="tblUserInfo" Type="Self.tblUserInfo" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblUserAuthorRelation" Type="Self.tblUserAuthorRelation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblUserAuthorRelation">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TeachingResearchV2Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAfterMarkInfo" EntityType="Self.tblAfterMarkInfo" />
+    <EntitySet Name="tblAllocate" EntityType="Self.tblAllocate" />
+    <EntitySet Name="tblAuthorizationInfo" EntityType="Self.tblAuthorizationInfo" />
+    <EntitySet Name="tblChannelAuthorRelation" EntityType="Self.tblChannelAuthorRelation" />
+    <EntitySet Name="tblChannelContent" EntityType="Self.tblChannelContent" />
+    <EntitySet Name="tblChannelContentDoc" EntityType="Self.tblChannelContentDoc" />
+    <EntitySet Name="tblChannelContentPic" EntityType="Self.tblChannelContentPic" />
+    <EntitySet Name="tblChannelType" EntityType="Self.tblChannelType" />
+    <EntitySet Name="tblCommunicateInfo" EntityType="Self.tblCommunicateInfo" />
+    <EntitySet Name="tblContestFlowDetail" EntityType="Self.tblContestFlowDetail" />
+    <EntitySet Name="tblContestFlowType" EntityType="Self.tblContestFlowType" />
+    <EntitySet Name="tblContestInfo" EntityType="Self.tblContestInfo" />
+    <EntitySet Name="tblContestType" EntityType="Self.tblContestType" />
+    <EntitySet Name="tblCourseFileInfo" EntityType="Self.tblCourseFileInfo" />
+    <EntitySet Name="tblCourseInfo" EntityType="Self.tblCourseInfo" />
+    <EntitySet Name="tblCoursePeriodRelation" EntityType="Self.tblCoursePeriodRelation" />
+    <EntitySet Name="tblDepartmentInfo" EntityType="Self.tblDepartmentInfo" />
+    <EntitySet Name="tblDutyInfo" EntityType="Self.tblDutyInfo" />
+    <EntitySet Name="tblGroupWorkInfo" EntityType="Self.tblGroupWorkInfo" />
+    <EntitySet Name="tblGuestBook" EntityType="Self.tblGuestBook" />
+    <EntitySet Name="tblMainInfo" EntityType="Self.tblMainInfo" />
+    <EntitySet Name="tblMarkInfo" EntityType="Self.tblMarkInfo" />
+    <EntitySet Name="tblOperationAuthorRelation" EntityType="Self.tblOperationAuthorRelation" />
+    <EntitySet Name="tblOperationInfo" EntityType="Self.tblOperationInfo" />
+    <EntitySet Name="tblPaticalScore" EntityType="Self.tblPaticalScore" />
+    <EntitySet Name="tblPeriodInfo" EntityType="Self.tblPeriodInfo" />
+    <EntitySet Name="tblRegisterGroup" EntityType="Self.tblRegisterGroup" />
+    <EntitySet Name="tblRegisterUser" EntityType="Self.tblRegisterUser" />
+    <EntitySet Name="tblScoreTypeInfo" EntityType="Self.tblScoreTypeInfo" />
+    <EntitySet Name="tblStudentCourseTestFile" EntityType="Self.tblStudentCourseTestFile" />
+    <EntitySet Name="tblStudentDutyInfo" EntityType="Self.tblStudentDutyInfo" />
+    <EntitySet Name="tblStudentSelCourseRelation" EntityType="Self.tblStudentSelCourseRelation" />
+    <EntitySet Name="tblTeacherCourseRelation" EntityType="Self.tblTeacherCourseRelation" />
+    <EntitySet Name="tblTestQuestion" EntityType="Self.tblTestQuestion" />
+    <EntitySet Name="tblUserAuthorRelation" EntityType="Self.tblUserAuthorRelation" />
+    <EntitySet Name="tblUserInfo" EntityType="Self.tblUserInfo" />
+    <EntitySet Name="ViewContestInfo" EntityType="Self.ViewContestInfo" />
+    <AssociationSet Name="FK_dbo_tblAfterMarkInfo_dbo_tblCourseInfo_ChapterID" Association="Self.FK_dbo_tblAfterMarkInfo_dbo_tblCourseInfo_ChapterID">
+      <End Role="tblCourseInfo" EntitySet="tblCourseInfo" />
+      <End Role="tblAfterMarkInfo" EntitySet="tblAfterMarkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblAfterMarkInfo_dbo_tblPeriodInfo_PeriodID" Association="Self.FK_dbo_tblAfterMarkInfo_dbo_tblPeriodInfo_PeriodID">
+      <End Role="tblPeriodInfo" EntitySet="tblPeriodInfo" />
+      <End Role="tblAfterMarkInfo" EntitySet="tblAfterMarkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblAfterMarkInfo_dbo_tblUserInfo_StudentID" Association="Self.FK_dbo_tblAfterMarkInfo_dbo_tblUserInfo_StudentID">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblAfterMarkInfo" EntitySet="tblAfterMarkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAfterMarkInfo_tblStudentSelCourseRelation" Association="Self.FK_tblAfterMarkInfo_tblStudentSelCourseRelation">
+      <End Role="tblStudentSelCourseRelation" EntitySet="tblStudentSelCourseRelation" />
+      <End Role="tblAfterMarkInfo" EntitySet="tblAfterMarkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAllocate_tblGroupWorkInfo" Association="Self.FK_tblAllocate_tblGroupWorkInfo">
+      <End Role="tblGroupWorkInfo" EntitySet="tblGroupWorkInfo" />
+      <End Role="tblAllocate" EntitySet="tblAllocate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAllocate_tblUserInfo" Association="Self.FK_tblAllocate_tblUserInfo">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblAllocate" EntitySet="tblAllocate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAllocate_tblUserInfo1" Association="Self.FK_tblAllocate_tblUserInfo1">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblAllocate" EntitySet="tblAllocate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPaticalScore_tblAllocate" Association="Self.FK_tblPaticalScore_tblAllocate">
+      <End Role="tblAllocate" EntitySet="tblAllocate" />
+      <End Role="tblPaticalScore" EntitySet="tblPaticalScore" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblChannelAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" Association="Self.FK_dbo_tblChannelAuthorRelation_dbo_tblAuthorizationInfo_AuthorID">
+      <End Role="tblAuthorizationInfo" EntitySet="tblAuthorizationInfo" />
+      <End Role="tblChannelAuthorRelation" EntitySet="tblChannelAuthorRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblOperationAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" Association="Self.FK_dbo_tblOperationAuthorRelation_dbo_tblAuthorizationInfo_AuthorID">
+      <End Role="tblAuthorizationInfo" EntitySet="tblAuthorizationInfo" />
+      <End Role="tblOperationAuthorRelation" EntitySet="tblOperationAuthorRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblUserAuthorRelation_dbo_tblAuthorizationInfo_AuthorID" Association="Self.FK_dbo_tblUserAuthorRelation_dbo_tblAuthorizationInfo_AuthorID">
+      <End Role="tblAuthorizationInfo" EntitySet="tblAuthorizationInfo" />
+      <End Role="tblUserAuthorRelation" EntitySet="tblUserAuthorRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblChannelAuthorRelation_dbo_tblChannelType_ChannelID" Association="Self.FK_dbo_tblChannelAuthorRelation_dbo_tblChannelType_ChannelID">
+      <End Role="tblChannelType" EntitySet="tblChannelType" />
+      <End Role="tblChannelAuthorRelation" EntitySet="tblChannelAuthorRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblChannelContent_dbo_tblChannelType_ChannelTypeID" Association="Self.FK_dbo_tblChannelContent_dbo_tblChannelType_ChannelTypeID">
+      <End Role="tblChannelType" EntitySet="tblChannelType" />
+      <End Role="tblChannelContent" EntitySet="tblChannelContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblChannelContent_dbo_tblUserInfo_UserID" Association="Self.FK_dbo_tblChannelContent_dbo_tblUserInfo_UserID">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblChannelContent" EntitySet="tblChannelContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblChannelContentDoc_dbo_tblChannelContent_RelationID" Association="Self.FK_dbo_tblChannelContentDoc_dbo_tblChannelContent_RelationID">
+      <End Role="tblChannelContent" EntitySet="tblChannelContent" />
+      <End Role="tblChannelContentDoc" EntitySet="tblChannelContentDoc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblChannelContentPic_dbo_tblChannelContent_RelationID" Association="Self.FK_dbo_tblChannelContentPic_dbo_tblChannelContent_RelationID">
+      <End Role="tblChannelContent" EntitySet="tblChannelContent" />
+      <End Role="tblChannelContentPic" EntitySet="tblChannelContentPic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblCommunicateInfo_dbo_tblUserInfo_StudentID" Association="Self.FK_dbo_tblCommunicateInfo_dbo_tblUserInfo_StudentID">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblCommunicateInfo" EntitySet="tblCommunicateInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCommunicateInfo_tblCourseInfo" Association="Self.FK_tblCommunicateInfo_tblCourseInfo">
+      <End Role="tblCourseInfo" EntitySet="tblCourseInfo" />
+      <End Role="tblCommunicateInfo" EntitySet="tblCommunicateInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCommunicateInfo_tblStudentSelCourseRelation" Association="Self.FK_tblCommunicateInfo_tblStudentSelCourseRelation">
+      <End Role="tblStudentSelCourseRelation" EntitySet="tblStudentSelCourseRelation" />
+      <End Role="tblCommunicateInfo" EntitySet="tblCommunicateInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblContestFlowDetail_tblContestFlowType" Association="Self.FK_tblContestFlowDetail_tblContestFlowType">
+      <End Role="tblContestFlowType" EntitySet="tblContestFlowType" />
+      <End Role="tblContestFlowDetail" EntitySet="tblContestFlowDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblContestFlowDetail_tblContestInfo" Association="Self.FK_tblContestFlowDetail_tblContestInfo">
+      <End Role="tblContestInfo" EntitySet="tblContestInfo" />
+      <End Role="tblContestFlowDetail" EntitySet="tblContestFlowDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblGroupWorkInfo_tblContestFlowDetail" Association="Self.FK_tblGroupWorkInfo_tblContestFlowDetail">
+      <End Role="tblContestFlowDetail" EntitySet="tblContestFlowDetail" />
+      <End Role="tblGroupWorkInfo" EntitySet="tblGroupWorkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblScoreTypeInfo_tblContestFlowDetail" Association="Self.FK_tblScoreTypeInfo_tblContestFlowDetail">
+      <End Role="tblContestFlowDetail" EntitySet="tblContestFlowDetail" />
+      <End Role="tblScoreTypeInfo" EntitySet="tblScoreTypeInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblContestInfo_tblContestType" Association="Self.FK_tblContestInfo_tblContestType">
+      <End Role="tblContestType" EntitySet="tblContestType" />
+      <End Role="tblContestInfo" EntitySet="tblContestInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblContestInfo_tblUserInfo" Association="Self.FK_tblContestInfo_tblUserInfo">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblContestInfo" EntitySet="tblContestInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRegisterGroup_tblContestInfo" Association="Self.FK_tblRegisterGroup_tblContestInfo">
+      <End Role="tblContestInfo" EntitySet="tblContestInfo" />
+      <End Role="tblRegisterGroup" EntitySet="tblRegisterGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblCourseFileInfo_dbo_tblCourseInfo_RelationID" Association="Self.FK_dbo_tblCourseFileInfo_dbo_tblCourseInfo_RelationID">
+      <End Role="tblCourseInfo" EntitySet="tblCourseInfo" />
+      <End Role="tblCourseFileInfo" EntitySet="tblCourseFileInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblCoursePeriodRelation_dbo_tblCourseInfo_CourseID" Association="Self.FK_dbo_tblCoursePeriodRelation_dbo_tblCourseInfo_CourseID">
+      <End Role="tblCourseInfo" EntitySet="tblCourseInfo" />
+      <End Role="tblCoursePeriodRelation" EntitySet="tblCoursePeriodRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblStudentCourseTestFile_dbo_tblCourseInfo_ChapterID" Association="Self.FK_dbo_tblStudentCourseTestFile_dbo_tblCourseInfo_ChapterID">
+      <End Role="tblCourseInfo" EntitySet="tblCourseInfo" />
+      <End Role="tblStudentCourseTestFile" EntitySet="tblStudentCourseTestFile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblTeacherCourseRelation_dbo_tblCourseInfo_CourseID" Association="Self.FK_dbo_tblTeacherCourseRelation_dbo_tblCourseInfo_CourseID">
+      <End Role="tblCourseInfo" EntitySet="tblCourseInfo" />
+      <End Role="tblTeacherCourseRelation" EntitySet="tblTeacherCourseRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblTestQuestion_dbo_tblCourseInfo_ChapterID" Association="Self.FK_dbo_tblTestQuestion_dbo_tblCourseInfo_ChapterID">
+      <End Role="tblCourseInfo" EntitySet="tblCourseInfo" />
+      <End Role="tblTestQuestion" EntitySet="tblTestQuestion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblCoursePeriodRelation_dbo_tblPeriodInfo_PeriodID" Association="Self.FK_dbo_tblCoursePeriodRelation_dbo_tblPeriodInfo_PeriodID">
+      <End Role="tblPeriodInfo" EntitySet="tblPeriodInfo" />
+      <End Role="tblCoursePeriodRelation" EntitySet="tblCoursePeriodRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblStudentDutyInfo_dbo_tblCoursePeriodRelation_CoursePeriodID" Association="Self.FK_dbo_tblStudentDutyInfo_dbo_tblCoursePeriodRelation_CoursePeriodID">
+      <End Role="tblCoursePeriodRelation" EntitySet="tblCoursePeriodRelation" />
+      <End Role="tblStudentDutyInfo" EntitySet="tblStudentDutyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblStudentSelCourseRelation_dbo_tblCoursePeriodRelation_CoursePeriodID" Association="Self.FK_dbo_tblStudentSelCourseRelation_dbo_tblCoursePeriodRelation_CoursePeriodID">
+      <End Role="tblCoursePeriodRelation" EntitySet="tblCoursePeriodRelation" />
+      <End Role="tblStudentSelCourseRelation" EntitySet="tblStudentSelCourseRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblUserInfo_dbo_tblDepartmentInfo_UserIDepartmentIID" Association="Self.FK_dbo_tblUserInfo_dbo_tblDepartmentInfo_UserIDepartmentIID">
+      <End Role="tblDepartmentInfo" EntitySet="tblDepartmentInfo" />
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRegisterGroup_tblDepartmentInfo" Association="Self.FK_tblRegisterGroup_tblDepartmentInfo">
+      <End Role="tblDepartmentInfo" EntitySet="tblDepartmentInfo" />
+      <End Role="tblRegisterGroup" EntitySet="tblRegisterGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblUserInfo_dbo_tblDutyInfo_UserIDutyIID" Association="Self.FK_dbo_tblUserInfo_dbo_tblDutyInfo_UserIDutyIID">
+      <End Role="tblDutyInfo" EntitySet="tblDutyInfo" />
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblGroupWorkInfo_tblRegisterGroup" Association="Self.FK_tblGroupWorkInfo_tblRegisterGroup">
+      <End Role="tblRegisterGroup" EntitySet="tblRegisterGroup" />
+      <End Role="tblGroupWorkInfo" EntitySet="tblGroupWorkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblMarkInfo_dbo_tblPeriodInfo_PeriodID" Association="Self.FK_dbo_tblMarkInfo_dbo_tblPeriodInfo_PeriodID">
+      <End Role="tblPeriodInfo" EntitySet="tblPeriodInfo" />
+      <End Role="tblMarkInfo" EntitySet="tblMarkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblMarkInfo_dbo_tblTestQuestion_TestQuestionID" Association="Self.FK_dbo_tblMarkInfo_dbo_tblTestQuestion_TestQuestionID">
+      <End Role="tblTestQuestion" EntitySet="tblTestQuestion" />
+      <End Role="tblMarkInfo" EntitySet="tblMarkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblMarkInfo_dbo_tblUserInfo_StudentID" Association="Self.FK_dbo_tblMarkInfo_dbo_tblUserInfo_StudentID">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblMarkInfo" EntitySet="tblMarkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMarkInfo_tblStudentSelCourseRelation" Association="Self.FK_tblMarkInfo_tblStudentSelCourseRelation">
+      <End Role="tblStudentSelCourseRelation" EntitySet="tblStudentSelCourseRelation" />
+      <End Role="tblMarkInfo" EntitySet="tblMarkInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblOperationAuthorRelation_dbo_tblOperationInfo_OperationID" Association="Self.FK_dbo_tblOperationAuthorRelation_dbo_tblOperationInfo_OperationID">
+      <End Role="tblOperationInfo" EntitySet="tblOperationInfo" />
+      <End Role="tblOperationAuthorRelation" EntitySet="tblOperationAuthorRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPaticalScore_tblScoreTypeInfo" Association="Self.FK_tblPaticalScore_tblScoreTypeInfo">
+      <End Role="tblScoreTypeInfo" EntitySet="tblScoreTypeInfo" />
+      <End Role="tblPaticalScore" EntitySet="tblPaticalScore" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRegisterGroup_tblUserInfo" Association="Self.FK_tblRegisterGroup_tblUserInfo">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblRegisterGroup" EntitySet="tblRegisterGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRegisterUser_tblRegisterGroup" Association="Self.FK_tblRegisterUser_tblRegisterGroup">
+      <End Role="tblRegisterGroup" EntitySet="tblRegisterGroup" />
+      <End Role="tblRegisterUser" EntitySet="tblRegisterUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblRegisterUser_tblUserInfo" Association="Self.FK_tblRegisterUser_tblUserInfo">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblRegisterUser" EntitySet="tblRegisterUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblStudentCourseTestFile_dbo_tblStudentSelCourseRelation_StudentSelCourseID" Association="Self.FK_dbo_tblStudentCourseTestFile_dbo_tblStudentSelCourseRelation_StudentSelCourseID">
+      <End Role="tblStudentSelCourseRelation" EntitySet="tblStudentSelCourseRelation" />
+      <End Role="tblStudentCourseTestFile" EntitySet="tblStudentCourseTestFile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblStudentDutyInfo_dbo_tblUserInfo_StudentID" Association="Self.FK_dbo_tblStudentDutyInfo_dbo_tblUserInfo_StudentID">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblStudentDutyInfo" EntitySet="tblStudentDutyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblStudentDutyInfo_tblStudentSelCourseRelation" Association="Self.FK_tblStudentDutyInfo_tblStudentSelCourseRelation">
+      <End Role="tblStudentSelCourseRelation" EntitySet="tblStudentSelCourseRelation" />
+      <End Role="tblStudentDutyInfo" EntitySet="tblStudentDutyInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblStudentSelCourseRelation_dbo_tblUserInfo_StudentID" Association="Self.FK_dbo_tblStudentSelCourseRelation_dbo_tblUserInfo_StudentID">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblStudentSelCourseRelation" EntitySet="tblStudentSelCourseRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblTeacherCourseRelation_dbo_tblUserInfo_TeacherID" Association="Self.FK_dbo_tblTeacherCourseRelation_dbo_tblUserInfo_TeacherID">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblTeacherCourseRelation" EntitySet="tblTeacherCourseRelation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_tblUserAuthorRelation_dbo_tblUserInfo_UserID" Association="Self.FK_dbo_tblUserAuthorRelation_dbo_tblUserInfo_UserID">
+      <End Role="tblUserInfo" EntitySet="tblUserInfo" />
+      <End Role="tblUserAuthorRelation" EntitySet="tblUserAuthorRelation" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

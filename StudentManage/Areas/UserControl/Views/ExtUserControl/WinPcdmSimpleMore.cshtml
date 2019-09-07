@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Form)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().Name("ID").Text("0"),
+            X.TextField().Name("Code").FieldLabel("批次代码"),
+            X.TextField().Name("Name").FieldLabel("批次名称").AllowBlank(false),
+            X.TextField().Name("Gbpcdm").FieldLabel("国标批次代码"),
+            X.TextField().Name("Gbccdm").FieldLabel("国标层次代码"),
+            X.TextArea().Name("Remark").FieldLabel("批次备注")
+        )
+   )
+}

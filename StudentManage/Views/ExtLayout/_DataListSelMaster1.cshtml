@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "_ViewPortLayout2.cshtml";
+    var X = Html.X();
+    ViewBag.Title = "";
+}
+
+@RenderBody()
+
+@section LeftPanelField{
+@(X.Panel()
+        .Header(false)
+        .Layout(LayoutType.Fit)
+        .ID("DataListSelContainer")
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Loader(X.ComponentLoader()
+            .Url(Url.Action("AutoLoadDataListSel"))
+            .Mode(LoadMode.Script)
+            .Params(new { containerId = "DataListSelContainer" })
+            .LoadMask(lm => lm.ShowMask = true)
+            )
+)
+}
+
+
+@section CenterPanelField{
+    @(X.Panel()
+        .Layout(LayoutType.Border)
+        .Items(
+            X.Panel()
+                .ID("SearchPanelContainer")
+                .Height(150)
+                .Region(Region.North)
+                .Title("详细信息")
+                .Layout(LayoutType.Fit)
+                .Collapsible(true)
+                .Margin(1)
+                .ItemsFromSection(this, "SearchPanel"),
+            X.Panel()
+                .Region(Region.Center)
+                .Layout(LayoutType.Fit)
+                .Margin(1)
+                .ItemsFromPage(this, "~\\Areas\\UserControl\\Views\\ExtUserControl\\DataList.cshtml",
+                    ViewData["DataList_PanelID"],
+                    ViewData["DataList_ParentVariable"])
+            )
+    )
+}
+
+@section Hidden{
+    @RenderSection("HiddenMore", true)
+}
+
+@RenderSection("Hidden", true)

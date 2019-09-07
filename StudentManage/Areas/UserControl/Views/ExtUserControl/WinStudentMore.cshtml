@@ -1,0 +1,697 @@
+﻿@{
+    var X = Html.X();
+}
+@X.Hidden().ID((string)ViewData["WindowID"] + "_ParentVariable").Text((string)ViewData["WindowParentVariable"])
+@X.Hidden().ID((string)ViewData["WindowID"] + "_ExitCode").Text("0")
+@X.Hidden().ID((string)ViewData["WindowID"] + "_ParentKey").Text((string)ViewData["WindowParentKey"])
+
+
+@(
+        X.Window()
+            .ID((string)ViewData["WindowID"])
+            .Draggable(true)
+            .Modal(true)
+            .Layout(LayoutType.Fit)
+            .Maximizable(true)
+            .Resizable(true)
+            .Hidden(false)
+            .Title("新生详细信息")
+            .Width(510)
+            .Height(550)
+            .DirectEvents(de =>
+            {
+                de.Show.Url = Url.Action("WindowCommonShow", (string)ViewData["CurrentController"], new { Area = "UserControl" });
+                de.Show.ExtraParams.Add(new Parameter("PanelID", "this.id", ParameterMode.Raw));
+                de.Show.ExtraParams.Add(new Parameter("ParentVariable", (string)ViewData["WindowParentVariable"], ParameterMode.Value));
+                de.Show.ExtraParams.Add(new Parameter("ParentKey", (string)ViewData["WindowParentKey"], ParameterMode.Value));
+                de.Close.Url = Url.Action("WindowCommonHide", (string)ViewData["CurrentController"], new { Area = "UserControl" });
+                de.Close.ExtraParams.Add(new Parameter("ParentVariable", (string)ViewData["WindowParentVariable"], ParameterMode.Value));
+                de.Close.ExtraParams.Add(new Parameter("PanelID", "this.id", ParameterMode.Raw));
+                de.Close.ExtraParams.Add(new Parameter("sExitCode", "App." + (string)ViewData["WindowID"] + "_ExitCode" + ".getValue()", ParameterMode.Raw));
+            })
+            .Items(
+                X.TabPanel()
+                    .ID(ViewData["WindowID"] + "_TabPanel")
+                    .X(0).Y(0)
+                    .BodyStyle("background-color:transparent;")
+                    .Items(
+    #region 学生基本信息
+                        X.FormPanel()
+                            .Title("学生基本信息")
+                            .ID(ViewData["WindowID"] + "_Form1")
+                            .Layout(LayoutType.Absolute)
+                            .BodyPadding(0)
+                            .Border(false)
+                            .BodyStyle("background-color:transparent;")
+                            .Items(
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelStudentID").Name("ID").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelZzmmdm").Name("Zzmmdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelMzdm").Name("Mzdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelXbdm").Name("Xbdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelZjlxdm").Name("Zjlxdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelKslbdm").Name("Kslbdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelKslxdm").Name("Kslxdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelBylbdm").Name("Bylbdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelDqdm").Name("Dqdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelWyyzdm").Name("Wyyzdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelHjlbdm").Name("Hjlbdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_SelCzlbdm").Name("Czlbdm").Text("0"),
+                                X.Hidden().ID((string)ViewData["WindowID"] + "_RelationID").Name("RelationID").Text("0"),
+                                X.Hidden().Name("YearCode"), X.Hidden().Name("GxID"), X.Hidden().Name("ProvinceID"),
+                                X.Label().Text("考生号:").X(15).Y(10),
+                                X.TextField().Name("Ksh").X(58).Y(8).Width(120).AllowBlank(false),
+                                X.Label().Text("学生姓名:").X(190).Y(10),
+                                X.TextField().Name("Xm").X(248).Y(8).Width(120).AllowBlank(false),
+                                X.Label().Text("出生日期:").X(5).Y(35),
+                                X.DateField().Name("Csrq").X(58).Y(33).Width(120),
+                                X.Label().Text("学生性别:").X(190).Y(35),
+                                X.Panel()
+                                    .Header(false).X(248).Y(33).Width(120)
+                                    .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                    .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                        ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbXbdm"),
+                                X.Label().Text("政治面貌:").X(5).Y(60),
+                                X.Panel()
+                                .Header(false).X(58).Y(58).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbZzmmdm"),
+                                X.Label().Text("民族:").X(210).Y(60),
+                                X.Panel()
+                                .Header(false).X(248).Y(58).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbMzdm"),
+                                X.Label().Text("证件类型:").X(5).Y(85),
+                                X.Panel()
+                                .Header(false).X(58).Y(83).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbZjlxdm"),
+                                X.Label().Text("证件号码:").X(190).Y(85),
+                                X.TextField().Name("Zjhm").X(248).Y(83).Width(120),
+                                X.Label().Text("会考考号:").X(5).Y(110),
+                                X.TextField().Name("Hkkh").X(58).Y(108).Width(120),
+                                X.Label().Text("准考证号:").X(190).Y(110),
+                                X.TextField().Name("Zkzh").X(248).Y(108).Width(120),
+                                //X.Label().Text("毕业学校:").X(190).Y(110),
+                                //X.TextField().Name("ByxxName").X(248).Y(108).Width(120).Editable(false),
+                                X.Label().Text("联系手机:").X(5).Y(135),
+                                X.TextField().Name("Lxsj").X(58).Y(133).Width(120),
+                                X.Label().Text("联系电话:").X(190).Y(135),
+                                X.TextField().Name("Lxdh").X(248).Y(133).Width(120),
+                                X.Image().ID((string)ViewData["WindowID"] + "_StudentImg").X(375).Y(8).Width(112).Height(147),
+                                X.Label().Text("通讯地址:").X(5).Y(160),
+                                X.TextField().Name("Txdz").X(58).Y(158).Width(310),
+                                X.Label().Text("邮政编码:").X(375).Y(160),
+                                X.TextField().Name("Yzbm").X(428).Y(158).Width(60),
+                                X.Label().Text("考生类别:").X(5).Y(185),
+                                X.Panel()
+                                .Header(false).X(58).Y(183).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbKslbdm"),
+                                X.Label().Text("学籍号码:").X(190).Y(185),
+                                X.TextField().Name("Xjh").X(248).Y(183).Width(120),
+                                X.Label().Text("收件人:").X(387).Y(185),
+                                X.TextField().Name("Sjr").X(428).Y(183).Width(60),
+                                X.Label().Text("考试类型:").X(5).Y(210),
+                                X.Panel()
+                                .Header(false).X(58).Y(208).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbKslxdm"),
+                                X.Label().Text("毕业类别:").X(190).Y(210),
+                                X.Panel()
+                                .Header(false).X(248).Y(208).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbBylbdm"),
+                                X.Label().Text("地区:").X(375).Y(210),
+                                X.Panel()
+                                .Header(false).X(405).Y(208).Width(83).Height(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\ThreeListComboBox.cshtml",
+                                    ViewData["ThreeListComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbDqdm"),
+                                X.Label().Text("外语语种:").X(5).Y(235),
+                                X.Panel()
+                                .Header(false).X(58).Y(233).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbWyyzdm"),
+                                X.Label().Text("毕业学校:").X(190).Y(235),
+                                X.TextField().Name("ByxxName").X(248).Y(233).Width(120),
+                                //X.Label().Text("考生特长:").X(190).Y(235),
+                                //X.TextField().Name("Kstc").X(248).Y(233).Width(120),
+                                X.Label().Text("外语口试:").X(5).Y(260),
+                                X.TextField().Name("Wyks").X(58).Y(258).Width(120),
+                                X.Label().Text("外语听力:").X(190).Y(260),
+                                X.TextField().Name("Wytl").X(248).Y(258).Width(120),
+                                X.Label().Text("户籍类别:").X(5).Y(285),
+                                X.Panel()
+                                .Header(false).X(58).Y(283).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbHjlbdm"),
+                                X.Label().Text("残障类别:").X(190).Y(285),
+                                X.Panel()
+                                .Header(false).X(248).Y(283).Width(120)
+                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbCzlbdm"),
+                                X.Label().Text("流水:").X(375).Y(285),
+                                X.TextField().Name("FlowNumber").X(405).Y(285).Width(83),
+                                X.Label().Text("考生特长:").X(5).Y(310),
+                                X.TextField().Name("Kstc").X(58).Y(308).Width(430),
+                                X.Label().Text("考生奖惩:").X(5).Y(335),
+                                X.TextField().Name("Ksjlhcf").X(58).Y(333).Width(430),
+                                X.Label().Text("思品意见:").X(5).Y(360),
+                                X.TextField().Name("Sxpdkhyj").X(58).Y(358).Width(430),
+                                X.Label().Text("政审意见:").X(5).Y(385),
+                                X.TextArea().Name("Zsyj").X(58).Y(383).Width(430).Height(70)
+                            ),
+    #endregion
+    #region 学生投档信息
+                            X.Panel()
+                                .Title("学生投档信息")
+                                .Layout(LayoutType.Absolute)
+                                .BodyPadding(0)
+                                .Border(false)
+                                .BodyStyle("background-color:transparent;")
+                                .Items(
+                                    X.FormPanel()
+                                        .ID(ViewData["WindowID"] + "_Form2")
+                                        .Layout(LayoutType.Absolute)
+                                        .Height(170)
+                                        .Border(false)
+                                        .Region(Region.Center)
+                                        .BodyStyle("background-color:transparent;")
+                                        .Items(
+                                            X.Hidden().ID((string)ViewData["WindowID"] + "_SelTddID").Name("ID").Text("0"),
+                                            X.Hidden().ID((string)ViewData["WindowID"] + "_SelTdlxdm").Name("Tdlxdm").Text("0"),
+                                            X.Hidden().ID((string)ViewData["WindowID"] + "_SelZytzdm").Name("Zytz").Text("0"),
+                                            X.Hidden().ID((string)ViewData["WindowID"] + "_SelLqfsdm").Name("Lqfs").Text("0"),
+                                            X.Hidden().ID((string)ViewData["WindowID"] + "_SelTdyydm").Name("Tdyydm").Text("0"),
+                                            X.Label().Text("投档类型:").X(5).Y(10),
+                                                X.Panel()
+                                                .Header(false).X(58).Y(8).Width(100)
+                                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbTdlxdm"),
+                                                X.Label().Text("投档时间:").X(170).Y(10),
+                                                X.DateField().Name("Tdsj").X(223).Y(8).Width(100),
+                                                X.Label().Text("录取时间:").X(335).Y(10),
+                                                X.DateField().Name("Lqsj").X(388).Y(8).Width(100),
+                                                X.Label().Text("考生成绩:").X(5).Y(35),
+                                                X.NumberField().Name("Cj").X(58).Y(33).Width(100),
+                                                X.Label().Text("特征成绩:").X(170).Y(35),
+                                                X.NumberField().Name("Tzcj").X(223).Y(33).Width(100),
+                                                X.Label().Text("投档成绩:").X(335).Y(35),
+                                                X.NumberField().Name("Tdcj").X(388).Y(33).Width(100),
+                                                X.Label().Text("资格分:").X(18).Y(60),
+                                                X.NumberField().Name("Zgf").X(58).Y(58).Width(100),
+                                                X.Label().Text("院校定义成绩:").X(170).Y(60),
+                                                X.NumberField().Name("Yxdycj").X(253).Y(58).Width(70),
+                                                X.Label().Text("符合专业限制条件:").X(335).Y(60),
+                                                X.ComboBox().Name("Zyhg").X(443).Y(58).Width(45).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("是").Value("true"),
+                                                    X.ListItem().Text("否").Value("false")
+                                                ),
+                                                X.Label().Text("专业预投基准成绩:").X(5).Y(85),
+                                                X.NumberField().Name("Zyytjzcj").X(108).Y(83).Width(50),
+                                                X.Label().Text("专业预投附加成绩:").X(170).Y(85),
+                                                X.NumberField().Name("Zyytfjcj").X(273).Y(83).Width(50),
+                                                X.Label().Text("符合体检限制条件:").X(335).Y(85),
+                                                X.ComboBox().Name("Tjhg").X(443).Y(83).Width(45).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("是").Value("true"),
+                                                    X.ListItem().Text("否").Value("false")
+                                                ),
+                                                X.Label().Text("志愿特征:").X(5).Y(110),
+                                                X.Panel()
+                                                .Header(false).X(58).Y(108).Width(100)
+                                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbZytzdm"),
+                                                X.Label().Text("录取方式:").X(170).Y(110),
+                                                X.Panel()
+                                                .Header(false).X(223).Y(108).Width(100)
+                                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbLqfsdm"),
+                                                X.Label().Text("退档原因:").X(335).Y(110),
+                                                X.Panel()
+                                                .Header(false).X(388).Y(108).Width(100)
+                                                .Layout(LayoutType.Fit).Border(false).BodyStyle("background-color:transparent;")
+                                                .ItemsFromPartial("~\\Areas\\UserControl\\Views\\ExtUserControl\\DataComboBox.cshtml",
+                                                    ViewData["DataComboBox_ID"] = (string)ViewData["WindowID"] + "_cmbTdyydm")
+                                            ),
+                                            X.Panel()
+                                            .Header(false).X(0).Y(135)
+                                            .Region(Region.South)
+                                            .AnchorHorizontal("100%")
+                                            .AnchorVertical("100%")
+                                            .Layout(LayoutType.Fit).Border(true).BodyStyle("background-color:transparent;")
+                                            .ItemsFromPage(this, "~\\Areas\\UserControl\\Views\\ExtUserControl\\DataList.cshtml",
+                                                ViewData["DataList_PanelID"] = (string)ViewData["WindowID"] + "_zykDataList",
+                                                ViewData["DataList_ParentVariable"] = "UserControl|WinStudentMore|" + (string)ViewData["WindowID"] + "_zykDataList" + "||zykTable")
+                                    )
+                                    .DirectEvents(de =>
+                                    {
+                                        de.Activate.Url = Url.Action("WinStudentMore_TddFocus", "WinStudentMore", new { Area = "UserControl" });
+                                        de.Activate.ExtraParams.Add(new Parameter("PanelID", (string)ViewData["WindowID"], ParameterMode.Value));
+                                        de.Activate.ExtraParams.Add(new Parameter("sID", "App." + (string)ViewData["WindowID"] + "_SelStudentID" + ".getValue()", ParameterMode.Raw));
+                                    }),
+    #endregion
+    #region 简历和成绩
+                                X.Panel()
+                                    .Title("简历和成绩信息")
+                                    .Layout(LayoutType.Absolute)
+                                    .BodyPadding(0)
+                                    .Border(false)
+                                    .BodyStyle("background-color:transparent;")
+                                    .Items(
+                                        X.Panel()
+                                            .Title("学生简历").X(0).Y(5).Height(200).AnchorVertical("100%")
+                                            .Region(Region.North)
+                                            .Layout(LayoutType.Fit).Border(true).BodyStyle("background-color:transparent;")
+                                            .ItemsFromPage(this, "~\\Areas\\UserControl\\Views\\ExtUserControl\\DataList.cshtml",
+                                                ViewData["DataList_PanelID"] = (string)ViewData["WindowID"] + "_ksjlDataList",
+                                                ViewData["DataList_ParentVariable"] = "UserControl|WinStudentMore|" + (string)ViewData["WindowID"] + "_ksjlDataList" + "||ksjlTable"),
+                                        X.Panel()
+                                            .Layout(LayoutType.Absolute).Border(false).BodyStyle("background-color:transparent;")
+                                            .Region(Region.Center).Header(false).AutoScroll(true)
+                                            .X(0).Y(210).AnchorVertical("100%").AnchorHorizontal("100%")
+                                            .Margin(1)
+                                            .Items(
+                                                X.PropertyGrid().Title("高考成绩").X(0).Width(200).MinHeight(100)
+                                                    .ID((string)ViewData["WindowID"] + "_PropertyGrid1")
+                                                    .SortableColumns(false)
+                                                    .NameColumnWidth(115)
+                                                    .HideHeaders(true),
+                                                X.PropertyGrid().Title("会考成绩").X(210).Width(200).MinHeight(100)
+                                                    .ID((string)ViewData["WindowID"] + "_PropertyGrid2")
+                                                    .SortableColumns(false)
+                                                    .NameColumnWidth(115)
+                                                    .HideHeaders(true)
+                                            )
+                                    )
+                                    .DirectEvents(de =>
+                                    {
+                                        de.Activate.Url = Url.Action("WinStudentMore_KsjlFocus", "WinStudentMore", new { Area = "UserControl" });
+                                        de.Activate.ExtraParams.Add(new Parameter("PanelID", (string)ViewData["WindowID"], ParameterMode.Value));
+                                        de.Activate.ExtraParams.Add(new Parameter("sID", "App." + (string)ViewData["WindowID"] + "_SelStudentID" + ".getValue()", ParameterMode.Raw));
+                                    }),
+    #endregion
+    #region 体检信息
+                                X.FormPanel()
+                                    .Title("体检信息")
+                                    .AutoScroll(true)
+                                    .ID(ViewData["WindowID"] + "_Form4")
+                                    .Layout(LayoutType.Absolute)
+                                    .BodyPadding(0)
+                                    .Border(false)
+
+                                    .BodyStyle("background-color:transparent;")
+                                    .Items(
+                                            X.Label().Text("体检序号:").X(5).Y(10),
+                                            X.TextField().Name("Tjxh").X(58).Y(8).Width(200),
+                                            X.Label().Text("既往病史标志:").X(270).Y(10),
+                                            X.ComboBox().Name("Jwbsbz").X(348).Y(8).Width(120).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("有").Value("0"),
+                                                X.ListItem().Text("无").Value("1")
+                                            ),
+                                        X.Label().Text("既往病史:").X(5).Y(35),
+                                        X.TextField().Name("Jwbs").X(58).Y(33).Width(410),
+                                        X.Panel().Border(false).Header(false).X(0).Y(60).Width(475).Layout(LayoutType.Form).BodyStyle("background-color:transparent;")
+                                        .Items(
+    #region 眼科
+                                        X.FieldSet()
+                                            .Collapsible(true).Title("眼科").Height(235)
+                                            .Layout(LayoutType.Absolute).Border(true)
+                                            .Items(
+                                                X.Label().Text("裸眼视力(左):").X(5).Y(5),
+                                                X.TextField().Name("Yk_lyslz").X(80).Y(3).Width(50),
+                                                X.Label().Text("裸眼视力(右):").X(135).Y(5),
+                                                X.TextField().Name("Yk_lysly").X(210).Y(3).Width(50),
+                                                X.Label().Text("矫正视力(左):").X(5).Y(30),
+                                                X.TextField().Name("Yk_jzslz").X(80).Y(28).Width(50),
+                                                X.Label().Text("矫正视力(右):").X(135).Y(30),
+                                                X.TextField().Name("Yk_jzsly").X(210).Y(28).Width(50),
+                                                X.Label().Text("矫正度数(左):").X(5).Y(55),
+                                                X.TextField().Name("Yk_jzdsz").X(80).Y(53).Width(50),
+                                                X.Label().Text("矫正度数(右):").X(135).Y(55),
+                                                X.TextField().Name("Yk_jzdsy").X(210).Y(53).Width(50),
+                                                X.Label().Text("彩色图案及数码检查:").X(265).Y(5),
+                                                X.ComboBox().Name("Yk_sjjc").X(380).Y(3).Width(60).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("正常").Value("1"),
+                                                    X.ListItem().Text("其他").Value("2")
+                                                ),
+                                                X.Label().Text("色觉检查图名称:").X(290).Y(30),
+                                                X.ComboBox().Name("Yk_sjjct").X(380).Y(28).Width(60).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("喻自萍").Value("1"),
+                                                    X.ListItem().Text("其他").Value("2")
+                                                ),
+                                                X.Label().Text("单色识别能力(红):").X(5).Y(80),
+                                                X.ComboBox().Name("Yk_sjds1").X(105).Y(78).Width(80).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("能识别").Value("1"),
+                                                    X.ListItem().Text("不能识别").Value("0")
+                                                ),
+                                                X.Label().Text("单色识别能力(黄):").X(190).Y(80),
+                                                X.ComboBox().Name("Yk_sjds2").X(290).Y(78).Width(80).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("能识别").Value("1"),
+                                                    X.ListItem().Text("不能识别").Value("0")
+                                                ),
+                                                X.Label().Text("单色识别能力(绿):").X(5).Y(105),
+                                                X.ComboBox().Name("Yk_sjds3").X(105).Y(103).Width(80).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("能识别").Value("1"),
+                                                    X.ListItem().Text("不能识别").Value("0")
+                                                ),
+                                                X.Label().Text("单色识别能力(蓝):").X(190).Y(105),
+                                                X.ComboBox().Name("Yk_sjds4").X(290).Y(103).Width(80).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("能识别").Value("1"),
+                                                    X.ListItem().Text("不能识别").Value("0")
+                                                ),
+                                                X.Label().Text("单色识别能力(紫):").X(5).Y(130),
+                                                X.ComboBox().Name("Yk_sjds5").X(105).Y(128).Width(80).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("能识别").Value("1"),
+                                                    X.ListItem().Text("不能识别").Value("0")
+                                                ),
+                                                X.Label().Text("眼科医师意见:").X(208).Y(130),
+                                                X.ComboBox().Name("Yk_ysyj").X(290).Y(128).Width(80).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("合格").Value("1"),
+                                                    X.ListItem().Text("专业受限").Value("2"),
+                                                    X.ListItem().Text("不合格").Value("3")
+                                                ),
+                                                X.Label().Text("眼病(具体描述):").X(18).Y(155),
+                                                X.TextArea().Name("Yk_jzdsy").X(105).Y(153).Width(330).Height(30)
+                                                ),
+    #endregion
+    #region 内科1
+                                        X.FieldSet()
+                                            .Collapsible(true).Title("内科1").Height(215)
+                                            .Layout(LayoutType.Absolute).Border(true)
+                                            .Items(
+                                                X.Label().Text("血压收缩压(高压):").X(5).Y(10),
+                                                X.TextField().Name("Nk_xyssy").X(105).Y(8).Width(50),
+                                                X.Label().Text("血压舒张压(高压):").X(5).Y(35),
+                                                X.TextField().Name("Nk_xyszy").X(105).Y(33).Width(50),
+                                                X.Label().Text("发育情况:").X(170).Y(10),
+                                                X.ComboBox().Name("Nk_fyqk").X(225).Y(8).Width(70).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("良").Value("1"),
+                                                    X.ListItem().Text("中").Value("2"),
+                                                    X.ListItem().Text("差").Value("3")
+                                                ),
+                                                X.Label().Text("心脏及血管:").X(160).Y(35),
+                                                X.ComboBox().Name("Nk_xzjxg").X(225).Y(33).Width(70).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("正常").Value("1"),
+                                                    X.ListItem().Text("其他").Value("2")
+                                                ),
+                                                X.Label().Text("呼吸系统:").X(305).Y(10),
+                                                X.ComboBox().Name("Nk_hxxt").X(360).Y(8).Width(70).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("正常").Value("1"),
+                                                    X.ListItem().Text("其他").Value("2")
+                                                ),
+                                                X.Label().Text("神经系统:").X(305).Y(35),
+                                                X.ComboBox().Name("Nk_sjxt").X(360).Y(33).Width(70).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("正常").Value("1"),
+                                                    X.ListItem().Text("其他").Value("2")
+                                                ),
+                                                X.Label().Text("肝:").X(85).Y(60),
+                                                X.TextField().Name("Nk_g").X(105).Y(58).Width(50),
+                                                X.Label().Text("肝性质:").X(180).Y(60),
+                                                X.ComboBox().Name("Nk_gxz").X(225).Y(58).Width(70).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("正常").Value("1"),
+                                                    X.ListItem().Text("其他").Value("2")
+                                                ),
+                                                X.Label().Text("脾:").X(85).Y(85),
+                                                X.TextField().Name("Nk_p").X(105).Y(83).Width(50),
+                                                X.Label().Text("脾性质:").X(180).Y(85),
+                                                X.ComboBox().Name("Nk_pxz").X(225).Y(83).Width(70).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("正常").Value("1"),
+                                                    X.ListItem().Text("其他").Value("2")
+                                                ),
+                                                X.Label().Text("医师意见:").X(48).Y(110),
+                                                X.ComboBox().Name("Nk_ysyj").X(105).Y(108).Width(190).Editable(false)
+                                                .Items(
+                                                    X.ListItem().Text("合格").Value("1"),
+                                                    X.ListItem().Text("专业受限").Value("2"),
+                                                    X.ListItem().Text("不合格").Value("3")
+                                                ),
+                                                X.Label().Text("其他(具体描述):").X(15).Y(135),
+                                                X.TextArea().Name("Nk_qt").X(105).Y(133).Width(330).Height(30)
+                                                ),
+    #endregion
+    #region 内科2
+                                    X.FieldSet()
+                                        .Collapsible(true).Title("内科2").Height(190)
+                                        .Layout(LayoutType.Absolute).Border(true)
+                                        .Items(
+                                            X.Label().Text("身高(厘米):").X(5).Y(10),
+                                            X.TextField().Name("Wk_sg").X(70).Y(8).Width(70),
+                                            X.Label().Text("体重(千克):").X(145).Y(10),
+                                            X.TextField().Name("Wk_tz").X(210).Y(8).Width(70),
+                                            X.Label().Text("皮肤:").X(285).Y(10),
+                                            X.ComboBox().Name("Wk_pf").X(320).Y(8).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("面部:").X(40).Y(35),
+                                            X.ComboBox().Name("Wk_mb").X(70).Y(33).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("颈部:").X(175).Y(35),
+                                            X.ComboBox().Name("Wk_jb").X(210).Y(33).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("脊柱:").X(285).Y(35),
+                                            X.ComboBox().Name("Wk_jz").X(320).Y(33).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("四肢:").X(40).Y(60),
+                                            X.ComboBox().Name("Wk_sz").X(70).Y(58).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("关节:").X(175).Y(60),
+                                            X.ComboBox().Name("Wk_gj").X(210).Y(58).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("医师意见:").X(15).Y(85),
+                                            X.ComboBox().Name("Wk_ysyj").X(70).Y(83).Width(210).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("合格").Value("1"),
+                                                X.ListItem().Text("专业受限").Value("2"),
+                                                X.ListItem().Text("不合格").Value("3")
+                                            ),
+                                            X.Label().Text("其他(具体描述):").X(5).Y(110),
+                                            X.TextArea().Name("Wk_qt").X(100).Y(108).Width(330).Height(30)
+                                            ),
+    #endregion
+    #region 耳鼻喉科
+                                    X.FieldSet()
+                                        .Collapsible(true).Title("耳鼻喉科").Height(145)
+                                        .Layout(LayoutType.Absolute).Border(true)
+                                        .Items(
+                                            X.Label().Text("左耳听力(米):").X(25).Y(10),
+                                            X.TextField().Name("Eb_zetl").X(100).Y(8).Width(50),
+                                            X.Label().Text("右耳听力(米):").X(155).Y(10),
+                                            X.TextField().Name("Eb_yetl").X(230).Y(8).Width(50),
+                                            X.Label().Text("嗅觉:").X(285).Y(10),
+                                            X.ComboBox().Name("Eb_xj").X(325).Y(8).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("迟钝").Value("2")
+                                            ),
+                                            X.Label().Text("医师意见:").X(45).Y(35),
+                                            X.ComboBox().Name("Eb_ysyj").X(100).Y(33).Width(180).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("合格").Value("1"),
+                                                X.ListItem().Text("专业受限").Value("2"),
+                                                X.ListItem().Text("不合格").Value("3")
+                                            ),
+                                            X.Label().Text("其他(具体描述):").X(10).Y(60),
+                                            X.TextArea().Name("Eb_ebyh").X(100).Y(58).Width(330).Height(30)
+                                        ),
+    #endregion
+    #region 口腔科
+                                    X.FieldSet()
+                                        .Collapsible(true).Title("口腔科").Height(145)
+                                        .Layout(LayoutType.Absolute).Border(true)
+                                        .Items(
+                                            X.Label().Text("唇腭:").X(65).Y(10),
+                                            X.ComboBox().Name("Kq_ce").X(100).Y(8).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("是否口吃:").X(175).Y(10),
+                                            X.ComboBox().Name("Kq_sfkc").X(230).Y(8).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("是").Value("1"),
+                                                X.ListItem().Text("否").Value("2")
+                                            ),
+                                            X.Label().Text("牙齿:").X(305).Y(10),
+                                            X.ComboBox().Name("Kq_yc").X(335).Y(8).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("医师意见:").X(40).Y(35),
+                                            X.ComboBox().Name("Kq_ysyj").X(100).Y(33).Width(200).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("合格").Value("1"),
+                                                X.ListItem().Text("专业受限").Value("2"),
+                                                X.ListItem().Text("不合格").Value("3")
+                                            ),
+                                            X.Label().Text("其他(具体描述):").X(5).Y(60),
+                                            X.TextArea().Name("Kq_qt").X(100).Y(58).Width(330).Height(30)
+                                        ),
+    #endregion
+    #region 胸透
+                                    X.FieldSet()
+                                        .Collapsible(true).Title("胸透").Height(120)
+                                        .Layout(LayoutType.Absolute).Border(true)
+                                        .Items(
+                                            X.Label().Text("胸透:").X(65).Y(10),
+                                            X.ComboBox().Name("Xt").X(100).Y(8).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("医师意见:").X(175).Y(10),
+                                            X.ComboBox().Name("Xt_ysyj").X(235).Y(8).Width(195).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("合格").Value("1"),
+                                                X.ListItem().Text("专业受限").Value("2"),
+                                                X.ListItem().Text("不合格").Value("3")
+                                            ),
+                                            X.Label().Text("其他(具体描述):").X(5).Y(35),
+                                            X.TextArea().Name("Xt_qt").X(100).Y(33).Width(330).Height(30)
+                                        ),
+    #endregion
+    #region 肝功能
+                                    X.FieldSet()
+                                        .Collapsible(true).Title("肝功能").Height(145)
+                                        .Layout(LayoutType.Absolute).Border(true)
+                                        .Items(
+                                            X.Label().Text("转氨酶:").X(50).Y(10),
+                                            X.ComboBox().Name("Gg_zam").X(100).Y(8).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("乙肝表面抗原:").X(175).Y(10),
+                                            X.ComboBox().Name("Gg_ygky").X(260).Y(8).Width(70).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("正常").Value("1"),
+                                                X.ListItem().Text("其他").Value("2")
+                                            ),
+                                            X.Label().Text("医师意见:").X(40).Y(35),
+                                            X.ComboBox().Name("Gg_ysyj").X(100).Y(33).Width(230).Editable(false)
+                                            .Items(
+                                                X.ListItem().Text("合格").Value("1"),
+                                                X.ListItem().Text("专业受限").Value("2"),
+                                                X.ListItem().Text("不合格").Value("3")
+                                            ),
+                                            X.Label().Text("其他(具体描述):").X(5).Y(60),
+                                            X.TextArea().Name("Gg_qt").X(100).Y(58).Width(330).Height(30)
+                                        ),
+    #endregion
+    #region 专业受限代码
+                                    X.FieldSet()
+                                        .Collapsible(true).Title("专业受限代码").Height(110)
+                                        .Layout(LayoutType.Absolute).Border(true)
+                                        .Items(
+                                            X.Label().Text("专业受限代码1:").X(5).Y(10),
+                                            X.TextField().Name("Zysxdm1").X(100).Y(8).Width(80),
+                                            X.Label().Text("专业受限代码2:").X(200).Y(10),
+                                            X.TextField().Name("Zysxdm2").X(300).Y(8).Width(80),
+                                            X.Label().Text("专业受限代码3:").X(5).Y(35),
+                                            X.TextField().Name("Zysxdm3").X(100).Y(33).Width(80),
+                                            X.Label().Text("专业受限代码4:").X(200).Y(35),
+                                            X.TextField().Name("Zysxdm4").X(300).Y(33).Width(80),
+                                            X.Label().Text("专业受限代码5:").X(5).Y(60),
+                                            X.TextField().Name("Zysxdm5").X(100).Y(58).Width(80),
+                                            X.Label().Text("专业受限代码6:").X(200).Y(60),
+                                            X.TextField().Name("Zysxdm6").X(300).Y(58).Width(80)
+                                        )
+    #endregion
+                                )),
+    #endregion
+    #region 审核信息
+                            X.FormPanel()
+                                .Title("审核信息")
+                                .Layout(LayoutType.Absolute)
+                                .BodyPadding(0)
+                                .ID(ViewData["WindowID"] + "_Form5")
+                                .Border(false)
+                                .BodyStyle("background-color:transparent;")
+                                .Items(
+                                    X.Label().Text("当前状态:").X(5).Y(10),
+                                    X.TextField().Name("VerifyStatus").X(58).Y(8).Width(430).Editable(false),
+                                    X.Label().Text("审核信息:").X(5).Y(35),
+                                    X.TextArea().Name("VerifyResult").X(58).Y(35).Width(430).Height(400).Editable(false)
+                                    )
+
+    #endregion
+                        )
+            )
+            .ButtonAlign(Alignment.Center)
+            .Buttons(
+                X.Button()
+                .Text("审核")
+                .Icon(Icon.Accept)
+                .DirectEvents(de =>
+                {
+                    de.Click.Url = Url.Action("WindowSaveClick", (string)ViewData["CurrentController"], new { Area = "UserControl" });
+                    de.Click.FormID = "#(return this.up('window').down('form');)";
+                    de.Click.EventMask.ShowMask = true;
+                    de.Click.EventMask.Msg = "正在处理,请稍后...";
+                    de.Click.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "PanelID",
+                        Value = "this.up('window').id",
+                        Mode = ParameterMode.Raw
+                    });
+                    de.Click.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "ParentVariable",
+                        Value = (string)ViewData["WindowParentVariable"],
+                        Mode = ParameterMode.Value
+                    });
+                    de.Click.Success = "this.up('window').close();";
+                }),
+                X.Button()
+                    .Text("退出")
+                    .Icon(Icon.Cancel)
+                    .Handler("function(){this.up('window').close();}")
+            )
+)
+

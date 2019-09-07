@@ -1,0 +1,21 @@
+﻿@{
+    //只有中间结构
+    Layout = "_ExtLayout.cshtml";
+    var X = Html.X();
+}
+
+@RenderBody()
+
+@section center
+{
+    @(X.Viewport()
+        .Layout(LayoutType.Border)
+        .Items(
+            X.Panel()
+                .Region(Region.Center)
+                .Layout(LayoutType.Fit)
+                .ItemsFromSection(this, "MainPanelField")
+        )
+    )
+    @RenderSection("Hidden", true)
+}

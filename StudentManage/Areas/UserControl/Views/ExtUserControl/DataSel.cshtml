@@ -1,0 +1,183 @@
+﻿@{
+    var X = Html.X();
+}
+
+@(
+     X.Window()
+        .ID((string)ViewData["DataSel_WindowID"])
+        .Height(400)
+        .Width(570)
+        .Title("信息查询")
+        .Layout(LayoutType.Fit)
+        .Resizable(true)
+        .Maximizable(true)
+        .Modal(true)
+        .Hidden(false)
+        .Items(
+            X.GridPanel()
+                .ID((string)ViewData["DataSel_WindowID"] + "_DataSel")
+                .Header(false)
+                .Border(false)
+                .AutoScroll(true)
+                .Store(
+                    X.Store()
+                        .AutoLoad(false)
+                        .ID((string)(ViewData["DataSel_WindowID"] + "_DataSel_Store"))
+                        .RemotePaging(true)
+                        .RemoteSort(true)
+                        .Model(
+                                X.Model()
+                                .IDProperty("ID")
+                                .Fields(new ModelField("temp"))
+                            )
+                        .Proxy(
+                                X.AjaxProxy()
+                                .Url(Url.Action("DataSelRead", "DataSel", new { Area = "UserControl" }))
+                                .Reader(X.JsonReader().RootProperty("data"))
+                            )
+                        .Parameters(ps =>
+                        {
+                            ps.Add(new StoreParameter("ParentVariable", (string)ViewData["DataSel_HiddenVariable"], ParameterMode.Value));
+                            ps.Add(new StoreParameter("sInitNames", "App." + (string)ViewData["DataSel_WindowID"] + "_InitNames" + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("sInitValues", "App." + (string)ViewData["DataSel_WindowID"] + "_InitValues" + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("sInitSigns", "App." + (string)ViewData["DataSel_WindowID"] + "_InitSigns" + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("sNowNames", "App." + (string)ViewData["DataSel_WindowID"] + "_NowNames" + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("sNowValues", "App." + (string)ViewData["DataSel_WindowID"] + "_NowValues" + ".getValue()", ParameterMode.Raw));
+                            ps.Add(new StoreParameter("sNowSigns", "App." + (string)ViewData["DataSel_WindowID"] + "_NowSigns" + ".getValue()", ParameterMode.Raw));
+                        })
+                    )
+                .ColumnModel(
+
+                )
+                .BottomBar(
+                    X.PagingToolbar().HideRefresh(true)
+                )
+                .SelectionModel(X.CheckboxSelectionModel().Mode(SelectionMode.Multi))
+                .DirectEvents(de =>
+                {
+                    de.BeforeRender.Url = Url.Action("InitDataList", "DataSel", new { Area = "UserControl" });
+                    de.BeforeRender.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "ParentVariable",
+                        Value = "this.query('hidden')[3].getValue()",
+                        Mode = ParameterMode.Raw
+                    });
+                    de.BeforeRender.ExtraParams.Add(new Parameter()
+                    {
+                        Name = "PanelID",
+                        Value = (string)ViewData["DataSel_WindowID"],
+                        Mode = ParameterMode.Value
+                    });
+                })
+                .TopBar(
+                    X.Toolbar()
+                        .Items(
+                            X.Hidden()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_NowNames"))
+                                .Text((string)(ViewData["DataSel_NowNames"])),
+                            X.Hidden()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_NowValues"))
+                                .Text((string)(ViewData["DataSel_NowValues"])),
+                            X.Hidden()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_NowSigns"))
+                                .Text((string)(ViewData["DataSel_NowSigns"])),
+                            X.Hidden()
+                                .ID((string)ViewData["DataSel_WindowID"] + "_HiddenVariable")
+                                .Text((string)ViewData["DataSel_HiddenVariable"]),
+                            X.Hidden()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_InitNames"))
+                                .Text((string)(ViewData["DataSel_InitNames"])),
+                            X.Hidden()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_InitValues"))
+                                .Text((string)(ViewData["DataSel_InitValues"])),
+                            X.Hidden()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_InitSigns"))
+                                .Text((string)(ViewData["DataSel_InitSigns"])),
+                            X.ComboBox()
+                                .ID((string)ViewData["DataSel_WindowID"] + "_ComboBox")
+                                .AnchorHorizontal("100%")
+                                .DisplayField("name")
+                                .QueryMode(DataLoadMode.Local)
+                                .ValueField("value")
+                                .AutoDataBind(true)
+                                .EmptyText("全部")
+                                .Store(X.Store()
+                                    .AutoLoad(true)
+                                    .Model(X.Model()
+                                        .IDProperty("ID")
+                                        .Fields(
+                                            new ModelField("id", ModelFieldType.String) { Mapping = "ID" },
+                                            new ModelField("name", ModelFieldType.String) { Mapping = "Name" },
+                                            new ModelField("value", ModelFieldType.String) { Mapping = "Value" }
+                                        )
+                                    )
+                                    .Proxy(X.AjaxProxy()
+                                        .Url(Url.Action("InitComboBox", "DataSel", new { Area = "UserControl" }))
+                                        .Reader(X.JsonReader().RootProperty("data"))
+                                        .ExtraParams(pa => pa.Add(new Parameter("PanelID", ((string)ViewData["DataSel_WindowID"] + "_ComboBox"), ParameterMode.Value)))
+                                    )
+                                    .DirectEvents(de =>
+                                    {
+                                        de.Load.Url = Url.Action("SetDataCombo", "DataSel", new { Area = "UserControl" });
+                                        de.Load.ExtraParams.Add(new Parameter("PanelID", ((string)ViewData["DataSel_WindowID"] + "_ComboBox"), ParameterMode.Value));
+                                    })
+                                ),
+                            X.TextField().ID((string)ViewData["DataSel_WindowID"] + "_txtSearchValue").Text(""),
+                            X.Button()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_btnSearch"))
+                                .Text("查询")
+                                .Icon(Icon.Zoom)
+                                .DirectEvents(de =>
+                                {
+                                    de.Click.Url = Url.Action("DataSel_SearchClick", "DataSel", new { Area = "UserControl" });
+                                    de.Click.ExtraParams.Add(new Parameter("PanelID", ((string)ViewData["DataSel_WindowID"]), ParameterMode.Value));
+                                    de.Click.ExtraParams.Add(new Parameter("SearchName", "this.up('gridpanel').down('combobox').getValue()", ParameterMode.Raw));
+                                    de.Click.ExtraParams.Add(new Parameter("SearchValue", "App."+ (string)ViewData["DataSel_WindowID"] + "_txtSearchValue" + ".getValue()", ParameterMode.Raw));
+                                }),
+                            X.Button()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_btnSure"))
+                                .Text("确定")
+                                .Icon(Icon.Tick)
+                                .DirectEvents(de =>
+                                {
+                                    de.Click.Url = Url.Action("DataSel_SureClick", "DataSel", new { Area = "UserControl" });
+                                    de.Click.ExtraParams.Add(new Parameter()
+                                    {
+                                        Name = "ParentVariable",
+                                        Value = "this.up('gridpanel').query('hidden')[3].getValue()",
+                                        Mode = ParameterMode.Raw
+                                    });
+                                    de.Click.ExtraParams.Add(new Parameter()
+                                    {
+                                        Name = "selection",
+                                        Value = "this.up('gridpanel').getSelectionSubmit().getSelectionModelField().getValue()",
+                                        Mode = ParameterMode.Raw
+                                    });
+                                })
+                                .Handler("function(){this.up('window').close();}"),
+                            X.Button()
+                                .ID((string)(ViewData["DataSel_WindowID"] + "_btnCancel"))
+                                .Text("关闭")
+                                .Icon(Icon.Cancel)
+                                .Handler("function(){this.up('window').close();}")
+                            )
+                    )
+         )
+        .DirectEvents(de =>
+        {
+            //de.Show.Url = Url.Action("DataSel_Show", "DataSel", new { Area = "UserControl" });
+            //de.Show.ExtraParams.Add(new Parameter()
+            //{
+            //    Name = "PanelID",
+            //    Value = "this.id",
+            //    Mode = ParameterMode.Raw
+            //});
+            //de.Show.ExtraParams.Add(new Parameter()
+            //{
+            //    Name = "HideVariable",
+            //    Value = (string)ViewData["WinDocManage_HiddenVariable"],
+            //    Mode = ParameterMode.Value
+            //});
+        }
+        )
+)

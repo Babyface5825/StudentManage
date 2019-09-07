@@ -1,0 +1,188 @@
+﻿@{
+    //不带TreeMaster的树节点操作
+    Layout = "_ViewPortLayout1.cshtml";
+    var X = Html.X();
+}
+
+@RenderBody()
+
+@section TreePanelField{
+    @(X.Panel()
+        .Header(false)
+        .Layout(LayoutType.Fit)
+        .ID("DataTreeContainer")
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Loader(X.ComponentLoader()
+            .Url(Url.Action("AutoLoadDataTree"))
+            .Mode(LoadMode.Script)
+            .Params(new { containerId = "DataTreeContainer" })
+            .LoadMask(lm => lm.ShowMask = true)
+            )
+    )
+}
+
+@section MainPanelField{
+    @(X.Panel()
+        .Header(true)
+        .Layout(LayoutType.Fit)
+        .Title("详细信息")
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.FormPanel()
+                .ID((string)ViewData["TreeMaster_Form"])
+                .Layout(LayoutType.Absolute)
+                .Border(false)
+                .BodyPadding(5)
+                .BodyStyle("background-color:transparent;")
+                .AnchorVertical("100%")
+                .Items(
+                    X.Hidden().Name("ID").Text("0"),
+                    X.Label().Text("名称:").X(5).Y(5),
+                    X.TextField().Name("Name").X(40).FieldLabel("").Y(7).AnchorHorizontal("100%"),
+                    X.Label().Text("编码:").ID((string)ViewData["TreeMaster_Form"] + "_labCode").X(5).Y(30),
+                    X.TextField().Name("Code").X(40).Y(32).AnchorHorizontal("100%"),
+                    X.Label().Text("说明:").X(5).Y(55),
+                    X.TextArea().ID((string)ViewData["TreeMaster_Form"] + "_txtRemark").Name("Remark").X(40).Y(57).AnchorHorizontal("100%").AnchorVertical("100%")
+                    )
+            .TopBar(
+                X.Toolbar()
+                    .Items(
+                        X.Button()
+                            .Text("保存")
+                            .Icon(Icon.Disk)
+                            .ID((string)ViewData["TreeMaster_Form"] + "_btnSave")
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Action = "TreeMaster_SaveClick";
+                                de.Click.EventMask.ShowMask = true;
+                                de.Click.FormID = "#(return this.up('panel').down('form');)";
+                                de.Click.ExtraParams.Add(new Parameter("newFlag", "App."+ (string)ViewData["TreeMaster_Form"] + "_AddorSave" + ".getValue()", ParameterMode.Raw));
+                            }),
+                            X.Button()
+                            .Text("删除")
+                            .Icon(Icon.Delete)
+                            .ID((string)ViewData["TreeMaster_Form"] + "_btnDelete")
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("TreeMaster_DeleteClick");
+                                de.Click.EventMask.ShowMask = true;
+                                de.Click.FormID = "#(return this.up('panel').down('form');)";
+                                de.Click.Confirmation.ConfirmRequest = true;
+                                de.Click.Confirmation.Title = "注意";
+                                de.Click.Confirmation.Message = "确定删除选定内容吗？";
+                            }),
+                        X.Button()
+                            .Text("重置")
+                            .ID((string)ViewData["TreeMaster_Form"] + "_btnReset")
+                            .Icon(Icon.Database)
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("TreeMaster_ResetClick");
+                                de.Click.EventMask.ShowMask = true;
+                            }),
+                        X.Button()
+                            .Text("创建下级")
+                            .ID((string)ViewData["TreeMaster_Form"] + "_btnAddNextLevel")
+                            .Icon(Icon.Add)
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("TreeMaster_AddNextLevelClick");
+                                de.Click.EventMask.ShowMask = true;
+                                de.Click.FormID = "#(return this.up('panel').down('form');)";
+                            }),
+                        X.Button()
+                            .Text("上移")
+                            .ID((string)ViewData["TreeMaster_Form"] + "_btnOrderUp")
+                            .Icon(Icon.ArrowUp)
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("TreeMaster_OrderUpClick");
+                                de.Click.EventMask.ShowMask = true;
+                                de.Click.FormID = "#(return this.up('panel').down('form');)";
+                            }),
+                        X.Button()
+                            .Text("下移")
+                            .ID((string)ViewData["TreeMaster_Form"] + "_btnOrderDown")
+                            .Icon(Icon.ArrowDown)
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("TreeMaster_OrderDownClick");
+                                de.Click.EventMask.ShowMask = true;
+                                de.Click.FormID = "#(return this.up('panel').down('form');)";
+                            }),
+                        X.Button()
+                            .Text("更多内容1")
+                            .ID((string)ViewData["TreeMaster_Form"] + "_btnMore")
+                            .Icon(Icon.NoteEdit)
+                            .Hidden(true)
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("TreeMaster_MoreInfoClick");
+                                de.Click.FormID = "#(return this.up('panel').down('form');)";
+                                de.Click.EventMask.ShowMask = true;
+                            }),
+                        X.Button()
+                            .Text("更多内容2")
+                            .ID((string)ViewData["TreeMaster_Form"] + "_btnMore2")
+                            .Icon(Icon.NoteEdit)
+                            .Hidden(true)
+                            .DirectEvents(de =>
+                            {
+                                de.Click.Url = Url.Action("TreeMaster_More2InfoClick");
+                                de.Click.FormID = "#(return this.up('panel').down('form');)";
+                                de.Click.EventMask.ShowMask = true;
+                            })
+                        //X.FormPanel()
+                        //    .Header(false)
+                        //    .Border(false)
+                        //    .Layout(LayoutType.Fit)
+                        //    .BodyStyle("background-color:transparent;")
+                        //    .Items(
+                        //        X.Hidden()
+                        //            .ID(ViewData["TreeMaster_Form"] + "_txtInportFileName")
+                        //            .DirectEvents(de =>
+                        //            {
+                        //                de.Change.Url = Url.Action("TreeMaster_AfterInportClick");
+                        //                de.Change.ExtraParams.Add(new Parameter()
+                        //                {
+                        //                    Name = "sAddress",
+                        //                    Value = "this.getValue()",
+                        //                    Mode = ParameterMode.Raw
+                        //                });
+                        //                de.Change.EventMask.ShowMask = true;
+                        //                de.Change.EventMask.Msg = "正在处理,请稍后...";
+                        //            }),
+                        //        X.FileUploadField()
+                        //            .ButtonOnly(true)
+                        //            .ID(ViewData["TreeMaster_Form"] + "_btnInport")
+                        //            .ButtonText("导入")
+                        //            .Hidden(true)
+                        //            .Icon(Icon.PrinterAdd)
+                        //            .DirectEvents(de =>
+                        //            {
+                        //                de.Change.Url = Url.Action("TreeMaster_InportClick");                                        
+                        //                de.Change.EventMask.ShowMask = true;
+                        //                de.Change.EventMask.Msg = "正在处理,请稍后...";
+                        //                de.Change.Failure = @"Ext.Msg.show({ 
+                        //                    title   : '错误', 
+                        //                    msg     : '文件上传失败！', 
+                        //                    minWidth: 200, 
+                        //                    modal   : true, 
+                        //                    icon    : Ext.Msg.ERROR, 
+                        //                    buttons : Ext.Msg.OK 
+                        //                });";
+                        //            })
+                        //)
+                      )
+                )
+           )
+    )
+}
+
+@section Hidden{
+        @RenderPage("~\\Areas\\UserControl\\Views\\ExtUserControl\\WinNeedConfirm.cshtml", ViewData["WinNeedConfirm_WindowID"] = (string)ViewData["TreeMaster_Form"] + "_WinNeedConfirm")
+    @*Save:0; Add:1*@
+    @X.Hidden().ID((string)ViewData["TreeMaster_Form"] + "_AddorSave").Text("0")
+    @RenderSection("HiddenMore", true)
+}

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Form)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().Name("ID").Text("0"),
+            X.TextField().Name("代码")
+                .FieldLabel("科类代码"),
+            X.TextField().Name("Name")
+                .FieldLabel("科类名称")
+                .AllowBlank(false),
+            X.TextField().Name("Jbkl")
+                .FieldLabel("兼报科类"),
+            X.NumberField().Name("Kscjbjxh")
+                .FieldLabel("成绩序号"),
+            X.TextArea().Name("Remark")
+                .FieldLabel("科类备注")                
+        )       
+   )
+}

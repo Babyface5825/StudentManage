@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+
+@section WindowItemField
+{
+  @(X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Layout(LayoutType.Form)
+        .BodyPadding(5)
+        .Border(false)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.Hidden().Name("ID").Text("0"),
+            X.TextField().Name("Code")
+                .FieldLabel("代码"),
+            X.TextField().Name("Name")
+                .FieldLabel("名称")
+                .AllowBlank(false),
+            X.TextField().Name("JoinNames")
+                .FieldLabel("相似").ReadOnly(true)
+                .AllowBlank(false),
+            X.NumberField().Name("TheOrder")
+                .FieldLabel("排序")
+                .AllowBlank(false),
+            X.TextArea().Name("Remark")
+                .FieldLabel("备注")                
+        )       
+   )
+}

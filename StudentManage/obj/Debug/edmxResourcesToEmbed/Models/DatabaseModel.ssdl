@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="objectid" Type="int" />
+    <Property Name="property" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvalue" Type="image" />
+    <Property Name="version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblAfterMarkInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+    <Property Name="AfterMarkIGetNum" Type="smallint" />
+    <Property Name="AfterMarkIDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="tblAuthorizationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="TheOrder" Type="smallint" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.tblChannelAuthorRelation”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="tblChannelAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="RelationID1" />
+      <PropertyRef Name="RelationID2" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblChannelContent">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChannelCChannelTID" Type="bigint" Nullable="false" />
+    <Property Name="ChannelCName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChannelCText" Type="ntext" />
+    <Property Name="ChannelCTime" Type="smalldatetime" Nullable="false" />
+    <Property Name="ChannelCUserIID" Type="bigint" Nullable="false" />
+    <Property Name="ChannelCComeFrom" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChannelCAudio" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChannelCVedio" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChannelCTemplete" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChannelCPop" Type="bit" Nullable="false" />
+    <Property Name="ChannelCTop" Type="bit" Nullable="false" />
+    <Property Name="ChannelCVerify" Type="bit" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="ChannelCAuthor" Type="bigint" Nullable="false" />
+    <Property Name="ChannelCAuthorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="HitTime" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblChannelContentDoc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="TheOrder" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblChannelContentPic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID" Type="bigint" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="TheOrder" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.tblChannelType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="tblChannelType">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ParentIndex" />
+      <PropertyRef Name="TheOrder" />
+      <PropertyRef Name="TheLevel" />
+      <PropertyRef Name="ChildNum" />
+      <PropertyRef Name="IsLeaf" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="ParentIndex" Type="bigint" Nullable="false" />
+    <Property Name="TheOrder" Type="tinyint" Nullable="false" />
+    <Property Name="TheLevel" Type="tinyint" Nullable="false" />
+    <Property Name="ChildNum" Type="tinyint" Nullable="false" />
+    <Property Name="IsLeaf" Type="bit" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="ChannelTTemplete" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblCommunicateInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+    <Property Name="CommunicateIPageNum" Type="smallint" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="FoundDate" Type="smalldatetime" />
+    <Property Name="Type" Type="bigint" Nullable="false" />
+    <Property Name="score" Type="smallint" Nullable="false" />
+    <Property Name="status" Type="bit" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCourseFileInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="TheOrder" Type="smallint" />
+    <Property Name="OpenFlag" Type="bit" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCourseInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="ParentIndex" Type="bigint" Nullable="false" />
+    <Property Name="TheOrder" Type="smallint" Nullable="false" />
+    <Property Name="TheLevel" Type="smallint" Nullable="false" />
+    <Property Name="ChildNum" Type="smallint" Nullable="false" />
+    <Property Name="IsLeaf" Type="bit" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblCoursePeriodRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblDepartmentInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="ParentIndex" Type="bigint" Nullable="false" />
+    <Property Name="TheOrder" Type="smallint" Nullable="false" />
+    <Property Name="TheLevel" Type="tinyint" Nullable="false" />
+    <Property Name="ChildNum" Type="smallint" Nullable="false" />
+    <Property Name="IsLeaf" Type="bit" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="DepartmentICode" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentIADD" Type="nvarchar" MaxLength="250" />
+    <Property Name="DepartmentIPostalCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentIPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentIFax" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentIeMail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblDutyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="250" />
+    <Property Name="TheOrder" Type="smallint" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblFriendLink">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="TheOrder" Type="smallint" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.tblGuestBook”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="tblGuestBook">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="GuestBAnswerFlag" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GuestBName" Type="nvarchar" MaxLength="50" />
+    <Property Name="GuestBHead" Type="nvarchar" MaxLength="50" />
+    <Property Name="GuestBText" Type="ntext" />
+    <Property Name="GuestBAnswerFlag" Type="bit" Nullable="false" />
+    <Property Name="GuestBAnswer" Type="ntext" />
+    <Property Name="GuestBTime" Type="smalldatetime" />
+    <Property Name="GuestBAnswerTime" Type="smalldatetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.tblMainInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="tblMainInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="MainIVisitedVisiable" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MainIName" Type="nvarchar" MaxLength="250" />
+    <Property Name="MainIURL" Type="nvarchar" MaxLength="250" />
+    <Property Name="MainILogoPic" Type="nvarchar" MaxLength="250" />
+    <Property Name="MainIEmail" Type="nvarchar" MaxLength="250" />
+    <Property Name="MainIKeyWords" Type="nvarchar" MaxLength="250" />
+    <Property Name="MainIFootMark" Type="ntext" />
+    <Property Name="MainIVisitedNum" Type="int" />
+    <Property Name="MainIVisitedVisiable" Type="bit" Nullable="false" />
+    <Property Name="MainIInformation" Type="ntext" />
+    <Property Name="MainIAboutUS" Type="ntext" />
+    <Property Name="MainIAboutPic" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblMarkInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+    <Property Name="MarkIGetNum" Type="smallint" />
+    <Property Name="MarkIDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="tblOperationAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblOperationInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="ParentIndex" Type="bigint" Nullable="false" />
+    <Property Name="TheOrder" Type="tinyint" Nullable="false" />
+    <Property Name="TheLevel" Type="tinyint" Nullable="false" />
+    <Property Name="ChildNum" Type="tinyint" Nullable="false" />
+    <Property Name="IsLeaf" Type="bit" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="OperationIURL" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblPeriodInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="TheOrder" Type="smallint" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStudentDutyInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentDutyIDate" Type="smalldatetime" />
+    <Property Name="StudentDutyStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStudentSelCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTeacherCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTestMainInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID" Type="bigint" Nullable="false" />
+    <Property Name="TestMainIDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TestMainAddress" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTestQuestion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="50" />
+    <Property Name="Answer" Type="nvarchar(max)" />
+    <Property Name="Degree" Type="smallint" Nullable="false" />
+    <Property Name="RelationID" Type="bigint" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTestScoreInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+    <Property Name="MarkIGetNum" Type="smallint" />
+  </EntityType>
+  <EntityType Name="tblUserAuthorRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserICode" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIPsd" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIRegisterDate" Type="smalldatetime" />
+    <Property Name="UserISex" Type="nvarchar" MaxLength="2" />
+    <Property Name="UserIIDCard" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIBirth" Type="smalldatetime" />
+    <Property Name="UserIAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserIPostalCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="UserIStudentNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserIMobilePhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserIeMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIRemarks" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserIDutyIID" Type="bigint" />
+    <Property Name="UserIDepartmentIID" Type="bigint" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="UserIIntroduction" Type="nvarchar(max)" />
+    <Property Name="UserIResearchField" Type="nvarchar(max)" />
+    <Property Name="UserIContacted" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblUserLoginInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationID" Type="bigint" Nullable="false" />
+    <Property Name="UserLoginIIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserLoginIDate" Type="smalldatetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.ViewforAfterMarkInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ViewforAfterMarkInfo">
+    <Key>
+      <PropertyRef Name="CourseID" />
+      <PropertyRef Name="PeriodID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="DepartmentID" />
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="CourseID" Type="bigint" Nullable="false" />
+    <Property Name="CourseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PeriodID" Type="bigint" Nullable="false" />
+    <Property Name="PeriodName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserID" Type="bigint" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserIStudentNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="DepartmentID" Type="bigint" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserISex" Type="nvarchar" MaxLength="2" />
+    <Property Name="AfterMarkIGetNum" Type="smallint" />
+    <Property Name="AfterMarkIDate" Type="smalldatetime" />
+    <Property Name="ID" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.ViewForCommunicateInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ViewForCommunicateInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="RelationID1" />
+      <PropertyRef Name="RelationID2" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="score" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="RelationID1" Type="bigint" Nullable="false" />
+    <Property Name="RelationID2" Type="bigint" Nullable="false" />
+    <Property Name="CommunicateIPageNum" Type="smallint" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="FoundDate" Type="smalldatetime" />
+    <Property Name="Type" Type="bigint" Nullable="false" />
+    <Property Name="score" Type="smallint" Nullable="false" />
+    <Property Name="status" Type="bit" Nullable="false" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.ViewForCoursePeriodRelation”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ViewForCoursePeriodRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="CourseID" />
+      <PropertyRef Name="PeriodID" />
+      <PropertyRef Name="TheOrder" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="CourseID" Type="bigint" Nullable="false" />
+    <Property Name="PeriodID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar(max)" />
+    <Property Name="TheOrder" Type="smallint" Nullable="false" />
+    <Property Name="CourseName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.ViewforStudentDutyInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ViewforStudentDutyInfo">
+    <Key>
+      <PropertyRef Name="CourseID" />
+      <PropertyRef Name="PeriodID" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="StudentDutyStatus" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="CourseID" Type="bigint" Nullable="false" />
+    <Property Name="CourseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PeriodID" Type="bigint" Nullable="false" />
+    <Property Name="PeriodName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="StudentDutyIDate" Type="smalldatetime" />
+    <Property Name="StudentDutyStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserID" Type="bigint" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserIStudentNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="DepartmentID" Type="bigint" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserISex" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.ViewForStudentSelCourseRelation”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ViewForStudentSelCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserISex" Type="nvarchar" MaxLength="2" />
+    <Property Name="UserIIDCard" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentID" Type="bigint" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="DutyID" Type="bigint" />
+    <Property Name="DutyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIMobilePhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserIStudentNumber" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.ViewForTeacherCourseRelation”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ViewForTeacherCourseRelation">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="CourseID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="UserID" Type="bigint" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+    <Property Name="CourseID" Type="bigint" Nullable="false" />
+    <Property Name="CourseName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIMobilePhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“MvcTywzV2.dbo.ViewForUserInfo”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="ViewForUserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="DelFlag" />
+    </Key>
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DutyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentID" Type="bigint" />
+    <Property Name="DutyID" Type="bigint" />
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserICode" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIPsd" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIRegisterDate" Type="smalldatetime" />
+    <Property Name="UserISex" Type="nvarchar" MaxLength="2" />
+    <Property Name="UserIIDCard" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIBirth" Type="smalldatetime" />
+    <Property Name="UserIAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserIPostalCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="UserIStudentNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserIMobilePhone" Type="nvarchar" MaxLength="20" />
+    <Property Name="UserIeMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserIRemarks" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserIDutyIID" Type="bigint" />
+    <Property Name="UserIDepartmentIID" Type="bigint" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DatabaseModelStoreContainer">
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAfterMarkInfo" EntityType="Self.tblAfterMarkInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAuthorizationInfo" EntityType="Self.tblAuthorizationInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblChannelContent" EntityType="Self.tblChannelContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblChannelContentDoc" EntityType="Self.tblChannelContentDoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblChannelContentPic" EntityType="Self.tblChannelContentPic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCommunicateInfo" EntityType="Self.tblCommunicateInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCourseFileInfo" EntityType="Self.tblCourseFileInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCourseInfo" EntityType="Self.tblCourseInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCoursePeriodRelation" EntityType="Self.tblCoursePeriodRelation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDepartmentInfo" EntityType="Self.tblDepartmentInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDutyInfo" EntityType="Self.tblDutyInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblFriendLink" EntityType="Self.tblFriendLink" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMarkInfo" EntityType="Self.tblMarkInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOperationAuthorRelation" EntityType="Self.tblOperationAuthorRelation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOperationInfo" EntityType="Self.tblOperationInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPeriodInfo" EntityType="Self.tblPeriodInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStudentDutyInfo" EntityType="Self.tblStudentDutyInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStudentSelCourseRelation" EntityType="Self.tblStudentSelCourseRelation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTeacherCourseRelation" EntityType="Self.tblTeacherCourseRelation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTestMainInfo" EntityType="Self.tblTestMainInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTestQuestion" EntityType="Self.tblTestQuestion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTestScoreInfo" EntityType="Self.tblTestScoreInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserAuthorRelation" EntityType="Self.tblUserAuthorRelation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserInfo" EntityType="Self.tblUserInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserLoginInfo" EntityType="Self.tblUserLoginInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblChannelAuthorRelation" EntityType="Self.tblChannelAuthorRelation" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblChannelAuthorRelation].[ID] AS [ID], 
+    [tblChannelAuthorRelation].[RelationID1] AS [RelationID1], 
+    [tblChannelAuthorRelation].[RelationID2] AS [RelationID2]
+    FROM [dbo].[tblChannelAuthorRelation] AS [tblChannelAuthorRelation]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblChannelType" EntityType="Self.tblChannelType" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblChannelType].[ID] AS [ID], 
+    [tblChannelType].[Name] AS [Name], 
+    [tblChannelType].[Remark] AS [Remark], 
+    [tblChannelType].[ParentIndex] AS [ParentIndex], 
+    [tblChannelType].[TheOrder] AS [TheOrder], 
+    [tblChannelType].[TheLevel] AS [TheLevel], 
+    [tblChannelType].[ChildNum] AS [ChildNum], 
+    [tblChannelType].[IsLeaf] AS [IsLeaf], 
+    [tblChannelType].[DelFlag] AS [DelFlag], 
+    [tblChannelType].[ChannelTTemplete] AS [ChannelTTemplete]
+    FROM [dbo].[tblChannelType] AS [tblChannelType]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblGuestBook" EntityType="Self.tblGuestBook" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblGuestBook].[ID] AS [ID], 
+    [tblGuestBook].[GuestBName] AS [GuestBName], 
+    [tblGuestBook].[GuestBHead] AS [GuestBHead], 
+    [tblGuestBook].[GuestBText] AS [GuestBText], 
+    [tblGuestBook].[GuestBAnswerFlag] AS [GuestBAnswerFlag], 
+    [tblGuestBook].[GuestBAnswer] AS [GuestBAnswer], 
+    [tblGuestBook].[GuestBTime] AS [GuestBTime], 
+    [tblGuestBook].[GuestBAnswerTime] AS [GuestBAnswerTime]
+    FROM [dbo].[tblGuestBook] AS [tblGuestBook]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblMainInfo" EntityType="Self.tblMainInfo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblMainInfo].[ID] AS [ID], 
+    [tblMainInfo].[MainIName] AS [MainIName], 
+    [tblMainInfo].[MainIURL] AS [MainIURL], 
+    [tblMainInfo].[MainILogoPic] AS [MainILogoPic], 
+    [tblMainInfo].[MainIEmail] AS [MainIEmail], 
+    [tblMainInfo].[MainIKeyWords] AS [MainIKeyWords], 
+    [tblMainInfo].[MainIFootMark] AS [MainIFootMark], 
+    [tblMainInfo].[MainIVisitedNum] AS [MainIVisitedNum], 
+    [tblMainInfo].[MainIVisitedVisiable] AS [MainIVisitedVisiable], 
+    [tblMainInfo].[MainIInformation] AS [MainIInformation], 
+    [tblMainInfo].[MainIAboutUS] AS [MainIAboutUS], 
+    [tblMainInfo].[MainIAboutPic] AS [MainIAboutPic]
+    FROM [dbo].[tblMainInfo] AS [tblMainInfo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewforAfterMarkInfo" EntityType="Self.ViewforAfterMarkInfo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewforAfterMarkInfo].[CourseID] AS [CourseID], 
+    [ViewforAfterMarkInfo].[CourseName] AS [CourseName], 
+    [ViewforAfterMarkInfo].[PeriodID] AS [PeriodID], 
+    [ViewforAfterMarkInfo].[PeriodName] AS [PeriodName], 
+    [ViewforAfterMarkInfo].[UserID] AS [UserID], 
+    [ViewforAfterMarkInfo].[UserName] AS [UserName], 
+    [ViewforAfterMarkInfo].[UserIStudentNumber] AS [UserIStudentNumber], 
+    [ViewforAfterMarkInfo].[DepartmentID] AS [DepartmentID], 
+    [ViewforAfterMarkInfo].[DepartmentName] AS [DepartmentName], 
+    [ViewforAfterMarkInfo].[UserISex] AS [UserISex], 
+    [ViewforAfterMarkInfo].[AfterMarkIGetNum] AS [AfterMarkIGetNum], 
+    [ViewforAfterMarkInfo].[AfterMarkIDate] AS [AfterMarkIDate], 
+    [ViewforAfterMarkInfo].[ID] AS [ID]
+    FROM [dbo].[ViewforAfterMarkInfo] AS [ViewforAfterMarkInfo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewForCommunicateInfo" EntityType="Self.ViewForCommunicateInfo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewForCommunicateInfo].[ID] AS [ID], 
+    [ViewForCommunicateInfo].[RelationID1] AS [RelationID1], 
+    [ViewForCommunicateInfo].[RelationID2] AS [RelationID2], 
+    [ViewForCommunicateInfo].[CommunicateIPageNum] AS [CommunicateIPageNum], 
+    [ViewForCommunicateInfo].[Name] AS [Name], 
+    [ViewForCommunicateInfo].[Remark] AS [Remark], 
+    [ViewForCommunicateInfo].[FoundDate] AS [FoundDate], 
+    [ViewForCommunicateInfo].[Type] AS [Type], 
+    [ViewForCommunicateInfo].[score] AS [score], 
+    [ViewForCommunicateInfo].[status] AS [status], 
+    [ViewForCommunicateInfo].[DelFlag] AS [DelFlag], 
+    [ViewForCommunicateInfo].[UserName] AS [UserName]
+    FROM [dbo].[ViewForCommunicateInfo] AS [ViewForCommunicateInfo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewForCoursePeriodRelation" EntityType="Self.ViewForCoursePeriodRelation" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewForCoursePeriodRelation].[ID] AS [ID], 
+    [ViewForCoursePeriodRelation].[CourseID] AS [CourseID], 
+    [ViewForCoursePeriodRelation].[PeriodID] AS [PeriodID], 
+    [ViewForCoursePeriodRelation].[Name] AS [Name], 
+    [ViewForCoursePeriodRelation].[Remark] AS [Remark], 
+    [ViewForCoursePeriodRelation].[TheOrder] AS [TheOrder], 
+    [ViewForCoursePeriodRelation].[CourseName] AS [CourseName]
+    FROM [dbo].[ViewForCoursePeriodRelation] AS [ViewForCoursePeriodRelation]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewforStudentDutyInfo" EntityType="Self.ViewforStudentDutyInfo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewforStudentDutyInfo].[CourseID] AS [CourseID], 
+    [ViewforStudentDutyInfo].[CourseName] AS [CourseName], 
+    [ViewforStudentDutyInfo].[PeriodID] AS [PeriodID], 
+    [ViewforStudentDutyInfo].[PeriodName] AS [PeriodName], 
+    [ViewforStudentDutyInfo].[ID] AS [ID], 
+    [ViewforStudentDutyInfo].[StudentDutyIDate] AS [StudentDutyIDate], 
+    [ViewforStudentDutyInfo].[StudentDutyStatus] AS [StudentDutyStatus], 
+    [ViewforStudentDutyInfo].[UserID] AS [UserID], 
+    [ViewforStudentDutyInfo].[UserName] AS [UserName], 
+    [ViewforStudentDutyInfo].[UserIStudentNumber] AS [UserIStudentNumber], 
+    [ViewforStudentDutyInfo].[DepartmentID] AS [DepartmentID], 
+    [ViewforStudentDutyInfo].[DepartmentName] AS [DepartmentName], 
+    [ViewforStudentDutyInfo].[UserISex] AS [UserISex]
+    FROM [dbo].[ViewforStudentDutyInfo] AS [ViewforStudentDutyInfo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewForStudentSelCourseRelation" EntityType="Self.ViewForStudentSelCourseRelation" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewForStudentSelCourseRelation].[ID] AS [ID], 
+    [ViewForStudentSelCourseRelation].[DepartmentName] AS [DepartmentName], 
+    [ViewForStudentSelCourseRelation].[Name] AS [Name], 
+    [ViewForStudentSelCourseRelation].[UserISex] AS [UserISex], 
+    [ViewForStudentSelCourseRelation].[UserIIDCard] AS [UserIIDCard], 
+    [ViewForStudentSelCourseRelation].[DepartmentID] AS [DepartmentID], 
+    [ViewForStudentSelCourseRelation].[DelFlag] AS [DelFlag], 
+    [ViewForStudentSelCourseRelation].[DutyID] AS [DutyID], 
+    [ViewForStudentSelCourseRelation].[DutyName] AS [DutyName], 
+    [ViewForStudentSelCourseRelation].[UserIMobilePhone] AS [UserIMobilePhone], 
+    [ViewForStudentSelCourseRelation].[UserIStudentNumber] AS [UserIStudentNumber]
+    FROM [dbo].[ViewForStudentSelCourseRelation] AS [ViewForStudentSelCourseRelation]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewForTeacherCourseRelation" EntityType="Self.ViewForTeacherCourseRelation" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewForTeacherCourseRelation].[ID] AS [ID], 
+    [ViewForTeacherCourseRelation].[UserID] AS [UserID], 
+    [ViewForTeacherCourseRelation].[UserName] AS [UserName], 
+    [ViewForTeacherCourseRelation].[CourseID] AS [CourseID], 
+    [ViewForTeacherCourseRelation].[CourseName] AS [CourseName], 
+    [ViewForTeacherCourseRelation].[UserIMobilePhone] AS [UserIMobilePhone], 
+    [ViewForTeacherCourseRelation].[DepartmentName] AS [DepartmentName]
+    FROM [dbo].[ViewForTeacherCourseRelation] AS [ViewForTeacherCourseRelation]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewForUserInfo" EntityType="Self.ViewForUserInfo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewForUserInfo].[DepartmentName] AS [DepartmentName], 
+    [ViewForUserInfo].[DutyName] AS [DutyName], 
+    [ViewForUserInfo].[DepartmentID] AS [DepartmentID], 
+    [ViewForUserInfo].[DutyID] AS [DutyID], 
+    [ViewForUserInfo].[ID] AS [ID], 
+    [ViewForUserInfo].[Name] AS [Name], 
+    [ViewForUserInfo].[UserICode] AS [UserICode], 
+    [ViewForUserInfo].[UserIPsd] AS [UserIPsd], 
+    [ViewForUserInfo].[UserIRegisterDate] AS [UserIRegisterDate], 
+    [ViewForUserInfo].[UserISex] AS [UserISex], 
+    [ViewForUserInfo].[UserIIDCard] AS [UserIIDCard], 
+    [ViewForUserInfo].[UserIBirth] AS [UserIBirth], 
+    [ViewForUserInfo].[UserIAddress] AS [UserIAddress], 
+    [ViewForUserInfo].[UserIPostalCode] AS [UserIPostalCode], 
+    [ViewForUserInfo].[UserIStudentNumber] AS [UserIStudentNumber], 
+    [ViewForUserInfo].[UserIMobilePhone] AS [UserIMobilePhone], 
+    [ViewForUserInfo].[UserIeMail] AS [UserIeMail], 
+    [ViewForUserInfo].[UserIRemarks] AS [UserIRemarks], 
+    [ViewForUserInfo].[UserIDutyIID] AS [UserIDutyIID], 
+    [ViewForUserInfo].[UserIDepartmentIID] AS [UserIDepartmentIID], 
+    [ViewForUserInfo].[DelFlag] AS [DelFlag]
+    FROM [dbo].[ViewForUserInfo] AS [ViewForUserInfo]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

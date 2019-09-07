@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/ExtLayout/_ExtModalWindows.cshtml";
+}
+
+@{
+    var X = Html.X();
+}
+
+@section WindowItemField
+{
+    @(
+    X.FormPanel()
+        .ID((string)ViewData["WindowID"] + "_Form")
+        .Header(false)
+        .Border(false)
+        .Layout(LayoutType.Form)
+        .BodyStyle("background-color:transparent;")
+        .Items(
+            X.TextField().Name("OriginName").FieldLabel("文件名称")
+                .ToolTips(tips => tips.Add(new ToolTip { Html = "操作提示:请将所有文件以省份为目录、以年份为文件名打包成一个zip文件后上传。" }))
+                .AllowBlank(false),
+            X.ComboBox().Name("FileType").ID((string)ViewData["WindowID"] + "_cmbFileType").Editable(false).FieldLabel("文件类型").Value("数据")
+            .Items(
+                X.ListItem().Text("数据").Value("数据"),
+                X.ListItem().Text("照片").Value("照片")
+            ),
+            X.FileUploadField()            
+                .FieldLabel("文件选择")
+                .Editable(false)
+                .ID((string)ViewData["WindowID"] + "_fileField")
+                .Icon(Icon.FilmAdd).EmptyText("选择文件").ButtonText(""),
+            X.ComboBox().Name("HandleWay").ID((string)ViewData["WindowID"] + "_cmbHandleWay").Editable(false).FieldLabel("处理方式").Value("true")
+            .Items(
+                X.ListItem().Text("立即处理").Value("true"),
+                X.ListItem().Text("稍后处理").Value("false")
+            )
+        )
+    )
+}
